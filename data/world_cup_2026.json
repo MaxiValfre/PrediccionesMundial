@@ -1,0 +1,1492 @@
+{
+  "tournament": {
+    "name": "FIFA World Cup 2026",
+    "hosts": [
+      "USA",
+      "Mexico",
+      "Canada"
+    ],
+    "format": {
+      "teams": 48,
+      "groups": 12,
+      "teams_per_group": 4,
+      "qualify_top2": true,
+      "qualify_best_third": 8,
+      "knockout_rounds": [
+        "Round of 32",
+        "Round of 16",
+        "Quarterfinals",
+        "Semifinals",
+        "Third Place",
+        "Final"
+      ]
+    },
+    "final_venue": "MetLife Stadium, East Rutherford",
+    "final_date": "2026-07-19"
+  },
+  "elo_ratings": {
+    "Argentina": 2060,
+    "France": 2000,
+    "Brazil": 1960,
+    "England": 1950,
+    "Spain": 1940,
+    "Germany": 1920,
+    "Portugal": 1910,
+    "Netherlands": 1880,
+    "Belgium": 1860,
+    "Colombia": 1850,
+    "Uruguay": 1840,
+    "Japan": 1830,
+    "USA": 1820,
+    "Mexico": 1810,
+    "Sweden": 1805,
+    "Morocco": 1790,
+    "South Korea": 1780,
+    "Switzerland": 1775,
+    "Australia": 1760,
+    "Denmark": 1755,
+    "Iran": 1740,
+    "Ecuador": 1735,
+    "Turkey": 1730,
+    "Serbia": 1720,
+    "Senegal": 1710,
+    "Nigeria": 1700,
+    "Tunisia": 1690,
+    "Scotland": 1680,
+    "Egypt": 1670,
+    "Ivory Coast": 1665,
+    "Canada": 1660,
+    "Saudi Arabia": 1650,
+    "Norway": 1640,
+    "Algeria": 1630,
+    "Austria": 1620,
+    "Paraguay": 1610,
+    "Czech Republic": 1600,
+    "Iraq": 1580,
+    "New Zealand": 1560,
+    "Qatar": 1540,
+    "Cameroon": 1530,
+    "Haiti": 1500,
+    "Bosnia": 1490,
+    "Jordan": 1470,
+    "Cape Verde": 1450,
+    "Uzbekistan": 1440,
+    "Curaçao": 1350,
+    "South Africa": 1550
+  },
+  "host_countries": [
+    "USA",
+    "Mexico",
+    "Canada"
+  ],
+  "groups": {
+    "A": {
+      "teams": [
+        "Mexico",
+        "South Africa",
+        "South Korea",
+        "Czech Republic"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-11",
+            "team_a": "Mexico",
+            "team_b": "South Africa",
+            "score_a": 2,
+            "score_b": 0,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-11",
+            "team_a": "South Korea",
+            "team_b": "Czech Republic",
+            "score_a": 2,
+            "score_b": 1,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-18",
+            "team_a": "Czech Republic",
+            "team_b": "South Africa",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-18",
+            "team_a": "Mexico",
+            "team_b": "South Korea",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-24",
+            "team_a": "Mexico",
+            "team_b": "Czech Republic",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-24",
+            "team_a": "South Korea",
+            "team_b": "South Africa",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "Mexico",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 0,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "team": "South Korea",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 1,
+          "gd": 1,
+          "points": 3
+        },
+        {
+          "team": "Czech Republic",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 2,
+          "gd": -1,
+          "points": 0
+        },
+        {
+          "team": "South Africa",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 2,
+          "gd": -2,
+          "points": 0
+        }
+      ]
+    },
+    "B": {
+      "teams": [
+        "Canada",
+        "Bosnia",
+        "Qatar",
+        "Switzerland"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-12",
+            "team_a": "Canada",
+            "team_b": "Bosnia",
+            "score_a": 1,
+            "score_b": 1,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-13",
+            "team_a": "Qatar",
+            "team_b": "Switzerland",
+            "score_a": 1,
+            "score_b": 1,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-18",
+            "team_a": "Switzerland",
+            "team_b": "Bosnia",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-18",
+            "team_a": "Canada",
+            "team_b": "Qatar",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-24",
+            "team_a": "Canada",
+            "team_b": "Switzerland",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-24",
+            "team_a": "Qatar",
+            "team_b": "Bosnia",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "Switzerland",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Canada",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Qatar",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Bosnia",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        }
+      ]
+    },
+    "C": {
+      "teams": [
+        "Brazil",
+        "Morocco",
+        "Haiti",
+        "Scotland"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-13",
+            "team_a": "Brazil",
+            "team_b": "Morocco",
+            "score_a": 1,
+            "score_b": 1,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-13",
+            "team_a": "Haiti",
+            "team_b": "Scotland",
+            "score_a": 0,
+            "score_b": 1,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-19",
+            "team_a": "Scotland",
+            "team_b": "Morocco",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-19",
+            "team_a": "Brazil",
+            "team_b": "Haiti",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-24",
+            "team_a": "Brazil",
+            "team_b": "Scotland",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-24",
+            "team_a": "Morocco",
+            "team_b": "Haiti",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "Scotland",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 1,
+          "ga": 0,
+          "gd": 1,
+          "points": 3
+        },
+        {
+          "team": "Morocco",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Brazil",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Haiti",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 1,
+          "gd": -1,
+          "points": 0
+        }
+      ]
+    },
+    "D": {
+      "teams": [
+        "USA",
+        "Paraguay",
+        "Australia",
+        "Turkey"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-12",
+            "team_a": "USA",
+            "team_b": "Paraguay",
+            "score_a": 4,
+            "score_b": 1,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-13",
+            "team_a": "Australia",
+            "team_b": "Turkey",
+            "score_a": 2,
+            "score_b": 0,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-19",
+            "team_a": "USA",
+            "team_b": "Australia",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-19",
+            "team_a": "Turkey",
+            "team_b": "Paraguay",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-25",
+            "team_a": "USA",
+            "team_b": "Turkey",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-25",
+            "team_a": "Australia",
+            "team_b": "Paraguay",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "USA",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 4,
+          "ga": 1,
+          "gd": 3,
+          "points": 3
+        },
+        {
+          "team": "Australia",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 0,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "team": "Turkey",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 2,
+          "gd": -2,
+          "points": 0
+        },
+        {
+          "team": "Paraguay",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 4,
+          "gd": -3,
+          "points": 0
+        }
+      ]
+    },
+    "E": {
+      "teams": [
+        "Germany",
+        "Curaçao",
+        "Ivory Coast",
+        "Ecuador"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-14",
+            "team_a": "Germany",
+            "team_b": "Curaçao",
+            "score_a": 7,
+            "score_b": 1,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-14",
+            "team_a": "Ivory Coast",
+            "team_b": "Ecuador",
+            "score_a": 1,
+            "score_b": 0,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-20",
+            "team_a": "Germany",
+            "team_b": "Ivory Coast",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-20",
+            "team_a": "Ecuador",
+            "team_b": "Curaçao",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-25",
+            "team_a": "Germany",
+            "team_b": "Ecuador",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-25",
+            "team_a": "Ivory Coast",
+            "team_b": "Curaçao",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "Germany",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 7,
+          "ga": 1,
+          "gd": 6,
+          "points": 3
+        },
+        {
+          "team": "Ivory Coast",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 1,
+          "ga": 0,
+          "gd": 1,
+          "points": 3
+        },
+        {
+          "team": "Ecuador",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 1,
+          "gd": -1,
+          "points": 0
+        },
+        {
+          "team": "Curaçao",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 7,
+          "gd": -6,
+          "points": 0
+        }
+      ]
+    },
+    "F": {
+      "teams": [
+        "Netherlands",
+        "Japan",
+        "Sweden",
+        "Tunisia"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-14",
+            "team_a": "Netherlands",
+            "team_b": "Japan",
+            "score_a": 2,
+            "score_b": 2,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-14",
+            "team_a": "Sweden",
+            "team_b": "Tunisia",
+            "score_a": 5,
+            "score_b": 1,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-20",
+            "team_a": "Netherlands",
+            "team_b": "Sweden",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-20",
+            "team_a": "Tunisia",
+            "team_b": "Japan",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-25",
+            "team_a": "Netherlands",
+            "team_b": "Tunisia",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-25",
+            "team_a": "Japan",
+            "team_b": "Sweden",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "Sweden",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 5,
+          "ga": 1,
+          "gd": 4,
+          "points": 3
+        },
+        {
+          "team": "Japan",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Netherlands",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Tunisia",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 5,
+          "gd": -4,
+          "points": 0
+        }
+      ]
+    },
+    "G": {
+      "teams": [
+        "Belgium",
+        "Egypt",
+        "Iran",
+        "New Zealand"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-15",
+            "team_a": "Belgium",
+            "team_b": "Egypt",
+            "score_a": 1,
+            "score_b": 1,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-15",
+            "team_a": "Iran",
+            "team_b": "New Zealand",
+            "score_a": 2,
+            "score_b": 2,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-21",
+            "team_a": "Belgium",
+            "team_b": "Iran",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-21",
+            "team_a": "New Zealand",
+            "team_b": "Egypt",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-26",
+            "team_a": "Belgium",
+            "team_b": "New Zealand",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-26",
+            "team_a": "Iran",
+            "team_b": "Egypt",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "New Zealand",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Iran",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Belgium",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Egypt",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        }
+      ]
+    },
+    "H": {
+      "teams": [
+        "Spain",
+        "Cape Verde",
+        "Saudi Arabia",
+        "Uruguay"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-15",
+            "team_a": "Spain",
+            "team_b": "Cape Verde",
+            "score_a": 0,
+            "score_b": 0,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-15",
+            "team_a": "Saudi Arabia",
+            "team_b": "Uruguay",
+            "score_a": 1,
+            "score_b": 1,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-21",
+            "team_a": "Spain",
+            "team_b": "Saudi Arabia",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-21",
+            "team_a": "Uruguay",
+            "team_b": "Cape Verde",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-26",
+            "team_a": "Spain",
+            "team_b": "Uruguay",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-26",
+            "team_a": "Saudi Arabia",
+            "team_b": "Cape Verde",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "Uruguay",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Saudi Arabia",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Spain",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "team": "Cape Verde",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 1
+        }
+      ]
+    },
+    "I": {
+      "teams": [
+        "France",
+        "Senegal",
+        "Iraq",
+        "Norway"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-16",
+            "team_a": "France",
+            "team_b": "Senegal",
+            "score_a": 3,
+            "score_b": 1,
+            "status": "played"
+          },
+          {
+            "date": "2026-06-16",
+            "team_a": "Iraq",
+            "team_b": "Norway",
+            "score_a": 0,
+            "score_b": 2,
+            "status": "played"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-22",
+            "team_a": "France",
+            "team_b": "Iraq",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-22",
+            "team_a": "Norway",
+            "team_b": "Senegal",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-26",
+            "team_a": "France",
+            "team_b": "Norway",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-26",
+            "team_a": "Senegal",
+            "team_b": "Iraq",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "France",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 3,
+          "ga": 1,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "team": "Norway",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 0,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "team": "Senegal",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 3,
+          "gd": -2,
+          "points": 0
+        },
+        {
+          "team": "Iraq",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 2,
+          "gd": -2,
+          "points": 0
+        }
+      ]
+    },
+    "J": {
+      "teams": [
+        "Argentina",
+        "Algeria",
+        "Austria",
+        "Jordan"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-16",
+            "team_a": "Argentina",
+            "team_b": "Algeria",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-16",
+            "team_a": "Austria",
+            "team_b": "Jordan",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-22",
+            "team_a": "Argentina",
+            "team_b": "Austria",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-22",
+            "team_a": "Jordan",
+            "team_b": "Algeria",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-27",
+            "team_a": "Argentina",
+            "team_b": "Jordan",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-27",
+            "team_a": "Algeria",
+            "team_b": "Austria",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "Argentina",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Algeria",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Austria",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Jordan",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        }
+      ]
+    },
+    "K": {
+      "teams": [
+        "England",
+        "Serbia",
+        "Uzbekistan",
+        "Colombia"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-17",
+            "team_a": "England",
+            "team_b": "Serbia",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-17",
+            "team_a": "Colombia",
+            "team_b": "Uzbekistan",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-23",
+            "team_a": "England",
+            "team_b": "Uzbekistan",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-23",
+            "team_a": "Colombia",
+            "team_b": "Serbia",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-27",
+            "team_a": "England",
+            "team_b": "Colombia",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-27",
+            "team_a": "Serbia",
+            "team_b": "Uzbekistan",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "England",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Serbia",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Uzbekistan",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Colombia",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        }
+      ]
+    },
+    "L": {
+      "teams": [
+        "Portugal",
+        "Denmark",
+        "Nigeria",
+        "Cameroon"
+      ],
+      "matches": {
+        "matchday1": [
+          {
+            "date": "2026-06-17",
+            "team_a": "Portugal",
+            "team_b": "Cameroon",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-17",
+            "team_a": "Nigeria",
+            "team_b": "Denmark",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday2": [
+          {
+            "date": "2026-06-23",
+            "team_a": "Portugal",
+            "team_b": "Nigeria",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-23",
+            "team_a": "Denmark",
+            "team_b": "Cameroon",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ],
+        "matchday3": [
+          {
+            "date": "2026-06-27",
+            "team_a": "Portugal",
+            "team_b": "Denmark",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          },
+          {
+            "date": "2026-06-27",
+            "team_a": "Nigeria",
+            "team_b": "Cameroon",
+            "score_a": null,
+            "score_b": null,
+            "status": "scheduled"
+          }
+        ]
+      },
+      "standings": [
+        {
+          "team": "Portugal",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Denmark",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Nigeria",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "team": "Cameroon",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        }
+      ]
+    }
+  },
+  "knockout_schedule": {
+    "round_of_32": {
+      "dates": [
+        "2026-06-28",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02"
+      ]
+    },
+    "round_of_16": {
+      "dates": [
+        "2026-07-03",
+        "2026-07-04",
+        "2026-07-05",
+        "2026-07-06"
+      ]
+    },
+    "quarterfinals": {
+      "dates": [
+        "2026-07-09",
+        "2026-07-10"
+      ]
+    },
+    "semifinals": {
+      "dates": [
+        "2026-07-13",
+        "2026-07-14"
+      ]
+    },
+    "third_place": {
+      "date": "2026-07-18"
+    },
+    "final": {
+      "date": "2026-07-19",
+      "venue": "MetLife Stadium, East Rutherford"
+    }
+  },
+  "flags": {
+    "Argentina": "🇦🇷",
+    "France": "🇫🇷",
+    "Brazil": "🇧🇷",
+    "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "Spain": "🇪🇸",
+    "Germany": "🇩🇪",
+    "Portugal": "🇵🇹",
+    "Netherlands": "🇳🇱",
+    "Belgium": "🇧🇪",
+    "Colombia": "🇨🇴",
+    "Uruguay": "🇺🇾",
+    "Japan": "🇯🇵",
+    "USA": "🇺🇸",
+    "Mexico": "🇲🇽",
+    "Sweden": "🇸🇪",
+    "Morocco": "🇲🇦",
+    "South Korea": "🇰🇷",
+    "Switzerland": "🇨🇭",
+    "Australia": "🇦🇺",
+    "Denmark": "🇩🇰",
+    "Iran": "🇮🇷",
+    "Ecuador": "🇪🇨",
+    "Turkey": "🇹🇷",
+    "Serbia": "🇷🇸",
+    "Senegal": "🇸🇳",
+    "Nigeria": "🇳🇬",
+    "Tunisia": "🇹🇳",
+    "Scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "Egypt": "🇪🇬",
+    "Ivory Coast": "🇨🇮",
+    "Canada": "🇨🇦",
+    "Saudi Arabia": "🇸🇦",
+    "Norway": "🇳🇴",
+    "Algeria": "🇩🇿",
+    "Austria": "🇦🇹",
+    "Paraguay": "🇵🇾",
+    "Czech Republic": "🇨🇿",
+    "Iraq": "🇮🇶",
+    "New Zealand": "🇳🇿",
+    "Qatar": "🇶🇦",
+    "Cameroon": "🇨🇲",
+    "Haiti": "🇭🇹",
+    "Bosnia": "🇧🇦",
+    "Jordan": "🇯🇴",
+    "Cape Verde": "🇨🇻",
+    "Uzbekistan": "🇺🇿",
+    "Curaçao": "🇨🇼",
+    "South Africa": "🇿🇦"
+  }
+}
