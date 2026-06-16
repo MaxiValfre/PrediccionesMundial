@@ -37,17 +37,20 @@ TEAM_ALIASES: dict[str, str] = {
     "Bosnia & Herzegovina": "Bosnia",
     "Cabo Verde": "Cape Verde",
     "Curacao": "Curaçao",
+    "Congo DR": "DR Congo",
+    "Democratic Republic of the Congo": "DR Congo",
+    "Panamá": "Panama",
 }
 
 # All 48 teams in our dataset for validation
 VALID_TEAMS = {
     "Argentina", "France", "Brazil", "England", "Spain", "Germany", "Portugal",
     "Netherlands", "Belgium", "Colombia", "Uruguay", "Japan", "USA", "Mexico",
-    "Sweden", "Morocco", "South Korea", "Switzerland", "Australia", "Denmark",
-    "Iran", "Ecuador", "Turkey", "Serbia", "Senegal", "Nigeria", "Tunisia",
+    "Sweden", "Morocco", "South Korea", "Switzerland", "Australia", "DR Congo",
+    "Iran", "Ecuador", "Turkey", "Croatia", "Senegal", "Ghana", "Tunisia",
     "Scotland", "Egypt", "Ivory Coast", "Canada", "Saudi Arabia", "Norway",
     "Algeria", "Austria", "Paraguay", "Czech Republic", "Iraq", "New Zealand",
-    "Qatar", "Cameroon", "Haiti", "Bosnia", "Jordan", "Cape Verde",
+    "Qatar", "Panama", "Haiti", "Bosnia", "Jordan", "Cape Verde",
     "Uzbekistan", "Curaçao", "South Africa",
 }
 

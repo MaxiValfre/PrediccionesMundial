@@ -44,13 +44,14 @@
     "South Korea": 1780,
     "Switzerland": 1775,
     "Australia": 1760,
-    "Denmark": 1755,
+    "DR Congo": 1550,
+    "Croatia": 1790,
+    "Ghana": 1500,
+    "Panama": 1530,
     "Iran": 1740,
     "Ecuador": 1735,
     "Turkey": 1730,
-    "Serbia": 1720,
     "Senegal": 1710,
-    "Nigeria": 1700,
     "Tunisia": 1690,
     "Scotland": 1680,
     "Egypt": 1670,
@@ -65,7 +66,7 @@
     "Iraq": 1580,
     "New Zealand": 1560,
     "Qatar": 1540,
-    "Cameroon": 1530,
+
     "Haiti": 1500,
     "Bosnia": 1490,
     "Jordan": 1470,
@@ -1182,8 +1183,8 @@
     },
     "K": {
       "teams": [
-        "England",
-        "Serbia",
+        "Portugal",
+        "DR Congo",
         "Uzbekistan",
         "Colombia"
       ],
@@ -1191,8 +1192,8 @@
         "matchday1": [
           {
             "date": "2026-06-17",
-            "team_a": "England",
-            "team_b": "Serbia",
+            "team_a": "Portugal",
+            "team_b": "DR Congo",
             "score_a": null,
             "score_b": null,
             "status": "scheduled"
@@ -1209,7 +1210,7 @@
         "matchday2": [
           {
             "date": "2026-06-23",
-            "team_a": "England",
+            "team_a": "Portugal",
             "team_b": "Uzbekistan",
             "score_a": null,
             "score_b": null,
@@ -1218,7 +1219,7 @@
           {
             "date": "2026-06-23",
             "team_a": "Colombia",
-            "team_b": "Serbia",
+            "team_b": "DR Congo",
             "score_a": null,
             "score_b": null,
             "status": "scheduled"
@@ -1227,7 +1228,7 @@
         "matchday3": [
           {
             "date": "2026-06-27",
-            "team_a": "England",
+            "team_a": "Portugal",
             "team_b": "Colombia",
             "score_a": null,
             "score_b": null,
@@ -1235,7 +1236,7 @@
           },
           {
             "date": "2026-06-27",
-            "team_a": "Serbia",
+            "team_a": "DR Congo",
             "team_b": "Uzbekistan",
             "score_a": null,
             "score_b": null,
@@ -1245,7 +1246,7 @@
       },
       "standings": [
         {
-          "team": "England",
+          "team": "Portugal",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -1256,7 +1257,7 @@
           "points": 0
         },
         {
-          "team": "Serbia",
+          "team": "DR Congo",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -1292,25 +1293,25 @@
     },
     "L": {
       "teams": [
-        "Portugal",
-        "Denmark",
-        "Nigeria",
-        "Cameroon"
+        "England",
+        "Croatia",
+        "Ghana",
+        "Panama"
       ],
       "matches": {
         "matchday1": [
           {
             "date": "2026-06-17",
-            "team_a": "Portugal",
-            "team_b": "Cameroon",
+            "team_a": "England",
+            "team_b": "Croatia",
             "score_a": null,
             "score_b": null,
             "status": "scheduled"
           },
           {
             "date": "2026-06-17",
-            "team_a": "Nigeria",
-            "team_b": "Denmark",
+            "team_a": "Panama",
+            "team_b": "Ghana",
             "score_a": null,
             "score_b": null,
             "status": "scheduled"
@@ -1319,16 +1320,16 @@
         "matchday2": [
           {
             "date": "2026-06-23",
-            "team_a": "Portugal",
-            "team_b": "Nigeria",
+            "team_a": "England",
+            "team_b": "Ghana",
             "score_a": null,
             "score_b": null,
             "status": "scheduled"
           },
           {
             "date": "2026-06-23",
-            "team_a": "Denmark",
-            "team_b": "Cameroon",
+            "team_a": "Panama",
+            "team_b": "Croatia",
             "score_a": null,
             "score_b": null,
             "status": "scheduled"
@@ -1337,16 +1338,16 @@
         "matchday3": [
           {
             "date": "2026-06-27",
-            "team_a": "Portugal",
-            "team_b": "Denmark",
+            "team_a": "England",
+            "team_b": "Panama",
             "score_a": null,
             "score_b": null,
             "status": "scheduled"
           },
           {
             "date": "2026-06-27",
-            "team_a": "Nigeria",
-            "team_b": "Cameroon",
+            "team_a": "Croatia",
+            "team_b": "Ghana",
             "score_a": null,
             "score_b": null,
             "status": "scheduled"
@@ -1355,7 +1356,7 @@
       },
       "standings": [
         {
-          "team": "Portugal",
+          "team": "England",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -1366,7 +1367,7 @@
           "points": 0
         },
         {
-          "team": "Denmark",
+          "team": "Croatia",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -1377,7 +1378,7 @@
           "points": 0
         },
         {
-          "team": "Nigeria",
+          "team": "Ghana",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -1388,7 +1389,7 @@
           "points": 0
         },
         {
-          "team": "Cameroon",
+          "team": "Panama",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -1459,13 +1460,14 @@
     "South Korea": "🇰🇷",
     "Switzerland": "🇨🇭",
     "Australia": "🇦🇺",
-    "Denmark": "🇩🇰",
+    "DR Congo": "🇨🇩",
+    "Croatia": "🇭🇷",
+    "Ghana": "🇬🇭",
+    "Panama": "🇵🇦",
     "Iran": "🇮🇷",
     "Ecuador": "🇪🇨",
     "Turkey": "🇹🇷",
-    "Serbia": "🇷🇸",
     "Senegal": "🇸🇳",
-    "Nigeria": "🇳🇬",
     "Tunisia": "🇹🇳",
     "Scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
     "Egypt": "🇪🇬",
@@ -1480,7 +1482,7 @@
     "Iraq": "🇮🇶",
     "New Zealand": "🇳🇿",
     "Qatar": "🇶🇦",
-    "Cameroon": "🇨🇲",
+
     "Haiti": "🇭🇹",
     "Bosnia": "🇧🇦",
     "Jordan": "🇯🇴",
