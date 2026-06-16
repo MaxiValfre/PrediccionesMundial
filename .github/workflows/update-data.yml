@@ -40,6 +40,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data dashboard model/fetcher.py run_predictions.py README.md requirements.txt
+          git add data dashboard docs
           git commit -m "chore(data): refresh world cup predictions"
           git push

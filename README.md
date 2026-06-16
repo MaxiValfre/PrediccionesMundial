@@ -33,11 +33,9 @@ Manual live/final overrides can still be written in `data/results_update.json`.
 
 This repo is prepared for:
 
-- GitHub Pages to serve `dashboard/`
-- GitHub Actions to deploy on push to `main`
+- GitHub Pages to serve `docs/`
 - GitHub Actions scheduled updates every 15 minutes
 
 Workflows:
 
-- `.github/workflows/deploy-pages.yml`
 - `.github/workflows/update-data.yml`

@@ -12,6 +12,7 @@ import argparse
 import io
 import json
 import logging
+import shutil
 import sys
 from pathlib import Path
 
@@ -226,6 +227,13 @@ def main():
     )
     html_path.write_text(html, encoding="utf-8")
     print(f"Predictions embedded into: {html_path}")
+
+    # Mirror the published dashboard into docs/ for GitHub Pages branch deploys.
+    docs_dir = Path(__file__).resolve().parent / "docs"
+    docs_dir.mkdir(exist_ok=True)
+    shutil.copy2(out_path, docs_dir / "predictions.json")
+    shutil.copy2(html_path, docs_dir / "index.html")
+    print(f"GitHub Pages docs synced to: {docs_dir}")
 
     # Print today's matches
     print(f"\n{'='*60}")
