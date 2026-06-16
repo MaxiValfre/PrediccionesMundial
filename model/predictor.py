@@ -43,7 +43,7 @@ GROUP_DRAW_BIAS = 0.08
 
 # Model metadata
 MODEL_NAME = "Dixon-Coles + FIFA Rankings"
-MODEL_VERSION = "3.1.0"
+MODEL_VERSION = "3.2.0"
 
 
 # ---------------------------------------------------------------------------
@@ -668,6 +668,170 @@ def simulate_knockout_match(rng: np.random.Generator,
 
 
 # ---------------------------------------------------------------------------
+# FIFA tiebreaking helpers (official cascade)
+# ---------------------------------------------------------------------------
+
+def _h2h_record(
+    teams: list[str],
+    matches: list[tuple[str, str, int, int]],
+) -> dict[str, dict[str, int]]:
+    """Compute head-to-head mini-table for a subset of teams.
+
+    Args:
+        teams: The subset of tied teams to evaluate.
+        matches: All group match results as (team_a, team_b, score_a, score_b).
+
+    Returns:
+        Dict mapping each team to {"pts": int, "gd": int, "gf": int}.
+    """
+    team_set = set(teams)
+    record: dict[str, dict[str, int]] = {
+        t: {"pts": 0, "gd": 0, "gf": 0} for t in teams
+    }
+    for ta, tb, sa, sb in matches:
+        if ta in team_set and tb in team_set:
+            record[ta]["gf"] += sa
+            record[ta]["gd"] += sa - sb
+            record[tb]["gf"] += sb
+            record[tb]["gd"] += sb - sa
+            if sa > sb:
+                record[ta]["pts"] += 3
+            elif sa < sb:
+                record[tb]["pts"] += 3
+            else:
+                record[ta]["pts"] += 1
+                record[tb]["pts"] += 1
+    return record
+
+
+def _sort_tied_group(
+    tied_teams: list[str],
+    overall_stats: dict[str, dict],
+    all_matches: list[tuple[str, str, int, int]],
+    ratings: dict[str, float],
+    _depth: int = 0,
+) -> list[str]:
+    """Resolve a group of tied-on-points teams using the FIFA cascade.
+
+    FIFA rules (in order):
+      1. H2H points among tied teams
+      2. H2H goal difference among tied teams
+      3. H2H goals scored among tied teams
+      4. If still tied, re-apply 1-3 on the remaining subset
+      5. Overall goal difference
+      6. Overall goals scored
+      7. Fair play (skipped in simulation — no card data)
+      8. FIFA ranking position
+
+    Args:
+        tied_teams: Teams sharing the same overall points.
+        overall_stats: Full group table stats for fallback criteria.
+        all_matches: Every match result in the group as tuples.
+        ratings: FIFA ratings dict for final tiebreak.
+        _depth: Recursion guard to prevent infinite loops.
+
+    Returns:
+        The tied_teams list ordered from best to worst.
+    """
+    if len(tied_teams) <= 1:
+        return tied_teams
+
+    # Prevent runaway recursion (max 3 levels is more than enough for 4-team groups)
+    if _depth > 3:
+        return sorted(
+            tied_teams,
+            key=lambda t: ratings.get(t, DEFAULT_RATING),
+            reverse=True,
+        )
+
+    # Steps 1-3: head-to-head record among tied teams
+    h2h = _h2h_record(tied_teams, all_matches)
+
+    def _h2h_key(t: str) -> tuple:
+        return (h2h[t]["pts"], h2h[t]["gd"], h2h[t]["gf"])
+
+    # Group tied teams by their H2H key
+    from itertools import groupby as _groupby
+
+    sorted_by_h2h = sorted(tied_teams, key=_h2h_key, reverse=True)
+    result: list[str] = []
+
+    for _key, group_iter in _groupby(sorted_by_h2h, key=_h2h_key):
+        still_tied = list(group_iter)
+        if len(still_tied) == 1:
+            result.extend(still_tied)
+            continue
+
+        # Step 4: if the sub-group is smaller than the original, re-apply H2H
+        if len(still_tied) < len(tied_teams):
+            result.extend(
+                _sort_tied_group(
+                    still_tied, overall_stats, all_matches, ratings,
+                    _depth=_depth + 1,
+                )
+            )
+            continue
+
+        # Same size group — H2H didn't separate anyone.
+        # Fall through to steps 5-6: overall GD, GF, then step 8: rating.
+        result.extend(
+            sorted(
+                still_tied,
+                key=lambda t: (
+                    overall_stats[t]["gd"],
+                    overall_stats[t]["gf"],
+                    ratings.get(t, DEFAULT_RATING),
+                ),
+                reverse=True,
+            )
+        )
+
+    return result
+
+
+def _resolve_group_standings(
+    table: dict[str, dict],
+    all_matches: list[tuple[str, str, int, int]],
+    ratings: dict[str, float],
+) -> list[tuple[str, dict]]:
+    """Sort a group table using the full FIFA tiebreaking cascade.
+
+    First sorts by points, then applies _sort_tied_group for each cluster
+    of teams sharing the same point total.
+
+    Args:
+        table: Dict mapping team name to stat dict (pts, gd, gf, etc.).
+        all_matches: Every match result in the group as tuples.
+        ratings: FIFA ratings dict for final tiebreak.
+
+    Returns:
+        Ordered list of (team_name, stats_dict) from 1st to last.
+    """
+    from itertools import groupby as _groupby
+
+    # Primary sort by points descending
+    teams_sorted = sorted(
+        table.items(), key=lambda x: x[1]["pts"], reverse=True,
+    )
+
+    result: list[tuple[str, dict]] = []
+    for _pts, cluster in _groupby(teams_sorted, key=lambda x: x[1]["pts"]):
+        cluster_items = list(cluster)
+        if len(cluster_items) == 1:
+            result.append(cluster_items[0])
+            continue
+
+        team_names = [t for t, _ in cluster_items]
+        stats_lookup = {t: s for t, s in cluster_items}
+        ordered_names = _sort_tied_group(
+            team_names, stats_lookup, all_matches, ratings,
+        )
+        result.extend((name, stats_lookup[name]) for name in ordered_names)
+
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Group simulation
 # ---------------------------------------------------------------------------
 
@@ -677,6 +841,9 @@ def simulate_group(rng: np.random.Generator, group: dict,
     """Simulate a group from the current state, including live matches."""
     teams = group["teams"]
     table = {t: {"pts": 0, "gf": 0, "ga": 0, "gd": 0, "played": 0} for t in teams}
+
+    # Collect all match results (played + simulated) for H2H tiebreaking
+    all_match_results: list[tuple[str, str, int, int]] = []
 
     # Resolve the current group state: completed matches count fully, live matches
     # continue from the current scoreline, scheduled matches start from 0-0.
@@ -689,6 +856,7 @@ def simulate_group(rng: np.random.Generator, group: dict,
                 sb = m.get("score_b")
                 if sa is not None and sb is not None:
                     _apply_table_result(table, ta, tb, sa, sb)
+                    all_match_results.append((ta, tb, sa, sb))
                 continue
 
             ha = ta in HOST_COUNTRIES
@@ -708,16 +876,10 @@ def simulate_group(rng: np.random.Generator, group: dict,
             else:
                 ga, gb = simulate_match(rng, xg_a, xg_b, group_stage=True)
             _apply_table_result(table, ta, tb, ga, gb)
+            all_match_results.append((ta, tb, ga, gb))
 
-    # Sort: pts -> gd -> gf -> rating tiebreak
-    standings = sorted(
-        table.items(),
-        key=lambda x: (
-            x[1]["pts"], x[1]["gd"], x[1]["gf"],
-            ratings.get(x[0], DEFAULT_RATING),
-        ),
-        reverse=True,
-    )
+    # Sort using full FIFA tiebreaking cascade (H2H -> overall GD/GF -> rating)
+    standings = _resolve_group_standings(table, all_match_results, ratings)
     return [{"team": t, **s, "rank": i + 1} for i, (t, s) in enumerate(standings)]
 
 
@@ -1685,6 +1847,7 @@ def generate_predictions() -> dict:
             "Matchday momentum system",
             "Home advantage for host nations",
             "Travel/fatigue penalty",
+            "FIFA head-to-head tiebreaking cascade",
             "Group stage draw bias",
             "Conditional live match forecasting",
             "Probability timeline tracking",

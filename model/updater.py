@@ -188,8 +188,100 @@ def find_match_in_data(
     return None
 
 
+def _h2h_record_updater(
+    teams: list[str],
+    matches: list[tuple[str, str, int, int]],
+) -> dict[str, dict[str, int]]:
+    """Compute head-to-head mini-table for a subset of teams.
+
+    Mirrors the predictor's _h2h_record but lives in updater to avoid
+    a circular import.
+    """
+    team_set = set(teams)
+    record: dict[str, dict[str, int]] = {
+        t: {"pts": 0, "gd": 0, "gf": 0} for t in teams
+    }
+    for ta, tb, sa, sb in matches:
+        if ta in team_set and tb in team_set:
+            record[ta]["gf"] += sa
+            record[ta]["gd"] += sa - sb
+            record[tb]["gf"] += sb
+            record[tb]["gd"] += sb - sa
+            if sa > sb:
+                record[ta]["pts"] += 3
+            elif sa < sb:
+                record[tb]["pts"] += 3
+            else:
+                record[ta]["pts"] += 1
+                record[tb]["pts"] += 1
+    return record
+
+
+def _sort_tied_updater(
+    tied_teams: list[str],
+    overall_stats: dict[str, dict],
+    all_matches: list[tuple[str, str, int, int]],
+    _depth: int = 0,
+) -> list[str]:
+    """Resolve tied-on-points teams using the FIFA cascade for standings display.
+
+    Same logic as the predictor but uses team name (alphabetical) as the final
+    tiebreak instead of FIFA rating, since the updater context does not have
+    ratings readily available and this produces deterministic display order.
+    """
+    if len(tied_teams) <= 1:
+        return tied_teams
+
+    if _depth > 3:
+        return sorted(tied_teams)
+
+    from itertools import groupby as _groupby
+
+    h2h = _h2h_record_updater(tied_teams, all_matches)
+
+    def _h2h_key(t: str) -> tuple:
+        return (h2h[t]["pts"], h2h[t]["gd"], h2h[t]["gf"])
+
+    sorted_by_h2h = sorted(tied_teams, key=_h2h_key, reverse=True)
+    result: list[str] = []
+
+    for _key, group_iter in _groupby(sorted_by_h2h, key=_h2h_key):
+        still_tied = list(group_iter)
+        if len(still_tied) == 1:
+            result.extend(still_tied)
+            continue
+
+        if len(still_tied) < len(tied_teams):
+            result.extend(
+                _sort_tied_updater(
+                    still_tied, overall_stats, all_matches,
+                    _depth=_depth + 1,
+                )
+            )
+            continue
+
+        # H2H didn't separate anyone — fall through to overall GD, GF, alpha.
+        result.extend(
+            sorted(
+                still_tied,
+                key=lambda t: (
+                    overall_stats[t]["gd"],
+                    overall_stats[t]["gf"],
+                    t,  # alphabetical as final tiebreak for display
+                ),
+                reverse=True,
+            )
+        )
+
+    return result
+
+
 def recalculate_standings(group_data: dict) -> list[dict]:
     """Recalculate group standings from played and live matches.
+
+    Uses FIFA tiebreaking cascade: points -> H2H (pts, GD, GF) ->
+    recursive H2H re-application -> overall GD -> overall GF ->
+    alphabetical (display determinism).
 
     Returns sorted standings list.
     """
@@ -199,6 +291,9 @@ def recalculate_standings(group_data: dict) -> list[dict]:
             "gf": 0, "ga": 0, "gd": 0, "points": 0}
         for t in teams
     }
+
+    # Collect match results for H2H tiebreaking
+    all_matches: list[tuple[str, str, int, int]] = []
 
     for md_key in ["matchday1", "matchday2", "matchday3"]:
         for match in group_data["matches"].get(md_key, []):
@@ -234,12 +329,34 @@ def recalculate_standings(group_data: dict) -> list[dict]:
                 table[ta]["points"] += 1
                 table[tb]["points"] += 1
 
-    # Sort: points > gd > gf > alphabetical
-    standings = sorted(
-        table.values(),
-        key=lambda x: (x["points"], x["gd"], x["gf"], x["team"]),
-        reverse=True,
+            all_matches.append((ta, tb, sa, sb))
+
+    # Sort using FIFA tiebreaking cascade with H2H
+    from itertools import groupby as _groupby
+
+    teams_sorted = sorted(
+        table.values(), key=lambda x: x["points"], reverse=True,
     )
+
+    standings: list[dict] = []
+    for _pts, cluster in _groupby(teams_sorted, key=lambda x: x["points"]):
+        cluster_items = list(cluster)
+        if len(cluster_items) == 1:
+            standings.append(cluster_items[0])
+            continue
+
+        team_names = [item["team"] for item in cluster_items]
+        stats_lookup = {item["team"]: item for item in cluster_items}
+        # Build an overall_stats dict compatible with _sort_tied_updater
+        overall_for_tie = {
+            t: {"gd": stats_lookup[t]["gd"], "gf": stats_lookup[t]["gf"]}
+            for t in team_names
+        }
+        ordered_names = _sort_tied_updater(
+            team_names, overall_for_tie, all_matches,
+        )
+        standings.extend(stats_lookup[name] for name in ordered_names)
+
     return standings
 
 
