@@ -66,7 +66,6 @@
     "Iraq": 1580,
     "New Zealand": 1560,
     "Qatar": 1540,
-
     "Haiti": 1500,
     "Bosnia": 1490,
     "Jordan": 1470,
@@ -1084,9 +1083,24 @@
             "date": "2026-06-16",
             "team_a": "Argentina",
             "team_b": "Algeria",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-16",
+              "group": "J",
+              "team_a": "Argentina",
+              "team_b": "Algeria",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8752,
+              "prob_draw": 0.1185,
+              "prob_win_b": 0.0064,
+              "xg_a": 4.0,
+              "xg_b": 0.33,
+              "captured_at": "2026-06-17T01:39:46"
+            },
+            "minute": 1
           },
           {
             "date": "2026-06-16",
@@ -1137,17 +1151,17 @@
       "standings": [
         {
           "team": "Argentina",
-          "played": 0,
-          "won": 0,
+          "played": 1,
+          "won": 1,
           "drawn": 0,
           "lost": 0,
-          "gf": 0,
+          "gf": 1,
           "ga": 0,
-          "gd": 0,
-          "points": 0
+          "gd": 1,
+          "points": 3
         },
         {
-          "team": "Algeria",
+          "team": "Jordan",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -1169,14 +1183,14 @@
           "points": 0
         },
         {
-          "team": "Jordan",
-          "played": 0,
+          "team": "Algeria",
+          "played": 1,
           "won": 0,
           "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "ga": 1,
+          "gd": -1,
           "points": 0
         }
       ]
@@ -1482,7 +1496,6 @@
     "Iraq": "🇮🇶",
     "New Zealand": "🇳🇿",
     "Qatar": "🇶🇦",
-
     "Haiti": "🇭🇹",
     "Bosnia": "🇧🇦",
     "Jordan": "🇯🇴",
