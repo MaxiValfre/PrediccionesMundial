@@ -1360,6 +1360,93 @@ def predict_matches(data: dict) -> list[dict]:
         except (json.JSONDecodeError, IOError):
             pass
 
+    def build_match_explanation(
+        team_a: str,
+        team_b: str,
+        rating_a: float,
+        rating_b: float,
+        form_a: float,
+        form_b: float,
+        xg_a: float,
+        xg_b: float,
+        prob_win_a: float,
+        prob_draw: float,
+        prob_win_b: float,
+        home_a: bool,
+        home_b: bool,
+    ) -> dict:
+        outcomes = {
+            "team_a": prob_win_a,
+            "draw": prob_draw,
+            "team_b": prob_win_b,
+        }
+        favorite_side = max(outcomes, key=outcomes.get)
+        sorted_probs = sorted(outcomes.values(), reverse=True)
+        favorite_prob = outcomes[favorite_side]
+        separation = favorite_prob - sorted_probs[1]
+        rating_edge = rating_a - rating_b
+        form_edge = form_a - form_b
+        xg_edge = xg_a - xg_b
+
+        if favorite_side == "draw":
+            favorite_team = "Draw"
+            confidence_band = "fragile"
+            summary = "The model sees a tight game with draw risk on top."
+        else:
+            favorite_team = team_a if favorite_side == "team_a" else team_b
+            if favorite_prob >= 0.70 and separation >= 0.18:
+                confidence_band = "strong"
+                summary = f"{favorite_team} are clear favorites."
+            elif favorite_prob >= 0.55 and separation >= 0.08:
+                confidence_band = "lean"
+                summary = f"{favorite_team} hold the edge."
+            else:
+                confidence_band = "fragile"
+                summary = f"{favorite_team} lead a volatile matchup."
+
+        signals = []
+        if abs(rating_edge) >= 20:
+            stronger = team_a if rating_edge > 0 else team_b
+            signals.append(f"Elo edge: {stronger} {abs(rating_edge):.0f}")
+        if abs(xg_edge) >= 0.20:
+            stronger = team_a if xg_edge > 0 else team_b
+            signals.append(f"xG edge: {stronger} +{abs(xg_edge):.2f}")
+        if abs(form_edge) >= 0.03:
+            stronger = team_a if form_edge > 0 else team_b
+            signals.append(f"Form edge: {stronger} +{abs(form_edge):.2f}")
+        if home_a and favorite_side == "team_a":
+            signals.append(f"Venue boost: {team_a} host-side advantage")
+        elif home_b and favorite_side == "team_b":
+            signals.append(f"Venue boost: {team_b} host-side advantage")
+        if len(signals) < 2:
+            signals.append(f"Top outcome: {favorite_team} {favorite_prob * 100:.1f}%")
+
+        if favorite_side != "draw" and prob_draw >= 0.22:
+            risk = f"Draw risk is still {prob_draw * 100:.1f}%."
+        elif favorite_side == "draw":
+            risk = f"Neither side clears {max(prob_win_a, prob_win_b) * 100:.1f}% win probability."
+        else:
+            other_side = team_b if favorite_side == "team_a" else team_a
+            upset_prob = prob_win_b if favorite_side == "team_a" else prob_win_a
+            if upset_prob >= 0.18:
+                risk = f"{other_side} still keep {upset_prob * 100:.1f}% upset paths."
+            elif abs(xg_edge) < 0.45:
+                risk = "Expected-goals gap is still narrow."
+            else:
+                risk = "Most volatility sits in finishing variance."
+
+        return {
+            "favorite_side": favorite_side,
+            "favorite_team": favorite_team,
+            "confidence_band": confidence_band,
+            "summary": summary,
+            "signals": signals[:3],
+            "risk": risk,
+            "rating_edge": round(rating_edge, 1),
+            "form_edge": round(form_edge, 2),
+            "xg_edge": round(xg_edge, 2),
+        }
+
     predictions = []
 
     for gname, gdata in data["groups"].items():
@@ -1432,6 +1519,21 @@ def predict_matches(data: dict) -> list[dict]:
                         "odds_draw": odds_draw,
                         "odds_b": odds_b,
                         "prediction_source": "archived",
+                        "explanation": build_match_explanation(
+                            ta,
+                            tb,
+                            ratings.get(ta, DEFAULT_RATING),
+                            ratings.get(tb, DEFAULT_RATING),
+                            form.get(ta, 0),
+                            form.get(tb, 0),
+                            arch_xg_a,
+                            arch_xg_b,
+                            prob_win_a,
+                            prob_draw,
+                            prob_win_b,
+                            ha,
+                            hb,
+                        ),
                     }
                     predictions.append(pred)
                 elif m["status"] == "in_progress":
@@ -1488,6 +1590,21 @@ def predict_matches(data: dict) -> list[dict]:
                         "odds_draw": odds_draw,
                         "odds_b": odds_b,
                         "prediction_source": "live_conditional",
+                        "explanation": build_match_explanation(
+                            ta,
+                            tb,
+                            ratings.get(ta, DEFAULT_RATING),
+                            ratings.get(tb, DEFAULT_RATING),
+                            form.get(ta, 0),
+                            form.get(tb, 0),
+                            xg_a,
+                            xg_b,
+                            outcome["win"],
+                            outcome["draw"],
+                            outcome["loss"],
+                            ha,
+                            hb,
+                        ),
                     }
                     predictions.append(pred)
                 else:
@@ -1532,6 +1649,21 @@ def predict_matches(data: dict) -> list[dict]:
                         "odds_draw": odds_draw,
                         "odds_b": odds_b,
                         "prediction_source": "scheduled",
+                        "explanation": build_match_explanation(
+                            ta,
+                            tb,
+                            ratings.get(ta, DEFAULT_RATING),
+                            ratings.get(tb, DEFAULT_RATING),
+                            form.get(ta, 0),
+                            form.get(tb, 0),
+                            xg_a,
+                            xg_b,
+                            outcome["win"],
+                            outcome["draw"],
+                            outcome["loss"],
+                            ha,
+                            hb,
+                        ),
                     }
                     predictions.append(pred)
 

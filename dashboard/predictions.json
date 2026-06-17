@@ -71,7 +71,21 @@
       "odds_a": 1.17,
       "odds_draw": 7.55,
       "odds_b": 78.74,
-      "prediction_source": "archived"
+      "prediction_source": "archived",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Portugal",
+        "confidence_band": "strong",
+        "summary": "Portugal are clear favorites.",
+        "signals": [
+          "Elo edge: Portugal 330",
+          "xG edge: Portugal +3.37"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 330.1,
+        "form_edge": 0,
+        "xg_edge": 3.37
+      }
     },
     {
       "date": "2026-06-17",
@@ -142,7 +156,21 @@
       "odds_a": 1.15,
       "odds_draw": 8.16,
       "odds_b": 118.31,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Colombia",
+        "confidence_band": "strong",
+        "summary": "Colombia are clear favorites.",
+        "signals": [
+          "Elo edge: Colombia 410",
+          "xG edge: Colombia +3.60"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 410,
+        "form_edge": 0,
+        "xg_edge": 3.6
+      }
     },
     {
       "date": "2026-06-17",
@@ -214,10 +242,24 @@
           0.00019
         ]
       ],
-      "odds_a": 1.14,
-      "odds_draw": 12.7,
-      "odds_b": 24.49,
-      "prediction_source": "live_conditional"
+      "odds_a": 1.66,
+      "odds_draw": 3.61,
+      "odds_b": 8.38,
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "England",
+        "confidence_band": "lean",
+        "summary": "England hold the edge.",
+        "signals": [
+          "Elo edge: England 160",
+          "xG edge: England +1.29"
+        ],
+        "risk": "Draw risk is still 27.7%.",
+        "rating_edge": 160,
+        "form_edge": 0,
+        "xg_edge": 1.29
+      }
     },
     {
       "date": "2026-06-17",
@@ -288,7 +330,21 @@
       "odds_a": 2.64,
       "odds_draw": 2.9,
       "odds_b": 3.62,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Panama",
+        "confidence_band": "fragile",
+        "summary": "Panama lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Panama 30",
+          "xG edge: Panama +0.24"
+        ],
+        "risk": "Draw risk is still 34.5%.",
+        "rating_edge": 30,
+        "form_edge": 0,
+        "xg_edge": 0.24
+      }
     }
   ],
   "match_predictions": [
@@ -361,7 +417,22 @@
       "odds_a": 1.22,
       "odds_draw": 6.27,
       "odds_b": 45.64,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Mexico",
+        "confidence_band": "strong",
+        "summary": "Mexico are clear favorites.",
+        "signals": [
+          "Elo edge: Mexico 287",
+          "xG edge: Mexico +2.81",
+          "Form edge: Mexico +0.16"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 286.9,
+        "form_edge": 0.16,
+        "xg_edge": 2.81
+      }
     },
     {
       "date": "2026-06-11",
@@ -432,7 +503,22 @@
       "odds_a": 1.44,
       "odds_draw": 4.24,
       "odds_b": 14.0,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "South Korea",
+        "confidence_band": "lean",
+        "summary": "South Korea hold the edge.",
+        "signals": [
+          "Elo edge: South Korea 213",
+          "xG edge: South Korea +1.79",
+          "Form edge: South Korea +0.08"
+        ],
+        "risk": "Draw risk is still 23.6%.",
+        "rating_edge": 213.4,
+        "form_edge": 0.08,
+        "xg_edge": 1.79
+      }
     },
     {
       "date": "2026-06-12",
@@ -503,7 +589,22 @@
       "odds_a": 1.63,
       "odds_draw": 3.7,
       "odds_b": 8.65,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Canada",
+        "confidence_band": "lean",
+        "summary": "Canada hold the edge.",
+        "signals": [
+          "Elo edge: Canada 154",
+          "xG edge: Canada +1.35",
+          "Venue boost: Canada host-side advantage"
+        ],
+        "risk": "Draw risk is still 27.1%.",
+        "rating_edge": 154.2,
+        "form_edge": 0,
+        "xg_edge": 1.35
+      }
     },
     {
       "date": "2026-06-12",
@@ -574,7 +675,22 @@
       "odds_a": 1.31,
       "odds_draw": 5.15,
       "odds_b": 24.06,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "USA",
+        "confidence_band": "strong",
+        "summary": "USA are clear favorites.",
+        "signals": [
+          "Elo edge: USA 241",
+          "xG edge: USA +2.31",
+          "Form edge: USA +0.16"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 240.9,
+        "form_edge": 0.16,
+        "xg_edge": 2.31
+      }
     },
     {
       "date": "2026-06-13",
@@ -645,7 +761,21 @@
       "odds_a": 14.77,
       "odds_draw": 4.3,
       "odds_b": 1.43,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Switzerland",
+        "confidence_band": "lean",
+        "summary": "Switzerland hold the edge.",
+        "signals": [
+          "Elo edge: Switzerland 214",
+          "xG edge: Switzerland +1.83"
+        ],
+        "risk": "Draw risk is still 23.2%.",
+        "rating_edge": -213.9,
+        "form_edge": 0,
+        "xg_edge": -1.83
+      }
     },
     {
       "date": "2026-06-13",
@@ -716,7 +846,21 @@
       "odds_a": 1.62,
       "odds_draw": 3.68,
       "odds_b": 9.06,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Brazil",
+        "confidence_band": "lean",
+        "summary": "Brazil hold the edge.",
+        "signals": [
+          "Elo edge: Brazil 154",
+          "xG edge: Brazil +1.36"
+        ],
+        "risk": "Draw risk is still 27.2%.",
+        "rating_edge": 154.2,
+        "form_edge": 0,
+        "xg_edge": 1.36
+      }
     },
     {
       "date": "2026-06-13",
@@ -787,7 +931,22 @@
       "odds_a": 15.82,
       "odds_draw": 4.39,
       "odds_b": 1.41,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Scotland",
+        "confidence_band": "strong",
+        "summary": "Scotland are clear favorites.",
+        "signals": [
+          "Elo edge: Scotland 213",
+          "xG edge: Scotland +1.88",
+          "Form edge: Scotland +0.08"
+        ],
+        "risk": "Draw risk is still 22.8%.",
+        "rating_edge": -213.4,
+        "form_edge": -0.08,
+        "xg_edge": -1.88
+      }
     },
     {
       "date": "2026-06-13",
@@ -858,7 +1017,22 @@
       "odds_a": 2.07,
       "odds_draw": 3.09,
       "odds_b": 5.17,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Australia",
+        "confidence_band": "fragile",
+        "summary": "Australia lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Australia 77",
+          "xG edge: Australia +0.71",
+          "Form edge: Australia +0.16"
+        ],
+        "risk": "Draw risk is still 32.4%.",
+        "rating_edge": 77.1,
+        "form_edge": 0.16,
+        "xg_edge": 0.71
+      }
     },
     {
       "date": "2026-06-14",
@@ -929,7 +1103,22 @@
       "odds_a": 1.13,
       "odds_draw": 8.82,
       "odds_b": 242.49,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Germany",
+        "confidence_band": "strong",
+        "summary": "Germany are clear favorites.",
+        "signals": [
+          "Elo edge: Germany 580",
+          "xG edge: Germany +3.75",
+          "Form edge: Germany +0.16"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 580.1,
+        "form_edge": 0.16,
+        "xg_edge": 3.75
+      }
     },
     {
       "date": "2026-06-14",
@@ -1000,7 +1189,21 @@
       "odds_a": 3.19,
       "odds_draw": 2.9,
       "odds_b": 2.93,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "draw",
+        "favorite_team": "Draw",
+        "confidence_band": "fragile",
+        "summary": "The model sees a tight game with draw risk on top.",
+        "signals": [
+          "Form edge: Ivory Coast +0.08",
+          "Top outcome: Draw 34.5%"
+        ],
+        "risk": "Neither side clears 34.1% win probability.",
+        "rating_edge": -13.3,
+        "form_edge": 0.08,
+        "xg_edge": -0.06
+      }
     },
     {
       "date": "2026-06-14",
@@ -1071,7 +1274,21 @@
       "odds_a": 2.35,
       "odds_draw": 2.97,
       "odds_b": 4.21,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Netherlands",
+        "confidence_band": "fragile",
+        "summary": "Netherlands lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Netherlands 45",
+          "xG edge: Netherlands +0.45"
+        ],
+        "risk": "Draw risk is still 33.7%.",
+        "rating_edge": 45.2,
+        "form_edge": 0,
+        "xg_edge": 0.45
+      }
     },
     {
       "date": "2026-06-14",
@@ -1142,7 +1359,22 @@
       "odds_a": 1.57,
       "odds_draw": 3.75,
       "odds_b": 10.38,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Sweden",
+        "confidence_band": "lean",
+        "summary": "Sweden hold the edge.",
+        "signals": [
+          "Elo edge: Sweden 154",
+          "xG edge: Sweden +1.45",
+          "Form edge: Sweden +0.16"
+        ],
+        "risk": "Draw risk is still 26.7%.",
+        "rating_edge": 154.1,
+        "form_edge": 0.16,
+        "xg_edge": 1.45
+      }
     },
     {
       "date": "2026-06-15",
@@ -1213,7 +1445,21 @@
       "odds_a": 1.58,
       "odds_draw": 3.77,
       "odds_b": 10.03,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Belgium",
+        "confidence_band": "lean",
+        "summary": "Belgium hold the edge.",
+        "signals": [
+          "Elo edge: Belgium 173",
+          "xG edge: Belgium +1.45"
+        ],
+        "risk": "Draw risk is still 26.5%.",
+        "rating_edge": 172.5,
+        "form_edge": 0,
+        "xg_edge": 1.45
+      }
     },
     {
       "date": "2026-06-15",
@@ -1284,7 +1530,21 @@
       "odds_a": 1.64,
       "odds_draw": 3.6,
       "odds_b": 8.93,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Iran",
+        "confidence_band": "lean",
+        "summary": "Iran hold the edge.",
+        "signals": [
+          "Elo edge: Iran 163",
+          "xG edge: Iran +1.31"
+        ],
+        "risk": "Draw risk is still 27.8%.",
+        "rating_edge": 163.4,
+        "form_edge": 0,
+        "xg_edge": 1.31
+      }
     },
     {
       "date": "2026-06-15",
@@ -1355,7 +1615,21 @@
       "odds_a": 1.15,
       "odds_draw": 8.33,
       "odds_b": 140.32,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Spain",
+        "confidence_band": "strong",
+        "summary": "Spain are clear favorites.",
+        "signals": [
+          "Elo edge: Spain 453",
+          "xG edge: Spain +3.64"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 453.2,
+        "form_edge": 0,
+        "xg_edge": 3.64
+      }
     },
     {
       "date": "2026-06-15",
@@ -1426,7 +1700,21 @@
       "odds_a": 10.1,
       "odds_draw": 3.76,
       "odds_b": 1.57,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Uruguay",
+        "confidence_band": "lean",
+        "summary": "Uruguay hold the edge.",
+        "signals": [
+          "Elo edge: Uruguay 173",
+          "xG edge: Uruguay +1.44"
+        ],
+        "risk": "Draw risk is still 26.6%.",
+        "rating_edge": -172.5,
+        "form_edge": 0,
+        "xg_edge": -1.44
+      }
     },
     {
       "date": "2026-06-16",
@@ -1497,7 +1785,22 @@
       "odds_a": 1.27,
       "odds_draw": 5.65,
       "odds_b": 29.24,
-      "prediction_source": "archived"
+      "prediction_source": "archived",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "France",
+        "confidence_band": "strong",
+        "summary": "France are clear favorites.",
+        "signals": [
+          "Elo edge: France 315",
+          "xG edge: France +2.55",
+          "Form edge: France +0.16"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 314.7,
+        "form_edge": 0.16,
+        "xg_edge": 2.55
+      }
     },
     {
       "date": "2026-06-16",
@@ -1568,7 +1871,22 @@
       "odds_a": 4.46,
       "odds_draw": 3.0,
       "odds_b": 2.26,
-      "prediction_source": "archived"
+      "prediction_source": "archived",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Norway",
+        "confidence_band": "fragile",
+        "summary": "Norway lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Norway 104",
+          "xG edge: Norway +0.52",
+          "Form edge: Norway +0.16"
+        ],
+        "risk": "Draw risk is still 33.3%.",
+        "rating_edge": -104.3,
+        "form_edge": -0.16,
+        "xg_edge": -0.52
+      }
     },
     {
       "date": "2026-06-16",
@@ -1639,7 +1957,22 @@
       "odds_a": 1.14,
       "odds_draw": 8.44,
       "odds_b": 156.25,
-      "prediction_source": "archived"
+      "prediction_source": "archived",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Argentina",
+        "confidence_band": "strong",
+        "summary": "Argentina are clear favorites.",
+        "signals": [
+          "Elo edge: Argentina 446",
+          "xG edge: Argentina +3.67",
+          "Form edge: Argentina +0.16"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 446.1,
+        "form_edge": 0.16,
+        "xg_edge": 3.67
+      }
     },
     {
       "date": "2026-06-16",
@@ -1710,7 +2043,22 @@
       "odds_a": 1.67,
       "odds_draw": 3.55,
       "odds_b": 8.44,
-      "prediction_source": "archived"
+      "prediction_source": "archived",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Austria",
+        "confidence_band": "lean",
+        "summary": "Austria hold the edge.",
+        "signals": [
+          "Elo edge: Austria 186",
+          "xG edge: Austria +1.26",
+          "Form edge: Austria +0.16"
+        ],
+        "risk": "Draw risk is still 28.2%.",
+        "rating_edge": 186.0,
+        "form_edge": 0.16,
+        "xg_edge": 1.26
+      }
     },
     {
       "date": "2026-06-17",
@@ -1781,7 +2129,21 @@
       "odds_a": 1.17,
       "odds_draw": 7.55,
       "odds_b": 78.74,
-      "prediction_source": "archived"
+      "prediction_source": "archived",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Portugal",
+        "confidence_band": "strong",
+        "summary": "Portugal are clear favorites.",
+        "signals": [
+          "Elo edge: Portugal 330",
+          "xG edge: Portugal +3.37"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 330.1,
+        "form_edge": 0,
+        "xg_edge": 3.37
+      }
     },
     {
       "date": "2026-06-17",
@@ -1852,7 +2214,21 @@
       "odds_a": 1.15,
       "odds_draw": 8.16,
       "odds_b": 118.31,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Colombia",
+        "confidence_band": "strong",
+        "summary": "Colombia are clear favorites.",
+        "signals": [
+          "Elo edge: Colombia 410",
+          "xG edge: Colombia +3.60"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 410,
+        "form_edge": 0,
+        "xg_edge": 3.6
+      }
     },
     {
       "date": "2026-06-17",
@@ -1924,10 +2300,24 @@
           0.00019
         ]
       ],
-      "odds_a": 1.14,
-      "odds_draw": 12.7,
-      "odds_b": 24.49,
-      "prediction_source": "live_conditional"
+      "odds_a": 1.66,
+      "odds_draw": 3.61,
+      "odds_b": 8.38,
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "England",
+        "confidence_band": "lean",
+        "summary": "England hold the edge.",
+        "signals": [
+          "Elo edge: England 160",
+          "xG edge: England +1.29"
+        ],
+        "risk": "Draw risk is still 27.7%.",
+        "rating_edge": 160,
+        "form_edge": 0,
+        "xg_edge": 1.29
+      }
     },
     {
       "date": "2026-06-17",
@@ -1998,7 +2388,21 @@
       "odds_a": 2.64,
       "odds_draw": 2.9,
       "odds_b": 3.62,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Panama",
+        "confidence_band": "fragile",
+        "summary": "Panama lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Panama 30",
+          "xG edge: Panama +0.24"
+        ],
+        "risk": "Draw risk is still 34.5%.",
+        "rating_edge": 30,
+        "form_edge": 0,
+        "xg_edge": 0.24
+      }
     },
     {
       "date": "2026-06-18",
@@ -2069,7 +2473,22 @@
       "odds_a": 2.35,
       "odds_draw": 2.92,
       "odds_b": 4.31,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Czech Republic",
+        "confidence_band": "fragile",
+        "summary": "Czech Republic lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Czech Republic 47",
+          "xG edge: Czech Republic +0.45",
+          "Form edge: Czech Republic +0.04"
+        ],
+        "risk": "Draw risk is still 34.3%.",
+        "rating_edge": 46.8,
+        "form_edge": 0.04,
+        "xg_edge": 0.45
+      }
     },
     {
       "date": "2026-06-18",
@@ -2140,7 +2559,22 @@
       "odds_a": 2.38,
       "odds_draw": 3.06,
       "odds_b": 3.96,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Mexico",
+        "confidence_band": "fragile",
+        "summary": "Mexico lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Mexico 27",
+          "xG edge: Mexico +0.42",
+          "Form edge: Mexico +0.04"
+        ],
+        "risk": "Draw risk is still 32.7%.",
+        "rating_edge": 26.8,
+        "form_edge": 0.04,
+        "xg_edge": 0.42
+      }
     },
     {
       "date": "2026-06-18",
@@ -2211,7 +2645,21 @@
       "odds_a": 1.32,
       "odds_draw": 5.1,
       "odds_b": 22.15,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Switzerland",
+        "confidence_band": "strong",
+        "summary": "Switzerland are clear favorites.",
+        "signals": [
+          "Elo edge: Switzerland 267",
+          "xG edge: Switzerland +2.28"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 266.5,
+        "form_edge": 0,
+        "xg_edge": 2.28
+      }
     },
     {
       "date": "2026-06-18",
@@ -2282,7 +2730,22 @@
       "odds_a": 1.85,
       "odds_draw": 3.31,
       "odds_b": 6.31,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Canada",
+        "confidence_band": "fragile",
+        "summary": "Canada lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Canada 102",
+          "xG edge: Canada +0.97",
+          "Venue boost: Canada host-side advantage"
+        ],
+        "risk": "Draw risk is still 30.2%.",
+        "rating_edge": 101.5,
+        "form_edge": 0,
+        "xg_edge": 0.97
+      }
     },
     {
       "date": "2026-06-19",
@@ -2353,7 +2816,22 @@
       "odds_a": 5.06,
       "odds_draw": 3.13,
       "odds_b": 2.07,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Morocco",
+        "confidence_band": "fragile",
+        "summary": "Morocco lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Morocco 101",
+          "xG edge: Morocco +0.71",
+          "Form edge: Scotland +0.04"
+        ],
+        "risk": "Draw risk is still 31.9%.",
+        "rating_edge": -101.2,
+        "form_edge": 0.04,
+        "xg_edge": -0.71
+      }
     },
     {
       "date": "2026-06-19",
@@ -2424,7 +2902,22 @@
       "odds_a": 1.14,
       "odds_draw": 8.54,
       "odds_b": 174.36,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Brazil",
+        "confidence_band": "strong",
+        "summary": "Brazil are clear favorites.",
+        "signals": [
+          "Elo edge: Brazil 469",
+          "xG edge: Brazil +3.69",
+          "Form edge: Brazil +0.04"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 468.8,
+        "form_edge": 0.04,
+        "xg_edge": 3.69
+      }
     },
     {
       "date": "2026-06-19",
@@ -2495,7 +2988,22 @@
       "odds_a": 2.16,
       "odds_draw": 3.15,
       "odds_b": 4.55,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "USA",
+        "confidence_band": "fragile",
+        "summary": "USA lead a volatile matchup.",
+        "signals": [
+          "Elo edge: USA 52",
+          "xG edge: USA +0.61",
+          "Venue boost: USA host-side advantage"
+        ],
+        "risk": "Draw risk is still 31.7%.",
+        "rating_edge": 51.9,
+        "form_edge": 0.0,
+        "xg_edge": 0.61
+      }
     },
     {
       "date": "2026-06-19",
@@ -2566,7 +3074,21 @@
       "odds_a": 1.91,
       "odds_draw": 3.18,
       "odds_b": 6.23,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Turkey",
+        "confidence_band": "fragile",
+        "summary": "Turkey lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Turkey 112",
+          "xG edge: Turkey +0.89"
+        ],
+        "risk": "Draw risk is still 31.5%.",
+        "rating_edge": 111.9,
+        "form_edge": 0.0,
+        "xg_edge": 0.89
+      }
     },
     {
       "date": "2026-06-20",
@@ -2637,7 +3159,22 @@
       "odds_a": 1.34,
       "odds_draw": 4.89,
       "odds_b": 19.57,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Germany",
+        "confidence_band": "strong",
+        "summary": "Germany are clear favorites.",
+        "signals": [
+          "Elo edge: Germany 232",
+          "xG edge: Germany +2.17",
+          "Form edge: Germany +0.04"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 231.7,
+        "form_edge": 0.04,
+        "xg_edge": 2.17
+      }
     },
     {
       "date": "2026-06-20",
@@ -2708,7 +3245,22 @@
       "odds_a": 1.16,
       "odds_draw": 7.76,
       "odds_b": 100.43,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Ecuador",
+        "confidence_band": "strong",
+        "summary": "Ecuador are clear favorites.",
+        "signals": [
+          "Elo edge: Ecuador 362",
+          "xG edge: Ecuador +3.42",
+          "Form edge: Ecuador +0.04"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 361.7,
+        "form_edge": 0.04,
+        "xg_edge": 3.42
+      }
     },
     {
       "date": "2026-06-20",
@@ -2779,7 +3331,22 @@
       "odds_a": 2.49,
       "odds_draw": 3.01,
       "odds_b": 3.77,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Netherlands",
+        "confidence_band": "fragile",
+        "summary": "Netherlands lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Netherlands 53",
+          "xG edge: Netherlands +0.33",
+          "Form edge: Sweden +0.08"
+        ],
+        "risk": "Draw risk is still 33.2%.",
+        "rating_edge": 53.0,
+        "form_edge": -0.08,
+        "xg_edge": 0.33
+      }
     },
     {
       "date": "2026-06-20",
@@ -2850,7 +3417,22 @@
       "odds_a": 10.03,
       "odds_draw": 3.64,
       "odds_b": 1.6,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Japan",
+        "confidence_band": "lean",
+        "summary": "Japan hold the edge.",
+        "signals": [
+          "Elo edge: Japan 162",
+          "xG edge: Japan +1.38",
+          "Form edge: Japan +0.08"
+        ],
+        "risk": "Draw risk is still 27.5%.",
+        "rating_edge": -162.0,
+        "form_edge": -0.08,
+        "xg_edge": -1.38
+      }
     },
     {
       "date": "2026-06-21",
@@ -2921,7 +3503,21 @@
       "odds_a": 1.83,
       "odds_draw": 3.31,
       "odds_b": 6.68,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Belgium",
+        "confidence_band": "fragile",
+        "summary": "Belgium lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Belgium 120",
+          "xG edge: Belgium +1.01"
+        ],
+        "risk": "Draw risk is still 30.3%.",
+        "rating_edge": 119.6,
+        "form_edge": 0,
+        "xg_edge": 1.01
+      }
     },
     {
       "date": "2026-06-21",
@@ -2992,7 +3588,21 @@
       "odds_a": 5.99,
       "odds_draw": 3.19,
       "odds_b": 1.92,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Egypt",
+        "confidence_band": "fragile",
+        "summary": "Egypt lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Egypt 110",
+          "xG edge: Egypt +0.87"
+        ],
+        "risk": "Draw risk is still 31.3%.",
+        "rating_edge": -110.4,
+        "form_edge": 0,
+        "xg_edge": -0.87
+      }
     },
     {
       "date": "2026-06-21",
@@ -3063,7 +3673,21 @@
       "odds_a": 1.31,
       "odds_draw": 5.18,
       "odds_b": 23.62,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Spain",
+        "confidence_band": "strong",
+        "summary": "Spain are clear favorites.",
+        "signals": [
+          "Elo edge: Spain 263",
+          "xG edge: Spain +2.32"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 262.9,
+        "form_edge": 0,
+        "xg_edge": 2.32
+      }
     },
     {
       "date": "2026-06-21",
@@ -3134,7 +3758,21 @@
       "odds_a": 1.17,
       "odds_draw": 7.61,
       "odds_b": 81.59,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Uruguay",
+        "confidence_band": "strong",
+        "summary": "Uruguay are clear favorites.",
+        "signals": [
+          "Elo edge: Uruguay 363",
+          "xG edge: Uruguay +3.40"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 362.9,
+        "form_edge": 0,
+        "xg_edge": 3.4
+      }
     },
     {
       "date": "2026-06-22",
@@ -3205,7 +3843,22 @@
       "odds_a": 1.13,
       "odds_draw": 8.74,
       "odds_b": 220.05,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "France",
+        "confidence_band": "strong",
+        "summary": "France are clear favorites.",
+        "signals": [
+          "Elo edge: France 454",
+          "xG edge: France +3.73",
+          "Form edge: France +0.16"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 454.5,
+        "form_edge": 0.16,
+        "xg_edge": 3.73
+      }
     },
     {
       "date": "2026-06-22",
@@ -3276,7 +3929,21 @@
       "odds_a": 3.18,
       "odds_draw": 2.91,
       "odds_b": 2.92,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "draw",
+        "favorite_team": "Draw",
+        "confidence_band": "fragile",
+        "summary": "The model sees a tight game with draw risk on top.",
+        "signals": [
+          "Elo edge: Senegal 36",
+          "Form edge: Norway +0.16"
+        ],
+        "risk": "Neither side clears 34.2% win probability.",
+        "rating_edge": -35.5,
+        "form_edge": 0.16,
+        "xg_edge": -0.07
+      }
     },
     {
       "date": "2026-06-22",
@@ -3347,7 +4014,21 @@
       "odds_a": 1.17,
       "odds_draw": 7.72,
       "odds_b": 78.03,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Argentina",
+        "confidence_band": "strong",
+        "summary": "Argentina are clear favorites.",
+        "signals": [
+          "Elo edge: Argentina 430",
+          "xG edge: Argentina +3.49"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 430.1,
+        "form_edge": 0.0,
+        "xg_edge": 3.49
+      }
     },
     {
       "date": "2026-06-22",
@@ -3418,7 +4099,21 @@
       "odds_a": 10.35,
       "odds_draw": 3.63,
       "odds_b": 1.59,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Algeria",
+        "confidence_band": "lean",
+        "summary": "Algeria hold the edge.",
+        "signals": [
+          "Elo edge: Algeria 170",
+          "xG edge: Algeria +1.38"
+        ],
+        "risk": "Draw risk is still 27.6%.",
+        "rating_edge": -170.0,
+        "form_edge": 0.0,
+        "xg_edge": -1.38
+      }
     },
     {
       "date": "2026-06-23",
@@ -3489,7 +4184,21 @@
       "odds_a": 1.14,
       "odds_draw": 8.38,
       "odds_b": 146.94,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Portugal",
+        "confidence_band": "strong",
+        "summary": "Portugal are clear favorites.",
+        "signals": [
+          "Elo edge: Portugal 455",
+          "xG edge: Portugal +3.65"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 455.0,
+        "form_edge": 0,
+        "xg_edge": 3.65
+      }
     },
     {
       "date": "2026-06-23",
@@ -3560,7 +4269,21 @@
       "odds_a": 1.27,
       "odds_draw": 5.58,
       "odds_b": 30.32,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Colombia",
+        "confidence_band": "strong",
+        "summary": "Colombia are clear favorites.",
+        "signals": [
+          "Elo edge: Colombia 285",
+          "xG edge: Colombia +2.51"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 285.0,
+        "form_edge": 0,
+        "xg_edge": 2.51
+      }
     },
     {
       "date": "2026-06-23",
@@ -3631,7 +4354,21 @@
       "odds_a": 1.15,
       "odds_draw": 8.32,
       "odds_b": 138.21,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "England",
+        "confidence_band": "strong",
+        "summary": "England are clear favorites.",
+        "signals": [
+          "Elo edge: England 450",
+          "xG edge: England +3.64"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 450,
+        "form_edge": 0,
+        "xg_edge": 3.64
+      }
     },
     {
       "date": "2026-06-23",
@@ -3702,7 +4439,21 @@
       "odds_a": 22.62,
       "odds_draw": 5.05,
       "odds_b": 1.32,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Croatia",
+        "confidence_band": "strong",
+        "summary": "Croatia are clear favorites.",
+        "signals": [
+          "Elo edge: Croatia 260",
+          "xG edge: Croatia +2.25"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": -260,
+        "form_edge": 0,
+        "xg_edge": -2.25
+      }
     },
     {
       "date": "2026-06-24",
@@ -3773,7 +4524,22 @@
       "odds_a": 1.32,
       "odds_draw": 5.04,
       "odds_b": 21.32,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Mexico",
+        "confidence_band": "strong",
+        "summary": "Mexico are clear favorites.",
+        "signals": [
+          "Elo edge: Mexico 240",
+          "xG edge: Mexico +2.25",
+          "Form edge: Mexico +0.12"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 240.2,
+        "form_edge": 0.12,
+        "xg_edge": 2.25
+      }
     },
     {
       "date": "2026-06-24",
@@ -3844,7 +4610,22 @@
       "odds_a": 1.29,
       "odds_draw": 5.22,
       "odds_b": 27.85,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "South Korea",
+        "confidence_band": "strong",
+        "summary": "South Korea are clear favorites.",
+        "signals": [
+          "Elo edge: South Korea 260",
+          "xG edge: South Korea +2.33",
+          "Form edge: South Korea +0.12"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 260.2,
+        "form_edge": 0.12,
+        "xg_edge": 2.33
+      }
     },
     {
       "date": "2026-06-24",
@@ -3915,7 +4696,21 @@
       "odds_a": 5.2,
       "odds_draw": 3.23,
       "odds_b": 2.01,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Switzerland",
+        "confidence_band": "fragile",
+        "summary": "Switzerland lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Switzerland 112",
+          "xG edge: Switzerland +0.78"
+        ],
+        "risk": "Draw risk is still 30.9%.",
+        "rating_edge": -112.3,
+        "form_edge": 0,
+        "xg_edge": -0.78
+      }
     },
     {
       "date": "2026-06-24",
@@ -3986,7 +4781,21 @@
       "odds_a": 2.47,
       "odds_draw": 2.95,
       "odds_b": 3.9,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Qatar",
+        "confidence_band": "fragile",
+        "summary": "Qatar lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Qatar 53",
+          "xG edge: Qatar +0.35"
+        ],
+        "risk": "Draw risk is still 33.9%.",
+        "rating_edge": 52.7,
+        "form_edge": 0,
+        "xg_edge": 0.35
+      }
     },
     {
       "date": "2026-06-24",
@@ -4057,7 +4866,22 @@
       "odds_a": 1.32,
       "odds_draw": 5.14,
       "odds_b": 22.13,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Brazil",
+        "confidence_band": "strong",
+        "summary": "Brazil are clear favorites.",
+        "signals": [
+          "Elo edge: Brazil 255",
+          "xG edge: Brazil +2.30",
+          "Form edge: Scotland +0.04"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 255.4,
+        "form_edge": -0.04,
+        "xg_edge": 2.3
+      }
     },
     {
       "date": "2026-06-24",
@@ -4128,7 +4952,22 @@
       "odds_a": 1.22,
       "odds_draw": 6.29,
       "odds_b": 45.55,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Morocco",
+        "confidence_band": "strong",
+        "summary": "Morocco are clear favorites.",
+        "signals": [
+          "Elo edge: Morocco 315",
+          "xG edge: Morocco +2.82",
+          "Form edge: Morocco +0.04"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 314.6,
+        "form_edge": 0.04,
+        "xg_edge": 2.82
+      }
     },
     {
       "date": "2026-06-25",
@@ -4199,7 +5038,22 @@
       "odds_a": 1.65,
       "odds_draw": 3.62,
       "odds_b": 8.43,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "USA",
+        "confidence_band": "lean",
+        "summary": "USA hold the edge.",
+        "signals": [
+          "Elo edge: USA 129",
+          "xG edge: USA +1.30",
+          "Form edge: USA +0.16"
+        ],
+        "risk": "Draw risk is still 27.6%.",
+        "rating_edge": 129.0,
+        "form_edge": 0.16,
+        "xg_edge": 1.3
+      }
     },
     {
       "date": "2026-06-25",
@@ -4270,7 +5124,22 @@
       "odds_a": 1.49,
       "odds_draw": 4.03,
       "odds_b": 12.63,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Australia",
+        "confidence_band": "lean",
+        "summary": "Australia hold the edge.",
+        "signals": [
+          "Elo edge: Australia 189",
+          "xG edge: Australia +1.65",
+          "Form edge: Australia +0.16"
+        ],
+        "risk": "Draw risk is still 24.8%.",
+        "rating_edge": 189.0,
+        "form_edge": 0.16,
+        "xg_edge": 1.65
+      }
     },
     {
       "date": "2026-06-25",
@@ -4341,7 +5210,22 @@
       "odds_a": 1.38,
       "odds_draw": 4.63,
       "odds_b": 17.13,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Germany",
+        "confidence_band": "strong",
+        "summary": "Germany are clear favorites.",
+        "signals": [
+          "Elo edge: Germany 218",
+          "xG edge: Germany +2.02",
+          "Form edge: Germany +0.12"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 218.4,
+        "form_edge": 0.12,
+        "xg_edge": 2.02
+      }
     },
     {
       "date": "2026-06-25",
@@ -4412,7 +5296,22 @@
       "odds_a": 1.17,
       "odds_draw": 7.45,
       "odds_b": 85.39,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Ivory Coast",
+        "confidence_band": "strong",
+        "summary": "Ivory Coast are clear favorites.",
+        "signals": [
+          "Elo edge: Ivory Coast 348",
+          "xG edge: Ivory Coast +3.29",
+          "Form edge: Ivory Coast +0.12"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 348.4,
+        "form_edge": 0.12,
+        "xg_edge": 3.29
+      }
     },
     {
       "date": "2026-06-25",
@@ -4483,7 +5382,22 @@
       "odds_a": 1.42,
       "odds_draw": 4.3,
       "odds_b": 16.0,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Netherlands",
+        "confidence_band": "strong",
+        "summary": "Netherlands are clear favorites.",
+        "signals": [
+          "Elo edge: Netherlands 207",
+          "xG edge: Netherlands +1.84",
+          "Form edge: Netherlands +0.08"
+        ],
+        "risk": "Draw risk is still 23.3%.",
+        "rating_edge": 207.2,
+        "form_edge": 0.08,
+        "xg_edge": 1.84
+      }
     },
     {
       "date": "2026-06-25",
@@ -4554,7 +5468,21 @@
       "odds_a": 3.19,
       "odds_draw": 2.93,
       "odds_b": 2.89,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Sweden",
+        "confidence_band": "fragile",
+        "summary": "Sweden lead a volatile matchup.",
+        "signals": [
+          "Form edge: Sweden +0.08",
+          "Top outcome: Sweden 34.6%"
+        ],
+        "risk": "Draw risk is still 34.1%.",
+        "rating_edge": 7.8,
+        "form_edge": -0.08,
+        "xg_edge": -0.08
+      }
     },
     {
       "date": "2026-06-26",
@@ -4625,7 +5553,21 @@
       "odds_a": 1.27,
       "odds_draw": 5.56,
       "odds_b": 29.97,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Belgium",
+        "confidence_band": "strong",
+        "summary": "Belgium are clear favorites.",
+        "signals": [
+          "Elo edge: Belgium 283",
+          "xG edge: Belgium +2.50"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 283.0,
+        "form_edge": 0,
+        "xg_edge": 2.5
+      }
     },
     {
       "date": "2026-06-26",
@@ -4696,7 +5638,21 @@
       "odds_a": 2.41,
       "odds_draw": 2.94,
       "odds_b": 4.09,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Iran",
+        "confidence_band": "fragile",
+        "summary": "Iran lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Iran 53",
+          "xG edge: Iran +0.40"
+        ],
+        "risk": "Draw risk is still 34.0%.",
+        "rating_edge": 53.0,
+        "form_edge": 0,
+        "xg_edge": 0.4
+      }
     },
     {
       "date": "2026-06-26",
@@ -4767,7 +5723,21 @@
       "odds_a": 1.99,
       "odds_draw": 3.2,
       "odds_b": 5.41,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Spain",
+        "confidence_band": "fragile",
+        "summary": "Spain lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Spain 90",
+          "xG edge: Spain +0.80"
+        ],
+        "risk": "Draw risk is still 31.2%.",
+        "rating_edge": 90.3,
+        "form_edge": 0,
+        "xg_edge": 0.8
+      }
     },
     {
       "date": "2026-06-26",
@@ -4838,7 +5808,21 @@
       "odds_a": 1.53,
       "odds_draw": 3.89,
       "odds_b": 11.22,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Saudi Arabia",
+        "confidence_band": "lean",
+        "summary": "Saudi Arabia hold the edge.",
+        "signals": [
+          "Elo edge: Saudi Arabia 190",
+          "xG edge: Saudi Arabia +1.55"
+        ],
+        "risk": "Draw risk is still 25.7%.",
+        "rating_edge": 190.3,
+        "form_edge": 0,
+        "xg_edge": 1.55
+      }
     },
     {
       "date": "2026-06-26",
@@ -4909,7 +5893,21 @@
       "odds_a": 1.19,
       "odds_draw": 7.18,
       "odds_b": 53.29,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "France",
+        "confidence_band": "strong",
+        "summary": "France are clear favorites.",
+        "signals": [
+          "Elo edge: France 350",
+          "xG edge: France +3.29"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 350.2,
+        "form_edge": 0.0,
+        "xg_edge": 3.29
+      }
     },
     {
       "date": "2026-06-26",
@@ -4980,7 +5978,21 @@
       "odds_a": 1.74,
       "odds_draw": 3.34,
       "odds_b": 7.99,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Senegal",
+        "confidence_band": "lean",
+        "summary": "Senegal hold the edge.",
+        "signals": [
+          "Elo edge: Senegal 140",
+          "xG edge: Senegal +1.12"
+        ],
+        "risk": "Draw risk is still 30.0%.",
+        "rating_edge": 139.8,
+        "form_edge": 0.0,
+        "xg_edge": 1.12
+      }
     },
     {
       "date": "2026-06-27",
@@ -5051,7 +6063,22 @@
       "odds_a": 1.13,
       "odds_draw": 8.82,
       "odds_b": 242.49,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Argentina",
+        "confidence_band": "strong",
+        "summary": "Argentina are clear favorites.",
+        "signals": [
+          "Elo edge: Argentina 616",
+          "xG edge: Argentina +3.75",
+          "Form edge: Argentina +0.16"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 616.1,
+        "form_edge": 0.16,
+        "xg_edge": 3.75
+      }
     },
     {
       "date": "2026-06-27",
@@ -5122,7 +6149,21 @@
       "odds_a": 3.86,
       "odds_draw": 2.94,
       "odds_b": 2.5,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_b",
+        "favorite_team": "Austria",
+        "confidence_band": "fragile",
+        "summary": "Austria lead a volatile matchup.",
+        "signals": [
+          "xG edge: Austria +0.33",
+          "Form edge: Austria +0.16"
+        ],
+        "risk": "Draw risk is still 34.1%.",
+        "rating_edge": -16.0,
+        "form_edge": -0.16,
+        "xg_edge": -0.33
+      }
     },
     {
       "date": "2026-06-27",
@@ -5193,7 +6234,21 @@
       "odds_a": 2.46,
       "odds_draw": 2.97,
       "odds_b": 3.9,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Portugal",
+        "confidence_band": "fragile",
+        "summary": "Portugal lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Portugal 45",
+          "xG edge: Portugal +0.36"
+        ],
+        "risk": "Draw risk is still 33.7%.",
+        "rating_edge": 45.0,
+        "form_edge": 0,
+        "xg_edge": 0.36
+      }
     },
     {
       "date": "2026-06-27",
@@ -5264,7 +6319,21 @@
       "odds_a": 1.83,
       "odds_draw": 3.29,
       "odds_b": 6.72,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "DR Congo",
+        "confidence_band": "fragile",
+        "summary": "DR Congo lead a volatile matchup.",
+        "signals": [
+          "Elo edge: DR Congo 125",
+          "xG edge: DR Congo +1.00"
+        ],
+        "risk": "Draw risk is still 30.4%.",
+        "rating_edge": 125.0,
+        "form_edge": 0,
+        "xg_edge": 1.0
+      }
     },
     {
       "date": "2026-06-27",
@@ -5335,7 +6404,21 @@
       "odds_a": 1.15,
       "odds_draw": 8.14,
       "odds_b": 115.22,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "England",
+        "confidence_band": "strong",
+        "summary": "England are clear favorites.",
+        "signals": [
+          "Elo edge: England 420",
+          "xG edge: England +3.60"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 420,
+        "form_edge": 0,
+        "xg_edge": 3.6
+      }
     },
     {
       "date": "2026-06-27",
@@ -5406,7 +6489,21 @@
       "odds_a": 1.26,
       "odds_draw": 5.71,
       "odds_b": 32.36,
-      "prediction_source": "scheduled"
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Croatia",
+        "confidence_band": "strong",
+        "summary": "Croatia are clear favorites.",
+        "signals": [
+          "Elo edge: Croatia 290",
+          "xG edge: Croatia +2.57"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 290,
+        "form_edge": 0,
+        "xg_edge": 2.57
+      }
     }
   ],
   "tournament_probabilities": {
@@ -8557,40 +9654,28 @@
     "South Africa": "🇿🇦"
   },
   "probability_timeline": {
-    "Mexico": [
+    "Uzbekistan": [
       {
         "matchday": "pre",
-        "win_pct": 0.0052,
-        "qualify_pct": 0.9784
+        "win_pct": 0.0,
+        "qualify_pct": 0.0976
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0069,
-        "qualify_pct": 0.9978
+        "win_pct": 0.0,
+        "qualify_pct": 0.0987
       }
     ],
-    "New Zealand": [
+    "Paraguay": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.2412
+        "qualify_pct": 0.238
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.257
-      }
-    ],
-    "Panama": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.3096
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.2817
+        "qualify_pct": 0.1507
       }
     ],
     "Qatar": [
@@ -8602,19 +9687,127 @@
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.6063
+        "qualify_pct": 0.6064
       }
     ],
-    "Sweden": [
+    "Jordan": [
       {
         "matchday": "pre",
-        "win_pct": 0.0044,
-        "qualify_pct": 0.8212
+        "win_pct": 0.0,
+        "qualify_pct": 0.1484
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0047,
-        "qualify_pct": 0.9902
+        "win_pct": 0.0,
+        "qualify_pct": 0.0521
+      }
+    ],
+    "Ivory Coast": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.8852
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0001,
+        "qualify_pct": 0.9954
+      }
+    ],
+    "Croatia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0016,
+        "qualify_pct": 0.966
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0019,
+        "qualify_pct": 0.9626
+      }
+    ],
+    "Japan": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0036,
+        "qualify_pct": 0.8108
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0031,
+        "qualify_pct": 0.8468
+      }
+    ],
+    "DR Congo": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.4656
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.627
+      }
+    ],
+    "England": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0752,
+        "qualify_pct": 0.9964
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0691,
+        "qualify_pct": 0.997
+      }
+    ],
+    "Algeria": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6864
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6379
+      }
+    ],
+    "Iraq": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2416
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0557
+      }
+    ],
+    "Saudi Arabia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6476
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7291
+      }
+    ],
+    "Czech Republic": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.4276
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3728
       }
     ],
     "Ghana": [
@@ -8821,16 +10014,16 @@
         "qualify_pct": 0.7309
       }
     ],
-    "Paraguay": [
+    "South Africa": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.238
+        "qualify_pct": 0.2564
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.1492
+        "qualify_pct": 0.1812
       }
     ],
     "Netherlands": [
@@ -8841,44 +10034,56 @@
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0122,
-        "qualify_pct": 0.9093
+        "win_pct": 0.0118,
+        "qualify_pct": 0.9126
       }
     ],
-    "Ivory Coast": [
+    "Haiti": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.8852
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0001,
-        "qualify_pct": 0.9954
-      }
-    ],
-    "Cape Verde": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0696
+        "qualify_pct": 0.0708
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.1362
+        "qualify_pct": 0.0116
       }
     ],
-    "Curaçao": [
+    "Brazil": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0828,
+        "qualify_pct": 0.994
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0697,
+        "qualify_pct": 0.9933
+      }
+    ],
+    "USA": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0076,
+        "qualify_pct": 0.9488
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0113,
+        "qualify_pct": 0.997
+      }
+    ],
+    "Turkey": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.0216
+        "qualify_pct": 0.682
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.0078
+        "qualify_pct": 0.4838
       }
     ],
     "Tunisia": [
@@ -8893,124 +10098,16 @@
         "qualify_pct": 0.0846
       }
     ],
-    "Colombia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0128,
-        "qualify_pct": 0.9908
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0102,
-        "qualify_pct": 0.9859
-      }
-    ],
-    "Algeria": [
+    "New Zealand": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.6864
+        "qualify_pct": 0.2412
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.6414
-      }
-    ],
-    "Senegal": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.7264
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6806
-      }
-    ],
-    "France": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.1964,
-        "qualify_pct": 0.9992
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.2029,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Switzerland": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0004,
-        "qualify_pct": 0.98
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0008,
-        "qualify_pct": 0.9401
-      }
-    ],
-    "Austria": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.754
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.9233
-      }
-    ],
-    "Jordan": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1484
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0543
-      }
-    ],
-    "Belgium": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0096,
-        "qualify_pct": 0.9804
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0089,
-        "qualify_pct": 0.9575
-      }
-    ],
-    "Germany": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0408,
-        "qualify_pct": 0.9976
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0481,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Saudi Arabia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6476
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.7271
+        "qualify_pct": 0.2552
       }
     ],
     "Spain": [
@@ -9021,80 +10118,20 @@
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0428,
-        "qualify_pct": 0.9443
+        "win_pct": 0.0435,
+        "qualify_pct": 0.942
       }
     ],
-    "South Korea": [
+    "Scotland": [
       {
         "matchday": "pre",
-        "win_pct": 0.0024,
-        "qualify_pct": 0.9592
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0018,
-        "qualify_pct": 0.9933
-      }
-    ],
-    "Egypt": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6788
-      },
-      {
-        "matchday": "md1",
         "win_pct": 0.0,
         "qualify_pct": 0.748
-      }
-    ],
-    "DR Congo": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.4656
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.6291
-      }
-    ],
-    "South Africa": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.2564
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1775
-      }
-    ],
-    "Haiti": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0708
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0105
-      }
-    ],
-    "Japan": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0036,
-        "qualify_pct": 0.8108
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.003,
-        "qualify_pct": 0.8493
+        "qualify_pct": 0.8572
       }
     ],
     "Portugal": [
@@ -9131,6 +10168,270 @@
         "matchday": "md1",
         "win_pct": 0.0012,
         "qualify_pct": 0.9496
+      }
+    ],
+    "Argentina": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.4588,
+        "qualify_pct": 0.9996
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.4728,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Iran": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0008,
+        "qualify_pct": 0.8168
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0001,
+        "qualify_pct": 0.6249
+      }
+    ],
+    "Ecuador": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.918
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0001,
+        "qualify_pct": 0.8116
+      }
+    ],
+    "Australia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0008,
+        "qualify_pct": 0.872
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0017,
+        "qualify_pct": 0.9863
+      }
+    ],
+    "Belgium": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0096,
+        "qualify_pct": 0.9804
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0093,
+        "qualify_pct": 0.9584
+      }
+    ],
+    "Portugal": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.026,
+        "qualify_pct": 0.9928
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0241,
+        "qualify_pct": 0.9712
+      }
+    ],
+    "Panama": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3096
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2806
+      }
+    ],
+    "Germany": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0408,
+        "qualify_pct": 0.9976
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.048,
+        "qualify_pct": 0.9999
+      }
+    ],
+    "France": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.1964,
+        "qualify_pct": 0.9992
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.204,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Mexico": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0052,
+        "qualify_pct": 0.9784
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0065,
+        "qualify_pct": 0.9971
+      }
+    ],
+    "Austria": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.754
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.9249
+      }
+    ],
+    "Colombia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0128,
+        "qualify_pct": 0.9908
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0096,
+        "qualify_pct": 0.9861
+      }
+    ],
+    "Switzerland": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0004,
+        "qualify_pct": 0.98
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0006,
+        "qualify_pct": 0.9411
+      }
+    ],
+    "Senegal": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7264
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6808
+      }
+    ],
+    "Norway": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6408
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.9364
+      }
+    ],
+    "Morocco": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0012,
+        "qualify_pct": 0.9148
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0011,
+        "qualify_pct": 0.9597
+      }
+    ],
+    "South Korea": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0024,
+        "qualify_pct": 0.9592
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0022,
+        "qualify_pct": 0.994
+      }
+    ],
+    "Curaçao": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0216
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0077
+      }
+    ],
+    "Bosnia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3248
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3558
+      }
+    ],
+    "Egypt": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6788
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7487
+      }
+    ],
+    "Uruguay": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0036,
+        "qualify_pct": 0.9712
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0048,
+        "qualify_pct": 0.93
+      }
+    ],
+    "Sweden": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0044,
+        "qualify_pct": 0.8212
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0045,
+        "qualify_pct": 0.9897
       }
     ]
   },
@@ -9467,15 +10768,15 @@
       "change": -5.04
     },
     {
-      "team": "Canada",
-      "initial": 1660,
-      "current": 1652.12,
-      "change": -7.88
-    },
-    {
       "team": "Brazil",
       "initial": 1960,
       "current": 1952.12,
+      "change": -7.88
+    },
+    {
+      "team": "Canada",
+      "initial": 1660,
+      "current": 1652.12,
       "change": -7.88
     },
     {
@@ -9491,15 +10792,15 @@
       "change": -8.31
     },
     {
-      "team": "Uruguay",
-      "initial": 1840,
-      "current": 1831.27,
-      "change": -8.73
-    },
-    {
       "team": "Belgium",
       "initial": 1860,
       "current": 1851.27,
+      "change": -8.73
+    },
+    {
+      "team": "Uruguay",
+      "initial": 1840,
+      "current": 1831.27,
       "change": -8.73
     },
     {

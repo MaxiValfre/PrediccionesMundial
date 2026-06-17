@@ -201,6 +201,32 @@ def main():
             )
             if market:
                 match.update(market)
+                explanation = match.get("explanation")
+                if explanation:
+                    favorite_side = explanation.get("favorite_side")
+                    if favorite_side == "team_a":
+                        model_prob = match.get("prob_win_a")
+                        market_prob = match.get("market_prob_a")
+                    elif favorite_side == "team_b":
+                        model_prob = match.get("prob_win_b")
+                        market_prob = match.get("market_prob_b")
+                    elif favorite_side == "draw":
+                        model_prob = match.get("prob_draw")
+                        market_prob = match.get("market_prob_draw")
+                    else:
+                        model_prob = None
+                        market_prob = None
+
+                    if model_prob is not None and market_prob is not None:
+                        market_edge = round((model_prob - market_prob) * 100, 1)
+                        explanation["market_edge"] = market_edge
+                        if abs(market_edge) >= 3:
+                            market_signal = (
+                                f"Market edge: {market_edge:+.1f} pts vs books"
+                            )
+                            signals = explanation.get("signals", [])
+                            if market_signal not in signals:
+                                explanation["signals"] = (signals + [market_signal])[:4]
 
         if market_cache.get("last_fetch"):
             output["market_odds_status"] = {
