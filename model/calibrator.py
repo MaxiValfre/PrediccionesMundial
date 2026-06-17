@@ -52,6 +52,7 @@ def classify_result(
 
     Returns:
         'exact': Predicted the exact score.
+        'close': Predicted the right result and stayed within one goal per side.
         'correct_direction': Predicted the right winner/draw.
         'wrong': Predicted wrong outcome.
     """
@@ -74,6 +75,11 @@ def classify_result(
         actual_outcome = "draw"
 
     if pred_outcome == actual_outcome:
+        if (
+            abs(predicted_score_a - actual_score_a) <= 1
+            and abs(predicted_score_b - actual_score_b) <= 1
+        ):
+            return "close"
         return "correct_direction"
     return "wrong"
 
@@ -169,6 +175,7 @@ def compute_accuracy(prediction_log: list[dict]) -> dict:
         return {
             "total_predictions": 0,
             "exact_scores": 0,
+            "close_scores": 0,
             "correct_direction": 0,
             "wrong_direction": 0,
             "accuracy_pct": 0.0,
@@ -187,6 +194,7 @@ def compute_accuracy(prediction_log: list[dict]) -> dict:
         return {
             "total_predictions": 0,
             "exact_scores": 0,
+            "close_scores": 0,
             "correct_direction": 0,
             "wrong_direction": 0,
             "accuracy_pct": 0.0,
@@ -196,22 +204,23 @@ def compute_accuracy(prediction_log: list[dict]) -> dict:
         }
 
     exact = 0
+    close = 0
     correct = 0
     wrong = 0
     brier_total = 0.0
 
     for entry in evaluated:
-        cat = entry.get("result_category")
-        if cat is None:
-            cat = classify_result(
-                entry.get("predicted_score_a", 0),
-                entry.get("predicted_score_b", 0),
-                entry["actual_score_a"],
-                entry["actual_score_b"],
-            )
+        cat = classify_result(
+            entry.get("predicted_score_a", 0),
+            entry.get("predicted_score_b", 0),
+            entry["actual_score_a"],
+            entry["actual_score_b"],
+        )
 
         if cat == "exact":
             exact += 1
+        elif cat == "close":
+            close += 1
         elif cat == "correct_direction":
             correct += 1
         else:
@@ -243,13 +252,14 @@ def compute_accuracy(prediction_log: list[dict]) -> dict:
     else:
         rating = "Poor"
 
-    accuracy_pct = round((exact + correct) / n * 100, 1)
+    accuracy_pct = round((exact + close + correct) / n * 100, 1)
 
     calibration = compute_calibration(evaluated)
 
     return {
         "total_predictions": n,
         "exact_scores": exact,
+        "close_scores": close,
         "correct_direction": correct,
         "wrong_direction": wrong,
         "accuracy_pct": accuracy_pct,
@@ -267,6 +277,7 @@ def format_accuracy_report(metrics: dict) -> str:
     lines = [
         f"  Predictions evaluated: {metrics['total_predictions']}",
         f"  Exact scores:          {metrics['exact_scores']}",
+        f"  Close scores:          {metrics.get('close_scores', 0)}",
         f"  Correct direction:     {metrics['correct_direction']}",
         f"  Wrong direction:       {metrics['wrong_direction']}",
         f"  Accuracy:              {metrics['accuracy_pct']}%",

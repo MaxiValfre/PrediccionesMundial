@@ -17,6 +17,8 @@ from typing import Optional
 import numpy as np
 from scipy.stats import poisson
 
+from model.calibrator import classify_result
+
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -1870,11 +1872,25 @@ def generate_predictions() -> dict:
             with open(log_path, "r", encoding="utf-8") as f:
                 full_log = json.load(f)
             if full_log:
-                prediction_log_data = full_log
+                normalized_log = []
+                for entry in full_log:
+                    normalized_entry = dict(entry)
+                    actual_score_a = normalized_entry.get("actual_score_a")
+                    actual_score_b = normalized_entry.get("actual_score_b")
+                    if actual_score_a is not None and actual_score_b is not None:
+                        normalized_entry["result_category"] = classify_result(
+                            normalized_entry.get("predicted_score_a", 0),
+                            normalized_entry.get("predicted_score_b", 0),
+                            actual_score_a,
+                            actual_score_b,
+                        )
+                    normalized_log.append(normalized_entry)
+
+                prediction_log_data = normalized_log
 
                 # Calibration buckets (10% intervals)
                 buckets = {}
-                for entry in full_log:
+                for entry in normalized_log:
                     # Use the highest predicted probability
                     probs = [
                         entry.get("prob_win_a", 0),
