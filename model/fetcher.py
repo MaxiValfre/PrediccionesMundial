@@ -11,6 +11,7 @@ import os
 import re
 import urllib.request
 from datetime import date, datetime, timedelta
+from pathlib import Path
 from urllib.parse import urlencode
 from typing import Optional
 
@@ -54,6 +55,8 @@ VALID_TEAMS = {
     "Uzbekistan", "Curaçao", "South Africa",
 }
 
+DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "world_cup_2026.json"
+
 
 def _normalize_team_name(name: str) -> str:
     """Normalize a team name from Wikipedia to our internal format."""
@@ -74,6 +77,29 @@ def _fetch_wiki_html(url: str = WIKI_URL, timeout: int = 15) -> Optional[str]:
             return resp.read().decode("utf-8", errors="replace")
     except Exception as e:
         logger.warning("Failed to fetch Wikipedia page: %s", e)
+        return None
+
+
+def _fetch_wiki_wikitext(page_title: str, timeout: int = 15) -> Optional[str]:
+    """Fetch parsed MediaWiki wikitext for a specific page title."""
+    params = urlencode({
+        "action": "parse",
+        "page": page_title,
+        "prop": "wikitext",
+        "format": "json",
+    })
+    payload = _fetch_json_url(
+        f"https://en.wikipedia.org/w/api.php?{params}",
+        headers={"User-Agent": "WorldCup2026Predictor/1.0 (educational project)"},
+        timeout=timeout,
+    )
+    if not payload:
+        return None
+
+    try:
+        return str(payload["parse"]["wikitext"]["*"])
+    except (KeyError, TypeError):
+        logger.warning("Wikipedia wikitext payload missing for page %s", page_title)
         return None
 
 
@@ -369,6 +395,102 @@ def _parse_results_from_html(html: str) -> list[dict]:
     return list(unique.values())
 
 
+def _parse_results_from_group_wikitext(wikitext: str) -> list[dict]:
+    """Parse completed match results from structured World Cup group wikitext.
+
+    Group subpages expose each match as a `football box` block with explicit
+    date/score fields, which is more reliable than scraping the main page HTML.
+    """
+    results = []
+    match_pattern = re.compile(
+        r"===(?P<team_a>[^=]+?)\s+vs\s+(?P<team_b>[^=]+?)===.*?"
+        r"<section begin=.*?/>\{\{#invoke:football box\|main(?P<body>.*?)\}\}<section end=.*?/>",
+        re.DOTALL,
+    )
+    score_pattern = re.compile(r"\|score=\{\{score link\|[^|]*\|([^}]+)\}\}")
+    date_pattern = re.compile(r"\|date=\{\{Start date\|(\d{4})\|(\d{1,2})\|(\d{1,2})")
+    attendance_pattern = re.compile(r"\|attendance=([0-9][0-9,]*)")
+
+    for match in match_pattern.finditer(wikitext):
+        team_a = _normalize_team_name(match.group("team_a").strip())
+        team_b = _normalize_team_name(match.group("team_b").strip())
+        if team_a not in VALID_TEAMS or team_b not in VALID_TEAMS:
+            continue
+
+        body = match.group("body")
+        score_match = score_pattern.search(body)
+        date_match = date_pattern.search(body)
+        if not score_match or not date_match:
+            continue
+
+        score_value = score_match.group(1).strip()
+        played_match = re.fullmatch(r"(\d+)\s*[–-]\s*(\d+)", score_value)
+        if not played_match:
+            continue
+
+        match_date = f"{date_match.group(1)}-{int(date_match.group(2)):02d}-{int(date_match.group(3)):02d}"
+        attendance_match = attendance_pattern.search(body)
+
+        # Same-day Wikipedia edits can briefly show a live score. Requiring an
+        # attendance figure for current-day matches reduces false FT positives
+        # while still letting older finished matches pass through.
+        if match_date == date.today().isoformat() and attendance_match is None:
+            continue
+
+        results.append({
+            "date": match_date,
+            "team_a": team_a,
+            "team_b": team_b,
+            "score_a": int(played_match.group(1)),
+            "score_b": int(played_match.group(2)),
+            "status": "played",
+        })
+
+    return results
+
+
+def _fetch_group_page_results() -> list[dict]:
+    """Fetch completed results from the dedicated World Cup group pages."""
+    page_titles = []
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        recent_days = _thesportsdb_reference_dates(window_days=1)[:2]
+        recent_groups = set()
+        for group_name, group_data in data.get("groups", {}).items():
+            for matchday_key in ("matchday1", "matchday2", "matchday3"):
+                for match in group_data.get("matches", {}).get(matchday_key, []):
+                    if match.get("date") in recent_days:
+                        recent_groups.add(group_name)
+                        break
+                if group_name in recent_groups:
+                    break
+
+        page_titles = [
+            f"2026 FIFA World Cup Group {group_name}"
+            for group_name in sorted(recent_groups)
+        ]
+    except (OSError, json.JSONDecodeError, TypeError):
+        page_titles = []
+
+    if not page_titles:
+        page_titles = [f"2026 FIFA World Cup Group {group_name}" for group_name in "ABCDEFGHIJKL"]
+
+    results = []
+    for page_title in page_titles:
+        wikitext = _fetch_wiki_wikitext(page_title)
+        if not wikitext:
+            continue
+        results.extend(_parse_results_from_group_wikitext(wikitext))
+
+    unique = {}
+    for result in results:
+        key = tuple(sorted([result["team_a"], result["team_b"]]))
+        unique[key] = result
+    return list(unique.values())
+
+
 def fetch_latest_results() -> list[dict]:
     """Fetch completed World Cup 2026 match results from Wikipedia.
 
@@ -377,13 +499,18 @@ def fetch_latest_results() -> list[dict]:
 
     Returns empty list on failure (graceful degradation).
     """
+    results = _fetch_group_page_results()
+    if results:
+        logger.info("Fetched %d results from Wikipedia group pages.", len(results))
+        return results
+
     html = _fetch_wiki_html()
     if html is None:
         logger.info("No Wikipedia data available — using existing data only.")
         return []
 
     results = _parse_results_from_html(html)
-    logger.info("Fetched %d results from Wikipedia.", len(results))
+    logger.info("Fetched %d results from Wikipedia main page.", len(results))
     return results
 
 
