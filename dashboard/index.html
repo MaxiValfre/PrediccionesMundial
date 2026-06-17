@@ -1051,7 +1051,7 @@ function buildAccuracy() {
 
   // KPIs
   const total = log.length;
-  const correct = log.filter(e => e.result_category === 'exact_score' || e.result_category === 'correct_direction').length;
+  const correct = log.filter(e => e.result_category === 'exact' || e.result_category === 'correct_direction').length;
   const avgBrier = log.reduce((s, e) => s + (e.brier_score || 0), 0) / total;
 
   html += '<div class="kpi-grid" style="margin-bottom:12px">';
@@ -1108,8 +1108,8 @@ function buildAccuracy() {
   for (const e of log) {
     const bScore = e.brier_score || 0;
     const brierC = bScore < 0.1 ? 'var(--green)' : bScore < 0.25 ? 'var(--yellow)' : 'var(--red)';
-    const resultC = e.result_category === 'exact_score' ? 'var(--gold)' : e.result_category === 'correct_direction' ? 'var(--green)' : 'var(--red)';
-    const resultLabel = e.result_category === 'exact_score' ? 'EXACT' : e.result_category === 'correct_direction' ? 'OK' : 'MISS';
+    const resultC = e.result_category === 'exact' ? 'var(--gold)' : e.result_category === 'correct_direction' ? 'var(--green)' : 'var(--red)';
+    const resultLabel = e.result_category === 'exact' ? 'EXACT' : e.result_category === 'correct_direction' ? 'OK' : 'MISS';
     html += '<tr>' +
       '<td>' + (e.date || '') + '</td>' +
       '<td>' + getFlag(e.team_a) + ' ' + e.team_a + ' vs ' + e.team_b + ' ' + getFlag(e.team_b) + '</td>' +
