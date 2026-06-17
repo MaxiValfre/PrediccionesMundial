@@ -147,8 +147,15 @@ def _parse_live_minute(status: str) -> Optional[int]:
     status = status.strip().upper()
     if not status:
         return None
+    if status == "1H":
+        # TheSportsDB sometimes only exposes the current phase, not the exact
+        # minute. Use a first-half midpoint instead of misreading `1H` as 1'.
+        return 23
     if status == "HT":
         return 45
+    if status == "2H":
+        # Same idea for second-half phase-only updates.
+        return 68
     if status in {"ET", "AET"}:
         return 105
     if status in {"PEN", "FT", "NS", "POSTP", "CANC", "ABD"}:

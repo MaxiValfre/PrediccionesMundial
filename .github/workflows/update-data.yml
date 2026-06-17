@@ -38,6 +38,11 @@ jobs:
 
       - name: Commit and push updated artifacts
         shell: bash
+        env:
+          THESPORTSDB_API_KEY: ${{ secrets.THESPORTSDB_API_KEY }}
+          THESPORTSDB_LEAGUE_ID: ${{ secrets.THESPORTSDB_LEAGUE_ID }}
+          THESPORTSDB_REFERENCE_DATE: ${{ secrets.THESPORTSDB_REFERENCE_DATE }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           if git diff --quiet; then
             echo "No changes to commit"
@@ -47,6 +52,17 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data dashboard docs
           git commit -m "chore(data): refresh world cup predictions"
-          # Rebase to avoid conflicts from concurrent runs
-          git pull --rebase origin main || true
-          git push
+          if git push origin HEAD:main; then
+            exit 0
+          fi
+          echo "Push lost race, regenerating on latest main"
+          git fetch origin main
+          git reset --hard origin/main
+          python run_predictions.py --update
+          if git diff --quiet; then
+            echo "No changes left after rerun"
+            exit 0
+          fi
+          git add data dashboard docs
+          git commit -m "chore(data): refresh world cup predictions"
+          git push origin HEAD:main
