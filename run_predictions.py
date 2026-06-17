@@ -236,6 +236,11 @@ def main():
                     if m.get("market_prob_a") is not None
                 ),
             }
+
+        output["todays_matches"] = [
+            m for m in output.get("match_predictions", [])
+            if m.get("date") == output.get("today")
+        ]
     except Exception as e:
         logging.getLogger(__name__).warning("Could not load market odds: %s", e)
 

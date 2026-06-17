@@ -30,6 +30,7 @@ BOOKMAKER_TEAM_ALIASES = {
     "Côte d'Ivoire": "Ivory Coast",
     "Bosnia and Herzegovina": "Bosnia",
     "Bosnia Herzegovina": "Bosnia",
+    "Bosnia & Herzegovina": "Bosnia",
     "Czechia": "Czech Republic",
     "Czech Rep": "Czech Republic",
     "IR Iran": "Iran",
@@ -144,7 +145,11 @@ def _fetch_odds_api(sport_key: str, markets: str = "h2h",
         return None
 
 
-def _compute_consensus_odds(bookmakers: list) -> Optional[dict]:
+def _compute_consensus_odds(
+    bookmakers: list,
+    home_team: str,
+    away_team: str,
+) -> Optional[dict]:
     """Average h2h odds across bookmakers into consensus probabilities."""
     all_home = []
     all_draw = []
@@ -154,18 +159,23 @@ def _compute_consensus_odds(bookmakers: list) -> Optional[dict]:
         for market in bm.get("markets", []):
             if market.get("key") != "h2h":
                 continue
-            outcomes = {o["name"]: o["price"] for o in market.get("outcomes", [])}
-            if len(outcomes) == 3:
-                names = list(outcomes.keys())
-                # Find Draw
-                draw_odds = outcomes.get("Draw")
-                if draw_odds is None:
+            outcomes = {}
+            for outcome in market.get("outcomes", []):
+                name = str(outcome.get("name", "")).strip()
+                if not name:
                     continue
-                home_name = [n for n in names if n != "Draw"][0]
-                away_name = [n for n in names if n != "Draw" and n != home_name][0]
-                all_home.append(outcomes[home_name])
-                all_draw.append(draw_odds)
-                all_away.append(outcomes[away_name])
+                normalized_name = "Draw" if name == "Draw" else _normalize_team(name)
+                outcomes[normalized_name] = outcome.get("price")
+
+            draw_odds = outcomes.get("Draw")
+            home_odds = outcomes.get(home_team)
+            away_odds = outcomes.get(away_team)
+            if draw_odds is None or home_odds is None or away_odds is None:
+                continue
+
+            all_home.append(home_odds)
+            all_draw.append(draw_odds)
+            all_away.append(away_odds)
 
     if not all_home:
         return None
@@ -226,7 +236,11 @@ def fetch_market_odds() -> dict:
             if not home or not away:
                 continue
 
-            consensus = _compute_consensus_odds(event.get("bookmakers", []))
+            consensus = _compute_consensus_odds(
+                event.get("bookmakers", []),
+                home,
+                away,
+            )
             if consensus:
                 # Store with both orderings for easy lookup
                 key = f"{home}|{away}"
