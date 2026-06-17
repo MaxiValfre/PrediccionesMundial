@@ -10,7 +10,7 @@ import logging
 import os
 import re
 import urllib.request
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
 from typing import Optional
 
@@ -139,6 +139,41 @@ def _parse_live_minute(status: str) -> Optional[int]:
     return None
 
 
+def _resolve_event_date(event: dict) -> str:
+    """Resolve the local calendar date for a provider event.
+
+    TheSportsDB often gives a UTC `dateEvent` plus separate UTC/local kickoff
+    times. We normalize to the venue-local day so the stored schedule stays
+    aligned with the tournament dataset.
+    """
+    event_date = str(event.get("dateEvent") or "").strip()
+    if not event_date:
+        return str(event.get("dateEventLocal") or "").strip()
+
+    utc_time = str(event.get("strTime") or "").strip()
+    local_time = str(event.get("strTimeLocal") or "").strip()
+    if not utc_time or not local_time:
+        return str(event.get("dateEventLocal") or event_date)
+
+    try:
+        resolved_date = datetime.strptime(event_date, "%Y-%m-%d").date()
+        utc_clock = datetime.strptime(utc_time, "%H:%M:%S").time()
+        local_clock = datetime.strptime(local_time, "%H:%M:%S").time()
+    except ValueError:
+        return str(event.get("dateEventLocal") or event_date)
+
+    utc_minutes = utc_clock.hour * 60 + utc_clock.minute
+    local_minutes = local_clock.hour * 60 + local_clock.minute
+    delta_minutes = local_minutes - utc_minutes
+
+    if delta_minutes > 12 * 60:
+        resolved_date -= timedelta(days=1)
+    elif delta_minutes < -12 * 60:
+        resolved_date += timedelta(days=1)
+
+    return resolved_date.isoformat()
+
+
 def _event_to_update(event: dict) -> Optional[dict]:
     """Map a TheSportsDB event payload to our updater format."""
     team_a = _normalize_team_name(event.get("strHomeTeam", ""))
@@ -159,7 +194,7 @@ def _event_to_update(event: dict) -> Optional[dict]:
         return None
 
     base = {
-        "date": event.get("dateEvent") or event.get("dateEventLocal") or "",
+        "date": _resolve_event_date(event),
         "group": event.get("strGroup", ""),
         "team_a": team_a,
         "team_b": team_b,

@@ -23,6 +23,7 @@ from scipy.stats import poisson
 # ---------------------------------------------------------------------------
 
 SIMULATIONS = 50_000
+TIMELINE_SIMULATIONS = 2_500
 MAX_GOALS_MATRIX = 8          # 0..7 goals per side for probability matrix
 BASE_GOALS = 1.35             # average expected goals baseline
 ELO_DIVISOR = 400.0
@@ -1689,11 +1690,16 @@ def predict_knockout_bracket(data: dict) -> dict:
 # Probability timeline (for dashboard "stock charts")
 # ---------------------------------------------------------------------------
 
-def build_probability_timeline(data: dict, n_sims: int = 10_000) -> dict:
+def build_probability_timeline(
+    data: dict,
+    current_probs: dict[str, dict],
+    n_sims: int = TIMELINE_SIMULATIONS,
+) -> dict:
     """Generate probability snapshots at each matchday for the trading charts.
 
     Returns dict: team -> list of {matchday, win_pct, qualify_pct}.
-    Simulates as if we're at different points in the tournament.
+    Reuses the main Monte Carlo output for the current snapshot and only
+    resimulates a lighter pre-tournament baseline.
     """
     ratings = _load_dynamic_ratings()
     all_teams = set()
@@ -1731,24 +1737,12 @@ def build_probability_timeline(data: dict, n_sims: int = 10_000) -> dict:
             "qualify_pct": round(pre_reach[team].get("R32", 0) / n_sims, 4),
         })
 
-    # Post-MD1 snapshot (with actual form adjustments from MD1 results)
-    form_md1 = compute_form_adjustments(data)
-    rng_md1 = np.random.default_rng(SEED + 101)
-    md1_reach = {t: defaultdict(int) for t in all_teams}
-
-    for _ in range(n_sims):
-        results, _, _ = simulate_tournament(rng_md1, data, ratings, form_md1)
-        for team in all_teams:
-            best = results.get(team, "Group")
-            idx = ROUND_ORDER.index(best)
-            for r in ROUND_ORDER[:idx + 1]:
-                md1_reach[team][r] += 1
-
     for team in all_teams:
+        current = current_probs.get(team, {})
         timeline[team].append({
             "matchday": "md1",
-            "win_pct": round(md1_reach[team].get("Winner", 0) / n_sims, 4),
-            "qualify_pct": round(md1_reach[team].get("R32", 0) / n_sims, 4),
+            "win_pct": round(current.get("winner", 0), 4),
+            "qualify_pct": round(current.get("r32", current.get("group_stage", 0)), 4),
         })
 
     return timeline
@@ -1775,7 +1769,7 @@ def generate_predictions() -> dict:
     bracket = predict_knockout_bracket(data)
 
     print("Building probability timeline...")
-    probability_timeline = build_probability_timeline(data)
+    probability_timeline = build_probability_timeline(data, tournament_probs)
 
     # Power rankings by tournament win probability
     ci = mc_extra["confidence_intervals"]

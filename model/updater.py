@@ -129,6 +129,44 @@ def save_prediction_log(log: list[dict]) -> None:
     logger.info("Prediction log saved to %s", PREDICTION_LOG_FILE)
 
 
+def recalculate_all_group_standings(data: dict) -> None:
+    """Refresh stored standings for every group from the match data."""
+    for gname, gdata in data["groups"].items():
+        data["groups"][gname]["standings"] = recalculate_standings(gdata)
+
+
+def rebuild_ratings_history(data: dict) -> dict:
+    """Recompute ratings history from the current tournament dataset."""
+    ratings = dict(data.get("elo_ratings", {}))
+    history = {"initial": dict(ratings)}
+    labels = {
+        "matchday1": "after_md1",
+        "matchday2": "after_md2",
+        "matchday3": "after_md3",
+    }
+
+    for md_key, label in labels.items():
+        processed_any = False
+        for gdata in data["groups"].values():
+            for match in gdata["matches"].get(md_key, []):
+                if match.get("status") != "played":
+                    continue
+                processed_any = True
+                team_a = match["team_a"]
+                team_b = match["team_b"]
+                score_a = int(match.get("score_a") or 0)
+                score_b = int(match.get("score_b") or 0)
+                rating_a = ratings.get(team_a, 1400.0)
+                rating_b = ratings.get(team_b, 1400.0)
+                new_a, new_b = elo_update(rating_a, rating_b, score_a, score_b, K_GROUP)
+                ratings[team_a] = new_a
+                ratings[team_b] = new_b
+        if processed_any:
+            history[label] = dict(ratings)
+
+    return history
+
+
 def normalize_update_status(entry: dict) -> str:
     """Normalize inbound update status while keeping old files compatible."""
     status = str(entry.get("status", "played")).strip().lower()
@@ -449,6 +487,50 @@ def build_log_entry_from_snapshot(snapshot: dict,
     }
 
 
+def reconcile_prediction_log(
+    prediction_log: list[dict],
+    corrected_matches: list[dict],
+) -> bool:
+    """Update logged actual scores when a provider corrects a played match."""
+    if not corrected_matches:
+        return False
+
+    corrected_by_pair = {
+        (m["team_a"], m["team_b"]): m
+        for m in corrected_matches
+    }
+    changed = False
+
+    for idx, entry in enumerate(prediction_log):
+        direct = corrected_by_pair.get((entry.get("team_a", ""), entry.get("team_b", "")))
+        reverse = corrected_by_pair.get((entry.get("team_b", ""), entry.get("team_a", "")))
+
+        if direct:
+            snapshot = dict(entry)
+            snapshot["date"] = direct.get("date", snapshot.get("date", ""))
+            updated = build_log_entry_from_snapshot(
+                snapshot,
+                direct["score_a"],
+                direct["score_b"],
+            )
+        elif reverse:
+            snapshot = dict(entry)
+            snapshot["date"] = reverse.get("date", snapshot.get("date", ""))
+            updated = build_log_entry_from_snapshot(
+                snapshot,
+                reverse["score_b"],
+                reverse["score_a"],
+            )
+        else:
+            continue
+
+        if updated != entry:
+            prediction_log[idx] = updated
+            changed = True
+
+    return changed
+
+
 def determine_matchday_label(data: dict) -> str:
     """Determine which matchday we're updating (for ratings history key).
 
@@ -556,6 +638,8 @@ def apply_live_updates(
             match["score_a"] = sa
             match["score_b"] = sb
 
+        if update.get("date"):
+            match["date"] = update["date"]
         match["status"] = "in_progress"
         match["minute"] = minute
         data["groups"][gname]["matches"][md_key][idx] = match
@@ -573,7 +657,7 @@ def apply_results(
     new_results: list[dict],
     data: dict,
     ratings: dict[str, float],
-) -> tuple[dict, dict[str, float], int]:
+) -> tuple[dict, dict[str, float], int, list[dict]]:
     """Apply new results to tournament data and update Elo ratings.
 
     Args:
@@ -582,9 +666,10 @@ def apply_results(
         ratings: Current ratings dict (modified in-place).
 
     Returns:
-        Tuple of (updated_data, updated_ratings, num_applied).
+        Tuple of (updated_data, updated_ratings, num_applied, corrected_matches).
     """
     applied = 0
+    corrected_matches = []
     groups_to_update = set()
 
     for result in new_results:
@@ -593,9 +678,9 @@ def apply_results(
         sa = result["score_a"]
         sb = result["score_b"]
 
-        found = find_match_in_data(data, ta, tb, allowed_statuses={"scheduled", "in_progress"})
+        found = find_match_in_data(data, ta, tb, allowed_statuses={"scheduled", "in_progress", "played"})
         if found is None:
-            logger.debug("Match %s vs %s not found as scheduled/live — skipping.", ta, tb)
+            logger.debug("Match %s vs %s not found in tournament data — skipping.", ta, tb)
             continue
 
         gname, md_key, idx, match = found
@@ -606,20 +691,49 @@ def apply_results(
 
         if canon_ta == tb and canon_tb == ta:
             # Flip scores to match canonical order
-            match["score_a"] = sb
-            match["score_b"] = sa
+            actual_sa = sb
+            actual_sb = sa
         else:
-            match["score_a"] = sa
-            match["score_b"] = sb
+            actual_sa = sa
+            actual_sb = sb
+
+        incoming_date = result.get("date") or match.get("date", "")
+        was_played = match.get("status") == "played"
+        if (
+            was_played
+            and match.get("score_a") == actual_sa
+            and match.get("score_b") == actual_sb
+            and match.get("date", "") == incoming_date
+        ):
+            continue
+
+        if incoming_date:
+            match["date"] = incoming_date
+        match["score_a"] = actual_sa
+        match["score_b"] = actual_sb
 
         match["status"] = "played"
         match.pop("minute", None)
         match.pop("pre_match_prediction", None)
         data["groups"][gname]["matches"][md_key][idx] = match
 
+        groups_to_update.add(gname)
+
+        if was_played:
+            corrected_matches.append({
+                "date": match.get("date", ""),
+                "team_a": canon_ta,
+                "team_b": canon_tb,
+                "score_a": actual_sa,
+                "score_b": actual_sb,
+            })
+            logger.info(
+                "Corrected played result: %s %d-%d %s",
+                canon_ta, actual_sa, actual_sb, canon_tb,
+            )
+            continue
+
         # Elo update (use canonical order scores)
-        actual_sa = match["score_a"]
-        actual_sb = match["score_b"]
         rating_a = ratings.get(canon_ta, 1400.0)
         rating_b = ratings.get(canon_tb, 1400.0)
         new_a, new_b = elo_update(rating_a, rating_b, actual_sa, actual_sb, K_GROUP)
@@ -632,7 +746,6 @@ def apply_results(
             canon_tb, rating_b, new_b,
         )
 
-        groups_to_update.add(gname)
         applied += 1
 
     # Recalculate standings for affected groups
@@ -642,7 +755,7 @@ def apply_results(
         )
         logger.info("Recalculated standings for Group %s", gname)
 
-    return data, ratings, applied
+    return data, ratings, applied, corrected_matches
 
 
 def run_update(new_results: list[dict]) -> dict:
@@ -664,6 +777,7 @@ def run_update(new_results: list[dict]) -> dict:
         return {
             "results_found": 0,
             "results_applied": 0,
+            "corrections_applied": 0,
             "live_updates_applied": 0,
             "ratings_updated": False,
             "prediction_entries_added": 0,
@@ -690,6 +804,8 @@ def run_update(new_results: list[dict]) -> dict:
     for result in new_results:
         status = normalize_update_status(result)
         allowed_statuses = {"scheduled", "in_progress"}
+        if status == "played":
+            allowed_statuses.add("played")
         found = find_match_in_data(data, result["team_a"], result["team_b"], allowed_statuses=allowed_statuses)
         if found is None:
             continue
@@ -702,6 +818,7 @@ def run_update(new_results: list[dict]) -> dict:
         return {
             "results_found": len(new_results),
             "results_applied": 0,
+            "corrections_applied": 0,
             "live_updates_applied": 0,
             "ratings_updated": False,
             "prediction_entries_added": 0,
@@ -712,7 +829,9 @@ def run_update(new_results: list[dict]) -> dict:
         data, live_applied = apply_live_updates(live_updates, data, current_ratings)
 
     unique_entries = []
+    prediction_log_changed = False
     num_applied = 0
+    corrected_matches = []
     md_label = ""
     updated_ratings = dict(current_ratings)
     if final_results:
@@ -727,28 +846,38 @@ def run_update(new_results: list[dict]) -> dict:
             e for e in new_log_entries
             if (e["team_a"], e["team_b"], e.get("date", "")) not in existing_keys
         ]
-        prediction_log.extend(unique_entries)
+        if unique_entries:
+            prediction_log.extend(unique_entries)
+            prediction_log_changed = True
 
         # Step 2: Apply final results and update Elo.
         ratings_copy = dict(current_ratings)
-        data, updated_ratings, num_applied = apply_results(final_results, data, ratings_copy)
+        data, updated_ratings, num_applied, corrected_matches = apply_results(final_results, data, ratings_copy)
 
-        # Step 3: Save updated ratings to history.
-        md_label = determine_matchday_label(data)
-        ratings_history[md_label] = dict(updated_ratings)
+        if reconcile_prediction_log(prediction_log, corrected_matches):
+            prediction_log_changed = True
+
+        # Step 3: Rebuild ratings to keep corrected finals consistent.
+        if num_applied > 0 or corrected_matches:
+            ratings_history = rebuild_ratings_history(data)
+            updated_ratings = get_latest_ratings(ratings_history) or dict(current_ratings)
+            md_label = determine_matchday_label(data)
 
     # Step 4: Save everything
-    save_tournament_data(data)
-    if num_applied > 0:
+    if live_applied > 0 or num_applied > 0 or corrected_matches:
+        recalculate_all_group_standings(data)
+        save_tournament_data(data)
+    if num_applied > 0 or corrected_matches:
         save_ratings_history(ratings_history)
-    if unique_entries:
+    if prediction_log_changed:
         save_prediction_log(prediction_log)
 
     return {
         "results_found": len(new_results),
         "results_applied": num_applied,
+        "corrections_applied": len(corrected_matches),
         "live_updates_applied": live_applied,
-        "ratings_updated": num_applied > 0,
+        "ratings_updated": num_applied > 0 or len(corrected_matches) > 0,
         "prediction_entries_added": len(unique_entries),
         "matchday_label": md_label,
     }

@@ -107,6 +107,7 @@ def run_update_cycle() -> dict:
     summary = run_update(merged)
 
     print(f"\n  Results applied: {summary['results_applied']}")
+    print(f"  Corrections applied: {summary.get('corrections_applied', 0)}")
     print(f"  Live updates applied: {summary.get('live_updates_applied', 0)}")
     print(f"  Prediction log entries added: {summary['prediction_entries_added']}")
     if summary.get("ratings_updated"):
