@@ -1303,9 +1303,24 @@
             "date": "2026-06-17",
             "team_a": "England",
             "team_b": "Croatia",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-17",
+              "group": "L",
+              "team_a": "England",
+              "team_b": "Croatia",
+              "predicted_score_a": 2,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.6035,
+              "prob_draw": 0.2772,
+              "prob_win_b": 0.1193,
+              "xg_a": 2.18,
+              "xg_b": 0.89,
+              "captured_at": "2026-06-17T20:26:02"
+            },
+            "minute": 1
           },
           {
             "date": "2026-06-17",
@@ -1355,6 +1370,17 @@
       },
       "standings": [
         {
+          "team": "England",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 1,
+          "ga": 0,
+          "gd": 1,
+          "points": 3
+        },
+        {
           "team": "Panama",
           "played": 0,
           "won": 0,
@@ -1377,25 +1403,14 @@
           "points": 0
         },
         {
-          "team": "England",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
-        },
-        {
           "team": "Croatia",
-          "played": 0,
+          "played": 1,
           "won": 0,
           "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "ga": 1,
+          "gd": -1,
           "points": 0
         }
       ]
