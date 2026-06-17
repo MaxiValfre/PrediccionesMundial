@@ -83,5 +83,22 @@
     "actual_score_b": 1,
     "result_category": "wrong",
     "brier_score": 0.4945
+  },
+  {
+    "date": "2026-06-17",
+    "group": "L",
+    "team_a": "England",
+    "team_b": "Croatia",
+    "predicted_score_a": 2,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.6035,
+    "prob_draw": 0.2772,
+    "prob_win_b": 0.1193,
+    "xg_a": 2.18,
+    "xg_b": 0.89,
+    "actual_score_a": 4,
+    "actual_score_b": 2,
+    "result_category": "correct_direction",
+    "brier_score": 0.0828
   }
 ]
