@@ -33,6 +33,7 @@ jobs:
           THESPORTSDB_API_KEY: ${{ secrets.THESPORTSDB_API_KEY }}
           THESPORTSDB_LEAGUE_ID: ${{ secrets.THESPORTSDB_LEAGUE_ID }}
           THESPORTSDB_REFERENCE_DATE: ${{ secrets.THESPORTSDB_REFERENCE_DATE }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python run_predictions.py --update
 
       - name: Commit and push updated artifacts

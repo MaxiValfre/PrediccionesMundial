@@ -185,6 +185,33 @@ def main():
     # Step 2: Run predictions
     output = generate_predictions()
 
+    # Step 2b: Merge market odds if available
+    try:
+        from model.odds_provider import fetch_market_odds, get_market_odds_for_match
+        if args.update:
+            market_cache = fetch_market_odds()
+        else:
+            from model.odds_provider import _load_cache
+            market_cache = _load_cache()
+
+        for match in output.get("match_predictions", []):
+            market = get_market_odds_for_match(
+                match["team_a"], match["team_b"], cache=market_cache
+            )
+            if market:
+                match.update(market)
+
+        if market_cache.get("last_fetch"):
+            output["market_odds_status"] = {
+                "last_fetch": market_cache["last_fetch"],
+                "matches_with_odds": sum(
+                    1 for m in output.get("match_predictions", [])
+                    if m.get("market_prob_a") is not None
+                ),
+            }
+    except Exception as e:
+        logging.getLogger(__name__).warning("Could not load market odds: %s", e)
+
     # Step 3: Add accuracy metrics to output if prediction log exists
     try:
         from model.calibrator import compute_accuracy

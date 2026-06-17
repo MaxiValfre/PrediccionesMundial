@@ -1867,6 +1867,58 @@ def generate_predictions() -> dict:
     else:
         model_info["ratings_source"] = "static (FIFA Rankings June 2026)"
 
+    # Accuracy data for dashboard
+    prediction_log_data = None
+    calibration_data = None
+    log_path = Path(__file__).resolve().parent.parent / "data" / "prediction_log.json"
+    if log_path.exists():
+        try:
+            with open(log_path, "r", encoding="utf-8") as f:
+                full_log = json.load(f)
+            if full_log:
+                prediction_log_data = full_log
+
+                # Calibration buckets (10% intervals)
+                buckets = {}
+                for entry in full_log:
+                    # Use the highest predicted probability
+                    probs = [
+                        entry.get("prob_win_a", 0),
+                        entry.get("prob_draw", 0),
+                        entry.get("prob_win_b", 0),
+                    ]
+                    max_prob = max(probs)
+                    predicted_outcome = probs.index(max_prob)  # 0=win_a, 1=draw, 2=win_b
+
+                    sa = entry.get("actual_score_a", 0)
+                    sb = entry.get("actual_score_b", 0)
+                    if sa > sb:
+                        actual_outcome = 0
+                    elif sa == sb:
+                        actual_outcome = 1
+                    else:
+                        actual_outcome = 2
+
+                    bucket_key = int(max_prob * 10) * 10  # 0, 10, 20, ..., 90
+                    bucket_key = min(bucket_key, 90)
+                    if bucket_key not in buckets:
+                        buckets[bucket_key] = {"predicted_sum": 0, "correct": 0, "total": 0}
+                    buckets[bucket_key]["predicted_sum"] += max_prob
+                    buckets[bucket_key]["correct"] += 1 if predicted_outcome == actual_outcome else 0
+                    buckets[bucket_key]["total"] += 1
+
+                calibration_data = []
+                for bucket in sorted(buckets.keys()):
+                    b = buckets[bucket]
+                    calibration_data.append({
+                        "bucket": f"{bucket}-{bucket+10}%",
+                        "avg_predicted": round(b["predicted_sum"] / b["total"], 4) if b["total"] > 0 else 0,
+                        "actual_rate": round(b["correct"] / b["total"], 4) if b["total"] > 0 else 0,
+                        "count": b["total"],
+                    })
+        except (json.JSONDecodeError, IOError):
+            pass
+
     # Today's matches
     today = date.today().isoformat()
     todays_matches = [m for m in match_predictions if m["date"] == today]
@@ -1887,6 +1939,12 @@ def generate_predictions() -> dict:
         "probability_timeline": probability_timeline,
         "model_info": model_info,
     }
+
+    # Add accuracy/calibration data if available
+    if prediction_log_data:
+        output["prediction_log"] = prediction_log_data
+    if calibration_data:
+        output["calibration_data"] = calibration_data
 
     return output
 

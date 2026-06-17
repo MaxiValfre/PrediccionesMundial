@@ -9144,6 +9144,102 @@
     "confidence_metric": "binomial_std_error",
     "ratings_source": "dynamic (Bayesian-updated Elo)"
   },
+  "prediction_log": [
+    {
+      "date": "2026-06-16",
+      "group": "I",
+      "team_a": "France",
+      "team_b": "Senegal",
+      "predicted_score_a": 3,
+      "predicted_score_b": 0,
+      "prob_win_a": 0.7887,
+      "prob_draw": 0.1771,
+      "prob_win_b": 0.0342,
+      "xg_a": 3.18,
+      "xg_b": 0.63,
+      "actual_score_a": 3,
+      "actual_score_b": 1,
+      "result_category": "correct_direction",
+      "brier_score": 0.0257
+    },
+    {
+      "date": "2026-06-16",
+      "group": "I",
+      "team_a": "Iraq",
+      "team_b": "Norway",
+      "predicted_score_a": 1,
+      "predicted_score_b": 1,
+      "prob_win_a": 0.2242,
+      "prob_draw": 0.333,
+      "prob_win_b": 0.4428,
+      "xg_a": 1.12,
+      "xg_b": 1.64,
+      "actual_score_a": 0,
+      "actual_score_b": 2,
+      "result_category": "wrong",
+      "brier_score": 0.1572
+    },
+    {
+      "date": "2026-06-16",
+      "group": "J",
+      "team_a": "Argentina",
+      "team_b": "Algeria",
+      "predicted_score_a": 3,
+      "predicted_score_b": 0,
+      "prob_win_a": 0.8752,
+      "prob_draw": 0.1185,
+      "prob_win_b": 0.0064,
+      "xg_a": 4.0,
+      "xg_b": 0.33,
+      "actual_score_a": 3,
+      "actual_score_b": 0,
+      "result_category": "exact",
+      "brier_score": 0.0099
+    },
+    {
+      "date": "2026-06-16",
+      "group": "J",
+      "team_a": "Austria",
+      "team_b": "Jordan",
+      "predicted_score_a": 2,
+      "predicted_score_b": 0,
+      "prob_win_a": 0.5997,
+      "prob_draw": 0.2818,
+      "prob_win_b": 0.1185,
+      "xg_a": 2.12,
+      "xg_b": 0.86,
+      "actual_score_a": 3,
+      "actual_score_b": 1,
+      "result_category": "correct_direction",
+      "brier_score": 0.0846
+    }
+  ],
+  "calibration_data": [
+    {
+      "bucket": "40-50%",
+      "avg_predicted": 0.4428,
+      "actual_rate": 1.0,
+      "count": 1
+    },
+    {
+      "bucket": "50-60%",
+      "avg_predicted": 0.5997,
+      "actual_rate": 1.0,
+      "count": 1
+    },
+    {
+      "bucket": "70-80%",
+      "avg_predicted": 0.7887,
+      "actual_rate": 1.0,
+      "count": 1
+    },
+    {
+      "bucket": "80-90%",
+      "avg_predicted": 0.8752,
+      "actual_rate": 1.0,
+      "count": 1
+    }
+  ],
   "accuracy_metrics": {
     "total_predictions": 4,
     "exact_scores": 1,

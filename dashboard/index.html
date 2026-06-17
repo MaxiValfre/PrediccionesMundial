@@ -198,6 +198,7 @@ canvas{display:block;width:100%;background:transparent}
   <button class="tab-btn" data-tab="bracket">BRACKET</button>
   <button class="tab-btn" data-tab="power">POWER</button>
   <button class="tab-btn" data-tab="stats">STATS</button>
+  <button class="tab-btn" data-tab="accuracy">ACCURACY</button>
 </div>
 
 <!-- CONTENT -->
@@ -208,6 +209,7 @@ canvas{display:block;width:100%;background:transparent}
   <div class="tab-content" id="tab-bracket"></div>
   <div class="tab-content" id="tab-power"></div>
   <div class="tab-content" id="tab-stats"></div>
+  <div class="tab-content" id="tab-accuracy"></div>
 </div>
 
 <!-- EMBEDDED DATA -->
@@ -521,6 +523,7 @@ function init() {
   buildBracket();
   buildPower();
   buildStats();
+  buildAccuracy();
   setupTabs();
   // Trigger animations for default tab
   triggerAnimations('live');
@@ -1031,6 +1034,101 @@ function buildStats() {
 }
 
 /* ===================================================================
+   TAB: ACCURACY
+   =================================================================== */
+function buildAccuracy() {
+  const el = document.getElementById('tab-accuracy');
+  const log = DATA.prediction_log || [];
+  const cal = DATA.calibration_data || [];
+  const metrics = DATA.accuracy_metrics || {};
+
+  if (!log.length) {
+    el.innerHTML = '<div class="panel"><div class="panel-body" style="text-align:center;color:var(--muted);padding:40px;font-family:var(--mono)">No prediction data yet. Accuracy tracking starts after the first match result is processed through --update.</div></div>';
+    return;
+  }
+
+  let html = '';
+
+  // KPIs
+  const total = log.length;
+  const correct = log.filter(e => e.result_category === 'exact_score' || e.result_category === 'correct_direction').length;
+  const avgBrier = log.reduce((s, e) => s + (e.brier_score || 0), 0) / total;
+
+  html += '<div class="kpi-grid" style="margin-bottom:12px">';
+  html += '<div class="kpi"><div class="kpi-val" data-counter="' + total + '" data-decimals="0">0</div><div class="kpi-label">Predictions Evaluated</div></div>';
+  html += '<div class="kpi"><div class="kpi-val" data-counter="' + (correct/total*100).toFixed(1) + '" data-decimals="1">0</div><div class="kpi-label">Correct Direction %</div></div>';
+  html += '<div class="kpi"><div class="kpi-val" data-counter="' + avgBrier.toFixed(4) + '" data-decimals="4">0</div><div class="kpi-label">Avg Brier Score</div></div>';
+
+  // Brier quality label
+  const brierLabel = avgBrier < 0.1 ? 'Excellent' : avgBrier < 0.2 ? 'Good' : avgBrier < 0.3 ? 'Average' : 'Poor';
+  const brierColor = avgBrier < 0.15 ? 'var(--green)' : avgBrier < 0.25 ? 'var(--yellow)' : 'var(--red)';
+  html += '<div class="kpi"><div class="kpi-val" style="font-size:1.2rem;color:' + brierColor + '">' + brierLabel + '</div><div class="kpi-label">Model Quality</div></div>';
+  html += '</div>';
+
+  // Calibration chart
+  if (cal.length) {
+    html += '<div class="panel" style="margin-bottom:10px"><div class="panel-title"><span class="dot" style="background:var(--cyan)"></span>Calibration — Predicted vs Actual</div><div class="panel-body">';
+    html += '<canvas id="chart-calibration" style="height:280px"></canvas>';
+    html += '<div style="font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:4px">Perfect calibration = bars match the diagonal. If predicted 70% events happen 70% of the time, the model is well-calibrated.</div>';
+    html += '</div></div>';
+    el._calibrationData = cal;
+  }
+
+  // Model vs Market (if available)
+  const matchPreds = DATA.match_predictions || [];
+  const withMarket = log.filter(e => matchPreds.find(m => m.team_a === e.team_a && m.team_b === e.team_b && m.market_prob_a != null));
+  if (withMarket.length > 0) {
+    html += '<div class="panel" style="margin-bottom:10px"><div class="panel-title"><span class="dot" style="background:var(--gold)"></span>Model vs Market</div><div class="panel-body">';
+    html += '<table class="data-table"><thead><tr><th>Match</th><th>Model Win%</th><th>Market Win%</th><th>Edge</th><th>Result</th></tr></thead><tbody>';
+    for (const entry of withMarket) {
+      const match = matchPreds.find(m => m.team_a === entry.team_a && m.team_b === entry.team_b);
+      if (!match || match.market_prob_a == null) continue;
+      const modelP = entry.prob_win_a;
+      const marketP = match.market_prob_a;
+      const edge = ((modelP - marketP) * 100).toFixed(1);
+      const edgeColor = Math.abs(edge) > 5 ? (edge > 0 ? 'var(--green)' : 'var(--red)') : 'var(--text2)';
+      const sa = entry.actual_score_a; const sb = entry.actual_score_b;
+      html += '<tr>' +
+        '<td>' + getFlag(entry.team_a) + ' ' + entry.team_a + ' vs ' + entry.team_b + ' ' + getFlag(entry.team_b) + '</td>' +
+        '<td>' + pct(modelP) + '</td>' +
+        '<td>' + pct(marketP) + '</td>' +
+        '<td style="color:' + edgeColor + '">' + (edge > 0 ? '+' : '') + edge + '%</td>' +
+        '<td>' + sa + '-' + sb + '</td>' +
+      '</tr>';
+    }
+    html += '</tbody></table></div></div>';
+  }
+
+  // Full prediction log table
+  html += '<div class="panel"><div class="panel-title"><span class="dot" style="background:var(--green)"></span>Prediction Log — Full History</div><div class="panel-body" style="overflow-x:auto">';
+  html += '<table class="data-table"><thead><tr>';
+  html += '<th>Date</th><th>Match</th><th>Predicted</th><th>Actual</th><th>Win%</th><th>Draw%</th><th>Loss%</th><th>Brier</th><th>Result</th>';
+  html += '</tr></thead><tbody>';
+
+  for (const e of log) {
+    const bScore = e.brier_score || 0;
+    const brierC = bScore < 0.1 ? 'var(--green)' : bScore < 0.25 ? 'var(--yellow)' : 'var(--red)';
+    const resultC = e.result_category === 'exact_score' ? 'var(--gold)' : e.result_category === 'correct_direction' ? 'var(--green)' : 'var(--red)';
+    const resultLabel = e.result_category === 'exact_score' ? 'EXACT' : e.result_category === 'correct_direction' ? 'OK' : 'MISS';
+    html += '<tr>' +
+      '<td>' + (e.date || '') + '</td>' +
+      '<td>' + getFlag(e.team_a) + ' ' + e.team_a + ' vs ' + e.team_b + ' ' + getFlag(e.team_b) + '</td>' +
+      '<td style="text-align:center">' + e.predicted_score_a + '-' + e.predicted_score_b + '</td>' +
+      '<td style="text-align:center;color:var(--gold)">' + e.actual_score_a + '-' + e.actual_score_b + '</td>' +
+      '<td>' + pct(e.prob_win_a) + '</td>' +
+      '<td>' + pct(e.prob_draw) + '</td>' +
+      '<td>' + pct(e.prob_win_b) + '</td>' +
+      '<td style="color:' + brierC + '">' + bScore.toFixed(4) + '</td>' +
+      '<td style="color:' + resultC + ';font-weight:700">' + resultLabel + '</td>' +
+    '</tr>';
+  }
+
+  html += '</tbody></table></div></div>';
+
+  el.innerHTML = html;
+}
+
+/* ===================================================================
    TABLE SORTING
    =================================================================== */
 function setupTableSorting(tableId, data) {
@@ -1212,6 +1310,28 @@ function renderCharts(tab) {
         maxVal: Math.max(...items.map(d => d.value)),
         format: pct
       });
+    }
+  }
+
+  if (tab === 'accuracy') {
+    const accEl = document.getElementById('tab-accuracy');
+    if (accEl && accEl._calibrationData) {
+      const canvas = document.getElementById('chart-calibration');
+      if (canvas) {
+        const cal = accEl._calibrationData;
+        const items = cal.map(b => ({
+          label: b.bucket,
+          value: b.actual_rate,
+          flag: '',
+          color: '#00e5ff'
+        }));
+        drawHBarChart(canvas, items, {
+          labelWidth: 70,
+          maxVal: 1.0,
+          barColor: '#00e5ff',
+          format: v => pct(v)
+        });
+      }
     }
   }
 
