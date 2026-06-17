@@ -9,7 +9,7 @@ import json
 import logging
 import os
 import urllib.request
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Optional
 
@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 ODDS_CACHE_FILE = DATA_DIR / "market_odds_cache.json"
+TOURNAMENT_FILE = DATA_DIR / "world_cup_2026.json"
 
 ODDS_API_BASE = "https://api.the-odds-api.com/v4"
 # The Odds API sport keys for FIFA World Cup
@@ -44,6 +45,16 @@ BOOKMAKER_TEAM_ALIASES = {
 }
 
 
+def _odds_refresh_minutes() -> int:
+    """Return the minimum age before hitting The Odds API again."""
+    raw = os.getenv("ODDS_REFRESH_MINUTES", "360").strip()
+    try:
+        value = int(raw)
+    except ValueError:
+        return 360
+    return max(15, value)
+
+
 def _get_api_key() -> Optional[str]:
     """Get The Odds API key from environment."""
     key = os.getenv("ODDS_API_KEY", "").strip()
@@ -65,6 +76,43 @@ def _load_cache() -> dict:
         except (json.JSONDecodeError, IOError):
             pass
     return {"matches": {}, "outright": {}, "last_fetch": None}
+
+
+def _cache_is_fresh(cache: dict) -> bool:
+    """Return True when the odds cache is still inside its refresh window."""
+    last_fetch = cache.get("last_fetch")
+    if not last_fetch:
+        return False
+
+    try:
+        fetched_at = datetime.fromisoformat(str(last_fetch))
+    except ValueError:
+        return False
+
+    age = datetime.utcnow() - fetched_at
+    return age < timedelta(minutes=_odds_refresh_minutes())
+
+
+def _has_near_term_matches(window_days: int = 1) -> bool:
+    """Return True when there are upcoming/live matches in the next window."""
+    try:
+        with open(TOURNAMENT_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError, TypeError):
+        return True
+
+    target_days = {
+        (date.today() + timedelta(days=offset)).isoformat()
+        for offset in range(window_days + 1)
+    }
+    for group in data.get("groups", {}).values():
+        for md_key in ("matchday1", "matchday2", "matchday3"):
+            for match in group.get("matches", {}).get(md_key, []):
+                if match.get("date") not in target_days:
+                    continue
+                if match.get("status") in {"scheduled", "in_progress"}:
+                    return True
+    return False
 
 
 def _save_cache(cache: dict) -> None:
@@ -156,6 +204,17 @@ def fetch_market_odds() -> dict:
 
     if not api_key:
         logger.info("No ODDS_API_KEY configured — using cached odds only.")
+        return cache
+
+    if _cache_is_fresh(cache):
+        logger.info(
+            "Odds cache still fresh (< %d min) — skipping API refresh.",
+            _odds_refresh_minutes(),
+        )
+        return cache
+
+    if not _has_near_term_matches(window_days=1):
+        logger.info("No near-term matches — skipping odds refresh.")
         return cache
 
     # Try to fetch match odds
