@@ -233,6 +233,7 @@ def _event_to_update(event: dict) -> Optional[dict]:
         "team_b": team_b,
         "score_a": score_a,
         "score_b": score_b,
+        "source": "thesportsdb",
     }
 
     if status in {"FT", "AET", "PEN"}:
@@ -508,6 +509,8 @@ def fetch_latest_results() -> list[dict]:
     """
     results = _fetch_group_page_results()
     if results:
+        for result in results:
+            result["source"] = "wikipedia"
         logger.info("Fetched %d results from Wikipedia group pages.", len(results))
         return results
 
@@ -517,6 +520,8 @@ def fetch_latest_results() -> list[dict]:
         return []
 
     results = _parse_results_from_html(html)
+    for result in results:
+        result["source"] = "wikipedia"
     logger.info("Fetched %d results from Wikipedia main page.", len(results))
     return results
 
@@ -559,9 +564,9 @@ def fetch_results_from_file(filepath: str) -> list[dict]:
                         if minute is None or not isinstance(minute, int):
                             logger.warning("Skipping live update without integer minute: %s", r)
                             continue
-                        valid.append({**r, "status": status, "minute": minute})
+                        valid.append({**r, "status": status, "minute": minute, "source": "file"})
                     else:
-                        valid.append({**r, "status": status})
+                        valid.append({**r, "status": status, "source": "file"})
                 else:
                     logger.warning("Skipping result with invalid scores: %s", r)
             else:

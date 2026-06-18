@@ -13,7 +13,7 @@ import logging
 import math
 import os
 from copy import deepcopy
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from typing import Optional
 
@@ -173,6 +173,16 @@ def normalize_update_status(entry: dict) -> str:
     if status in {"live", "in_progress", "in-progress", "inprogress"}:
         return "in_progress"
     return "played"
+
+
+def result_sources(entry: dict) -> set[str]:
+    """Return normalized source names attached to an update entry."""
+    sources = entry.get("sources")
+    if isinstance(sources, list):
+        return {str(s).strip().lower() for s in sources if str(s).strip()}
+
+    source = str(entry.get("source", "")).strip().lower()
+    return {source} if source else set()
 
 
 def get_latest_ratings(ratings_history: dict) -> Optional[dict[str, float]]:
@@ -642,6 +652,7 @@ def apply_live_updates(
             match["date"] = update["date"]
         match["status"] = "in_progress"
         match["minute"] = minute
+        match.pop("pending_final_confirmation", None)
         data["groups"][gname]["matches"][md_key][idx] = match
         groups_to_update.add(gname)
         applied += 1
@@ -699,6 +710,30 @@ def apply_results(
 
         incoming_date = result.get("date") or match.get("date", "")
         was_played = match.get("status") == "played"
+        sources = result_sources(result)
+
+        if match.get("status") == "in_progress" and sources == {"thesportsdb"}:
+            pending = match.get("pending_final_confirmation") or {}
+            same_pending = (
+                pending.get("date") == incoming_date
+                and pending.get("score_a") == actual_sa
+                and pending.get("score_b") == actual_sb
+            )
+            if not same_pending:
+                match["pending_final_confirmation"] = {
+                    "date": incoming_date,
+                    "score_a": actual_sa,
+                    "score_b": actual_sb,
+                    "source": "thesportsdb",
+                }
+                data["groups"][gname]["matches"][md_key][idx] = match
+                logger.info(
+                    "Holding first final confirmation for live match: %s %d-%d %s",
+                    canon_ta, actual_sa, actual_sb, canon_tb,
+                )
+                continue
+            match.pop("pending_final_confirmation", None)
+
         if (
             was_played
             and match.get("score_a") == actual_sa

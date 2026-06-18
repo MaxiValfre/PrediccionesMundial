@@ -78,23 +78,47 @@ def run_update_cycle() -> dict:
             return 1
         return 2
 
+    def with_sources(entry: dict, source_name: str) -> dict:
+        tagged = dict(entry)
+        sources = list(tagged.get("sources") or [])
+        if tagged.get("source") and tagged["source"] not in sources:
+            sources.append(tagged["source"])
+        if source_name and source_name not in sources:
+            sources.append(source_name)
+        tagged["source"] = source_name or tagged.get("source", "")
+        tagged["sources"] = sources
+        return tagged
+
+    def merge_update(existing: dict | None, incoming: dict) -> dict:
+        if existing is None:
+            return incoming
+
+        merged_sources = sorted(set(existing.get("sources", []) + incoming.get("sources", [])))
+        winner = incoming if update_priority(incoming) >= update_priority(existing) else existing
+        merged = dict(winner)
+        merged["sources"] = merged_sources
+        if len(merged_sources) == 1:
+            merged["source"] = merged_sources[0]
+        elif merged_sources:
+            merged["source"] = merged_sources[0]
+        return merged
+
     # Merge updates by team pair.
     # Final results outrank live snapshots so a stale local live file cannot
     # override a completed Wikipedia result.
     all_results = {}
     for r in sportsdb_updates:
+        r = with_sources(r, "thesportsdb")
         key = tuple(sorted([r["team_a"], r["team_b"]]))
-        all_results[key] = r
+        all_results[key] = merge_update(all_results.get(key), r)
     for r in web_results:
+        r = with_sources(r, "wikipedia")
         key = tuple(sorted([r["team_a"], r["team_b"]]))
-        existing = all_results.get(key)
-        if existing is None or update_priority(r) >= update_priority(existing):
-            all_results[key] = r
+        all_results[key] = merge_update(all_results.get(key), r)
     for r in file_results:
+        r = with_sources(r, "file")
         key = tuple(sorted([r["team_a"], r["team_b"]]))
-        existing = all_results.get(key)
-        if existing is None or update_priority(r) >= update_priority(existing):
-            all_results[key] = r
+        all_results[key] = merge_update(all_results.get(key), r)
 
     merged = list(all_results.values())
     print(f"\n  Total unique results to process: {len(merged)}")
