@@ -111,9 +111,24 @@
             "date": "2026-06-18",
             "team_a": "Czech Republic",
             "team_b": "South Africa",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-18",
+              "group": "A",
+              "team_a": "Czech Republic",
+              "team_b": "South Africa",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.4253,
+              "prob_draw": 0.3425,
+              "prob_win_b": 0.2321,
+              "xg_a": 1.54,
+              "xg_b": 1.09,
+              "captured_at": "2026-06-18T16:25:46"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-18",
@@ -145,17 +160,6 @@
       },
       "standings": [
         {
-          "team": "Mexico",
-          "played": 1,
-          "won": 1,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 2,
-          "ga": 0,
-          "gd": 2,
-          "points": 3
-        },
-        {
           "team": "South Korea",
           "played": 1,
           "won": 1,
@@ -167,25 +171,36 @@
           "points": 3
         },
         {
-          "team": "Czech Republic",
+          "team": "Mexico",
           "played": 1,
-          "won": 0,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 0,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "team": "Czech Republic",
+          "played": 2,
+          "won": 1,
           "drawn": 0,
           "lost": 1,
-          "gf": 1,
+          "gf": 2,
           "ga": 2,
-          "gd": -1,
-          "points": 0
+          "gd": 0,
+          "points": 3
         },
         {
           "team": "South Africa",
-          "played": 1,
+          "played": 2,
           "won": 0,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "gf": 0,
-          "ga": 2,
-          "gd": -2,
+          "ga": 3,
+          "gd": -3,
           "points": 0
         }
       ]
