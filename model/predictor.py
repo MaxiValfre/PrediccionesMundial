@@ -9,7 +9,7 @@ import json
 import math
 import os
 from collections import Counter, defaultdict
-from datetime import date
+from datetime import date, timedelta
 from functools import lru_cache
 from pathlib import Path
 from typing import Optional
@@ -266,6 +266,29 @@ def load_tournament_data() -> dict:
     data_path = Path(__file__).resolve().parent.parent / "data" / "world_cup_2026.json"
     with open(data_path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def current_matchday_date(data: dict) -> str:
+    """Return the tournament date the dashboard should treat as "today".
+
+    If the previous scheduled day still has matches that are live or not yet
+    finished, keep showing that matchday instead of advancing to the next one
+    just because the server clock crossed midnight.
+    """
+    today = date.today()
+    today_iso = today.isoformat()
+    previous_iso = (today - timedelta(days=1)).isoformat()
+
+    has_open_previous_matches = any(
+        match.get("date") == previous_iso and match.get("status") != "played"
+        for group in data.get("groups", {}).values()
+        for matchday_key in ("matchday1", "matchday2", "matchday3")
+        for match in group.get("matches", {}).get(matchday_key, [])
+    )
+    if has_open_previous_matches:
+        return previous_iso
+
+    return today_iso
 
 
 # ---------------------------------------------------------------------------
@@ -2062,11 +2085,11 @@ def generate_predictions() -> dict:
             pass
 
     # Today's matches
-    today = date.today().isoformat()
+    today = current_matchday_date(data)
     todays_matches = [m for m in match_predictions if m["date"] == today]
 
     output = {
-        "generated_date": today,
+        "generated_date": date.today().isoformat(),
         "today": today,
         "todays_matches": todays_matches,
         "match_predictions": match_predictions,
