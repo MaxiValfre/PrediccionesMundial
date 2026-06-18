@@ -112,7 +112,7 @@
             "team_a": "Czech Republic",
             "team_b": "South Africa",
             "score_a": 1,
-            "score_b": 0,
+            "score_b": 1,
             "status": "in_progress",
             "pre_match_prediction": {
               "date": "2026-06-18",
@@ -160,17 +160,6 @@
       },
       "standings": [
         {
-          "team": "South Korea",
-          "played": 1,
-          "won": 1,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 2,
-          "ga": 1,
-          "gd": 1,
-          "points": 3
-        },
-        {
           "team": "Mexico",
           "played": 1,
           "won": 1,
@@ -182,26 +171,37 @@
           "points": 3
         },
         {
-          "team": "Czech Republic",
-          "played": 2,
+          "team": "South Korea",
+          "played": 1,
           "won": 1,
           "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 1,
+          "gd": 1,
+          "points": 3
+        },
+        {
+          "team": "Czech Republic",
+          "played": 2,
+          "won": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 3
+          "ga": 3,
+          "gd": -1,
+          "points": 1
         },
         {
           "team": "South Africa",
           "played": 2,
           "won": 0,
-          "drawn": 0,
-          "lost": 2,
-          "gf": 0,
+          "drawn": 1,
+          "lost": 1,
+          "gf": 1,
           "ga": 3,
-          "gd": -3,
-          "points": 0
+          "gd": -2,
+          "points": 1
         }
       ]
     },
