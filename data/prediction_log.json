@@ -151,5 +151,22 @@
     "actual_score_b": 1,
     "result_category": "exact",
     "brier_score": 0.2224
+  },
+  {
+    "date": "2026-06-18",
+    "group": "B",
+    "team_a": "Switzerland",
+    "team_b": "Bosnia",
+    "predicted_score_a": 2,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.7589,
+    "prob_draw": 0.196,
+    "prob_win_b": 0.0451,
+    "xg_a": 2.95,
+    "xg_b": 0.67,
+    "actual_score_a": 4,
+    "actual_score_b": 1,
+    "result_category": "correct_direction",
+    "brier_score": 0.0329
   }
 ]
