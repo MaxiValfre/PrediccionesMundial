@@ -229,7 +229,7 @@
             "date": "2026-06-18",
             "team_a": "Canada",
             "team_b": "Qatar",
-            "score_a": 1,
+            "score_a": 3,
             "score_b": 0,
             "status": "in_progress",
             "pre_match_prediction": {
@@ -246,7 +246,7 @@
               "xg_b": 0.99,
               "captured_at": "2026-06-18T22:31:01"
             },
-            "minute": 23
+            "minute": 68
           }
         ],
         "matchday3": [
@@ -286,21 +286,10 @@
           "won": 1,
           "drawn": 1,
           "lost": 0,
-          "gf": 2,
+          "gf": 4,
           "ga": 1,
-          "gd": 1,
+          "gd": 3,
           "points": 4
-        },
-        {
-          "team": "Qatar",
-          "played": 2,
-          "won": 0,
-          "drawn": 1,
-          "lost": 1,
-          "gf": 1,
-          "ga": 2,
-          "gd": -1,
-          "points": 1
         },
         {
           "team": "Bosnia",
@@ -310,6 +299,17 @@
           "lost": 1,
           "gf": 2,
           "ga": 5,
+          "gd": -3,
+          "points": 1
+        },
+        {
+          "team": "Qatar",
+          "played": 2,
+          "won": 0,
+          "drawn": 1,
+          "lost": 1,
+          "gf": 1,
+          "ga": 4,
           "gd": -3,
           "points": 1
         }
