@@ -9,6 +9,7 @@ Usage:
 """
 
 import argparse
+from datetime import datetime, timezone
 import io
 import json
 import logging
@@ -123,9 +124,15 @@ def run_update_cycle() -> dict:
     merged = list(all_results.values())
     print(f"\n  Total unique results to process: {len(merged)}")
 
+    source_counts = {"thesportsdb": 0, "wikipedia": 0, "file": 0}
+    for entry in merged:
+        for source_name in entry.get("sources", []):
+            if source_name in source_counts:
+                source_counts[source_name] += 1
+
     if not merged:
         print("  No new results found. Continuing with existing data.\n")
-        return {"results_applied": 0}
+        return {"results_applied": 0, "source_counts": source_counts}
 
     # Step 3: Run the update pipeline
     summary = run_update(merged)
@@ -151,6 +158,7 @@ def run_update_cycle() -> dict:
                     print(f"    {c['team']:<20s} {c['initial']:.0f} -> {c['current']:.0f}  ({c['change']:.1f})")
 
     print("\n--- Update Complete ---\n")
+    summary["source_counts"] = source_counts
     return summary
 
 
@@ -209,6 +217,7 @@ def main():
 
     # Step 2: Run predictions
     output = generate_predictions()
+    output["generated_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
     # Step 2b: Merge market odds if available
     try:
@@ -267,6 +276,18 @@ def main():
         ]
     except Exception as e:
         logging.getLogger(__name__).warning("Could not load market odds: %s", e)
+
+    output["refresh_status"] = {
+        "generated_at": output["generated_at"],
+        "update_mode": "update" if args.update else "predict_only",
+        "sources": (update_summary or {}).get("source_counts", {}),
+        "results_applied": (update_summary or {}).get("results_applied", 0),
+        "corrections_applied": (update_summary or {}).get("corrections_applied", 0),
+        "live_updates_applied": (update_summary or {}).get("live_updates_applied", 0),
+        "prediction_entries_added": (update_summary or {}).get("prediction_entries_added", 0),
+        "market_last_fetch": (output.get("market_odds_status") or {}).get("last_fetch"),
+        "matches_with_market_odds": (output.get("market_odds_status") or {}).get("matches_with_odds", 0),
+    }
 
     # Step 3: Add accuracy metrics to output if prediction log exists
     try:
