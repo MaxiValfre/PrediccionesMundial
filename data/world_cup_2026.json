@@ -1311,9 +1311,9 @@
             "date": "2026-06-17",
             "team_a": "Panama",
             "team_b": "Ghana",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 1,
+            "status": "played"
           }
         ],
         "matchday2": [
@@ -1366,25 +1366,25 @@
           "points": 3
         },
         {
-          "team": "Panama",
-          "played": 0,
-          "won": 0,
+          "team": "Ghana",
+          "played": 1,
+          "won": 1,
           "drawn": 0,
           "lost": 0,
-          "gf": 0,
+          "gf": 1,
           "ga": 0,
-          "gd": 0,
-          "points": 0
+          "gd": 1,
+          "points": 3
         },
         {
-          "team": "Ghana",
-          "played": 0,
+          "team": "Panama",
+          "played": 1,
           "won": 0,
           "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "ga": 1,
+          "gd": -1,
           "points": 0
         },
         {

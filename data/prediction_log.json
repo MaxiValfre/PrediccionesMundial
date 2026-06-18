@@ -100,5 +100,22 @@
     "actual_score_b": 2,
     "result_category": "correct_direction",
     "brier_score": 0.0828
+  },
+  {
+    "date": "2026-06-17",
+    "group": "L",
+    "team_a": "Panama",
+    "team_b": "Ghana",
+    "predicted_score_a": 1,
+    "predicted_score_b": 1,
+    "prob_win_a": 0.3792,
+    "prob_draw": 0.3445,
+    "prob_win_b": 0.2762,
+    "xg_a": 1.47,
+    "xg_b": 1.23,
+    "actual_score_a": 0,
+    "actual_score_b": 1,
+    "result_category": "wrong",
+    "brier_score": 0.2621
   }
 ]
