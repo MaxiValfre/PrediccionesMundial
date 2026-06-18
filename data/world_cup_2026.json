@@ -1201,8 +1201,8 @@
             "date": "2026-06-17",
             "team_a": "Colombia",
             "team_b": "Uzbekistan",
-            "score_a": 0,
-            "score_b": 0,
+            "score_a": 1,
+            "score_b": 1,
             "status": "in_progress",
             "pre_match_prediction": {
               "date": "2026-06-17",
@@ -1218,7 +1218,7 @@
               "xg_b": 0.4,
               "captured_at": "2026-06-18T02:25:46"
             },
-            "minute": 23
+            "minute": 68
           }
         ],
         "matchday2": [
@@ -1260,6 +1260,17 @@
       },
       "standings": [
         {
+          "team": "Uzbekistan",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
           "team": "Portugal",
           "played": 1,
           "won": 0,
@@ -1282,24 +1293,13 @@
           "points": 1
         },
         {
-          "team": "Uzbekistan",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 1
-        },
-        {
           "team": "Colombia",
           "played": 1,
           "won": 0,
           "drawn": 1,
           "lost": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
           "points": 1
         }
