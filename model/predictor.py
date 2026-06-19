@@ -540,6 +540,49 @@ def remaining_expected_goals(xg_a: float, xg_b: float,
     return xg_a * remaining_fraction, xg_b * remaining_fraction, remaining_fraction
 
 
+def live_game_state_expected_goals(
+    current_score_a: int,
+    current_score_b: int,
+    minute: Optional[int | float],
+    xg_a: float,
+    xg_b: float,
+) -> tuple[float, float, float]:
+    """Adjust remaining xG for the live score state.
+
+    The pre-match xG split is a useful baseline, but once the match is live the
+    scoreline changes incentives: trailing teams push harder and leaders become
+    more conservative, especially late. We model that as a bounded reshaping of
+    the remaining xG rather than a full event-based live model.
+    """
+    rem_xg_a, rem_xg_b, remaining_fraction = remaining_expected_goals(xg_a, xg_b, minute)
+    score_diff = current_score_a - current_score_b
+    if score_diff == 0:
+        return rem_xg_a, rem_xg_b, remaining_fraction
+
+    state_magnitude = min(abs(score_diff), 2)
+    late_weight = 1.0 - remaining_fraction
+    boost = 1.0 + 0.22 * state_magnitude * late_weight
+    shrink = max(0.55, 1.0 - 0.14 * state_magnitude * late_weight)
+
+    if score_diff > 0:
+        rem_xg_a *= shrink
+        rem_xg_b *= boost
+    else:
+        rem_xg_a *= boost
+        rem_xg_b *= shrink
+
+    # Let game state increase total expected chaos a bit, but keep it bounded.
+    base_total = xg_a * remaining_fraction + xg_b * remaining_fraction
+    new_total = rem_xg_a + rem_xg_b
+    max_total = base_total * (1.0 + 0.18 * state_magnitude * late_weight)
+    if new_total > 0 and max_total > 0 and new_total > max_total:
+        scale = max_total / new_total
+        rem_xg_a *= scale
+        rem_xg_b *= scale
+
+    return rem_xg_a, rem_xg_b, remaining_fraction
+
+
 def build_display_score_matrix(matrix: np.ndarray, size: int = 6) -> list[list[float]]:
     """Convert a score matrix into a small normalized heatmap slice."""
     score_matrix_raw = matrix[:size, :size]
@@ -567,7 +610,13 @@ def live_match_state(current_score_a: int, current_score_b: int,
                      xg_a: float, xg_b: float,
                      group_stage: bool = False) -> dict:
     """Project a live match from the current score and remaining time."""
-    rem_xg_a, rem_xg_b, remaining_fraction = remaining_expected_goals(xg_a, xg_b, minute)
+    rem_xg_a, rem_xg_b, remaining_fraction = live_game_state_expected_goals(
+        current_score_a,
+        current_score_b,
+        minute,
+        xg_a,
+        xg_b,
+    )
     additional_matrix, _ = get_sampling_distribution(
         rem_xg_a,
         rem_xg_b,
@@ -895,7 +944,13 @@ def simulate_group(rng: np.random.Generator, group: dict,
                 form_a=form.get(ta, 0), form_b=form.get(tb, 0),
             )
             if status == "in_progress" and m.get("score_a") is not None and m.get("score_b") is not None:
-                rem_xg_a, rem_xg_b, _ = remaining_expected_goals(xg_a, xg_b, m.get("minute"))
+                rem_xg_a, rem_xg_b, _ = live_game_state_expected_goals(
+                    int(m.get("score_a") or 0),
+                    int(m.get("score_b") or 0),
+                    m.get("minute"),
+                    xg_a,
+                    xg_b,
+                )
                 add_a, add_b = simulate_match(rng, rem_xg_a, rem_xg_b, group_stage=True)
                 ga = int(m.get("score_a", 0)) + add_a
                 gb = int(m.get("score_b", 0)) + add_b
