@@ -491,6 +491,96 @@
           "points": 0
         }
       ],
+      "team_paths": [
+        {
+          "team": "Brazil",
+          "best_rank": 2,
+          "worst_rank": 4,
+          "top2_paths": 4,
+          "total_paths": 9,
+          "summary_key": "avoid_defeat",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 1,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Morocco",
+          "best_rank": 1,
+          "worst_rank": 3,
+          "top2_paths": 4,
+          "total_paths": 9,
+          "summary_key": "avoid_defeat",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 1,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Haiti",
+          "best_rank": 2,
+          "worst_rank": 4,
+          "top2_paths": 2,
+          "total_paths": 9,
+          "summary_key": "must_win_help",
+          "by_result": {
+            "win": {
+              "qualify": 2,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 0,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Scotland",
+          "best_rank": 1,
+          "worst_rank": 3,
+          "top2_paths": 8,
+          "total_paths": 9,
+          "summary_key": "avoid_defeat",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 3,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 2,
+              "total": 3
+            }
+          }
+        }
+      ],
       "default_scenario_id": "Scotland_Morocco_team_b_0_1__Brazil_Haiti_team_a_1_0",
       "scenarios": [
         {
@@ -1203,7 +1293,97 @@
           "points": 0
         }
       ],
-      "default_scenario_id": "USA_Australia_team_a_2_0__Turkey_Paraguay_team_a_1_0",
+      "team_paths": [
+        {
+          "team": "USA",
+          "best_rank": 1,
+          "worst_rank": 2,
+          "top2_paths": 9,
+          "total_paths": 9,
+          "summary_key": "locked",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 3,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 3,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Paraguay",
+          "best_rank": 3,
+          "worst_rank": 4,
+          "top2_paths": 0,
+          "total_paths": 9,
+          "summary_key": "eliminated",
+          "by_result": {
+            "win": {
+              "qualify": 0,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 0,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Australia",
+          "best_rank": 1,
+          "worst_rank": 2,
+          "top2_paths": 9,
+          "total_paths": 9,
+          "summary_key": "locked",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 3,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 3,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Turkey",
+          "best_rank": 3,
+          "worst_rank": 4,
+          "top2_paths": 0,
+          "total_paths": 9,
+          "summary_key": "eliminated",
+          "by_result": {
+            "win": {
+              "qualify": 0,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 0,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        }
+      ],
+      "default_scenario_id": "USA_Australia_team_a_1_0__Turkey_Paraguay_team_a_1_0",
       "scenarios": [
         {
           "id": "USA_Australia_team_a_2_0__Turkey_Paraguay_team_a_1_0",
@@ -11581,6 +11761,402 @@
     "South Africa": "🇿🇦"
   },
   "probability_timeline": {
+    "Japan": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0008,
+        "qualify_pct": 0.8188
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0032,
+        "qualify_pct": 0.8553
+      }
+    ],
+    "France": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.1852,
+        "qualify_pct": 0.9988
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.1938,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Curaçao": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0236
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0083
+      }
+    ],
+    "South Korea": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0008,
+        "qualify_pct": 0.9312
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0004,
+        "qualify_pct": 0.9896
+      }
+    ],
+    "Canada": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.9012
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0001,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Bosnia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3172
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2682
+      }
+    ],
+    "Mexico": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0112,
+        "qualify_pct": 0.984
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0106,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Colombia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0104,
+        "qualify_pct": 0.9888
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0151,
+        "qualify_pct": 0.9991
+      }
+    ],
+    "Ghana": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3032
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6898
+      }
+    ],
+    "Scotland": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7304
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.8847
+      }
+    ],
+    "Norway": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6252
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.9451
+      }
+    ],
+    "Jordan": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.1444
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0604
+      }
+    ],
+    "Switzerland": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0008,
+        "qualify_pct": 0.9868
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0013,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Ivory Coast": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.888
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0001,
+        "qualify_pct": 0.9957
+      }
+    ],
+    "Iraq": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2408
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0632
+      }
+    ],
+    "Qatar": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.4544
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3881
+      }
+    ],
+    "Croatia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0016,
+        "qualify_pct": 0.9628
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0005,
+        "qualify_pct": 0.9322
+      }
+    ],
+    "USA": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.01,
+        "qualify_pct": 0.9536
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0118,
+        "qualify_pct": 0.9966
+      }
+    ],
+    "Saudi Arabia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6712
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7299
+      }
+    ],
+    "Ecuador": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.922
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0001,
+        "qualify_pct": 0.8271
+      }
+    ],
+    "Spain": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0496,
+        "qualify_pct": 0.9896
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0414,
+        "qualify_pct": 0.9463
+      }
+    ],
+    "Argentina": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.4632,
+        "qualify_pct": 0.9992
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.4626,
+        "qualify_pct": 0.9999
+      }
+    ],
+    "Portugal": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0288,
+        "qualify_pct": 0.9916
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0251,
+        "qualify_pct": 0.9721
+      }
+    ],
+    "DR Congo": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.4472
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.658
+      }
+    ],
+    "Uzbekistan": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0956
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.086
+      }
+    ],
+    "England": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0888,
+        "qualify_pct": 0.9972
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0965,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Turkey": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6824
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.5
+      }
+    ],
+    "Australia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0008,
+        "qualify_pct": 0.8548
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0019,
+        "qualify_pct": 0.9876
+      }
+    ],
+    "Cape Verde": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.074
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.1379
+      }
+    ],
+    "Senegal": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7272
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6907
+      }
+    ],
+    "Belgium": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0112,
+        "qualify_pct": 0.9772
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.008,
+        "qualify_pct": 0.9567
+      }
+    ],
+    "New Zealand": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2412
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2596
+      }
+    ],
+    "Panama": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.236
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0292
+      }
+    ],
     "Iran": [
       {
         "matchday": "pre",
@@ -11605,256 +12181,28 @@
         "qualify_pct": 0.8295
       }
     ],
-    "USA": [
+    "Netherlands": [
       {
         "matchday": "pre",
-        "win_pct": 0.01,
-        "qualify_pct": 0.9536
+        "win_pct": 0.012,
+        "qualify_pct": 0.9108
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0138,
-        "qualify_pct": 1.0
+        "win_pct": 0.011,
+        "qualify_pct": 0.9133
       }
     ],
-    "Qatar": [
+    "Sweden": [
       {
         "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.4544
+        "win_pct": 0.0036,
+        "qualify_pct": 0.8068
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.3891
-      }
-    ],
-    "Australia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0008,
-        "qualify_pct": 0.8548
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0012,
-        "qualify_pct": 0.9729
-      }
-    ],
-    "Senegal": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.7272
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6909
-      }
-    ],
-    "Croatia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0016,
-        "qualify_pct": 0.9628
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0006,
-        "qualify_pct": 0.9301
-      }
-    ],
-    "Germany": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0396,
-        "qualify_pct": 0.996
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0464,
-        "qualify_pct": 0.9999
-      }
-    ],
-    "Algeria": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6884
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6546
-      }
-    ],
-    "Ghana": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.3032
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6925
-      }
-    ],
-    "Brazil": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.072,
-        "qualify_pct": 0.9956
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0615,
-        "qualify_pct": 0.9937
-      }
-    ],
-    "Belgium": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0112,
-        "qualify_pct": 0.9772
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0077,
-        "qualify_pct": 0.9567
-      }
-    ],
-    "Panama": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.236
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0299
-      }
-    ],
-    "Cape Verde": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.074
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1371
-      }
-    ],
-    "Haiti": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0752
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0111
-      }
-    ],
-    "Argentina": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.4632,
-        "qualify_pct": 0.9992
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.4661,
-        "qualify_pct": 0.9999
-      }
-    ],
-    "Jordan": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1444
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0597
-      }
-    ],
-    "Japan": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0008,
-        "qualify_pct": 0.8188
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.003,
-        "qualify_pct": 0.856
-      }
-    ],
-    "South Korea": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0008,
-        "qualify_pct": 0.9312
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0005,
-        "qualify_pct": 0.9891
-      }
-    ],
-    "Egypt": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6756
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.7523
-      }
-    ],
-    "Uzbekistan": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0956
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0852
-      }
-    ],
-    "Bosnia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.3172
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.2634
-      }
-    ],
-    "Saudi Arabia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6712
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.7359
+        "win_pct": 0.0043,
+        "qualify_pct": 0.9898
       }
     ],
     "Tunisia": [
@@ -11866,19 +12214,31 @@
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.0908
+        "qualify_pct": 0.0897
       }
     ],
-    "Norway": [
+    "Brazil": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.072,
+        "qualify_pct": 0.9956
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0616,
+        "qualify_pct": 0.9936
+      }
+    ],
+    "Egypt": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.6252
+        "qualify_pct": 0.6756
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.9469
+        "qualify_pct": 0.7522
       }
     ],
     "Morocco": [
@@ -11890,142 +12250,10 @@
       {
         "matchday": "md1",
         "win_pct": 0.0011,
-        "qualify_pct": 0.963
-      }
-    ],
-    "Switzerland": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0008,
-        "qualify_pct": 0.9868
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0012,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Curaçao": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0236
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0087
-      }
-    ],
-    "DR Congo": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.4472
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6587
-      }
-    ],
-    "Scotland": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.7304
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.8858
+        "qualify_pct": 0.9617
       }
     ],
     "Czech Republic": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.4464
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0571
-      }
-    ],
-    "Turkey": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6824
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.4942
-      }
-    ],
-    "New Zealand": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.2412
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.2618
-      }
-    ],
-    "Sweden": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0036,
-        "qualify_pct": 0.8068
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0045,
-        "qualify_pct": 0.9908
-      }
-    ],
-    "Canada": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.9012
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0001,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Mexico": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0112,
-        "qualify_pct": 0.984
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0103,
-        "qualify_pct": 1.0
-      }
-    ],
-    "France": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.1852,
-        "qualify_pct": 0.9988
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.1948,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Austria": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
@@ -12155,6 +12383,78 @@
         "matchday": "md1",
         "win_pct": 0.0,
         "qualify_pct": 0.9958
+      }
+    ],
+    "Algeria": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6884
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6538
+      }
+    ],
+    "Uruguay": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0068,
+        "qualify_pct": 0.968
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0041,
+        "qualify_pct": 0.9312
+      }
+    ],
+    "Austria": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7648
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.9357
+      }
+    ],
+    "South Africa": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2588
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0569
+      }
+    ],
+    "Germany": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0396,
+        "qualify_pct": 0.996
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0451,
+        "qualify_pct": 0.9999
+      }
+    ],
+    "Paraguay": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2496
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.16
       }
     ]
   },
@@ -12435,19 +12735,15 @@
       "count": 3
     }
   ],
-  "generated_at": "2026-06-19T21:16:49Z",
+  "generated_at": "2026-06-19T21:19:48Z",
   "market_odds_status": {
     "last_fetch": "2026-06-19T15:56:52",
     "matches_with_odds": 51
   },
   "refresh_status": {
-    "generated_at": "2026-06-19T21:16:49Z",
-    "update_mode": "update",
-    "sources": {
-      "thesportsdb": 5,
-      "wikipedia": 11,
-      "file": 0
-    },
+    "generated_at": "2026-06-19T21:19:48Z",
+    "update_mode": "predict_only",
+    "sources": {},
     "results_applied": 0,
     "corrections_applied": 0,
     "live_updates_applied": 1,

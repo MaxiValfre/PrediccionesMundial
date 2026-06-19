@@ -330,6 +330,90 @@ def build_group_scenarios(data: dict, match_predictions: list[dict], active_date
     from itertools import product
     from model.updater import recalculate_standings
 
+    def own_result_for_team(choice: dict, team: str) -> str:
+        if team == choice["team_a"]:
+            if choice["result"] == "team_a":
+                return "win"
+            if choice["result"] == "draw":
+                return "draw"
+            return "loss"
+        if team == choice["team_b"]:
+            if choice["result"] == "team_b":
+                return "win"
+            if choice["result"] == "draw":
+                return "draw"
+            return "loss"
+        return "other"
+
+    def summarize_team_paths(group_data: dict, scenarios: list[dict]) -> list[dict]:
+        summaries = []
+        teams = group_data.get("teams", [])
+        for team in teams:
+            best_rank = 99
+            worst_rank = 0
+            qualify_total = 0
+            buckets = {
+                "win": {"qualify": 0, "total": 0},
+                "draw": {"qualify": 0, "total": 0},
+                "loss": {"qualify": 0, "total": 0},
+            }
+
+            for scenario in scenarios:
+                rank = next(
+                    idx + 1 for idx, row in enumerate(scenario["standings"])
+                    if row["team"] == team
+                )
+                best_rank = min(best_rank, rank)
+                worst_rank = max(worst_rank, rank)
+                qualifies = rank <= 2
+                if qualifies:
+                    qualify_total += 1
+
+                own_result = "other"
+                for choice in scenario["choices"]:
+                    own_result = own_result_for_team(choice, team)
+                    if own_result != "other":
+                        break
+                if own_result in buckets:
+                    buckets[own_result]["total"] += 1
+                    if qualifies:
+                        buckets[own_result]["qualify"] += 1
+
+            total = len(scenarios)
+            win_all = buckets["win"]["total"] > 0 and buckets["win"]["qualify"] == buckets["win"]["total"]
+            win_some = buckets["win"]["qualify"] > 0
+            draw_some = buckets["draw"]["qualify"] > 0
+            loss_some = buckets["loss"]["qualify"] > 0
+
+            if qualify_total == 0:
+                summary_key = "eliminated"
+            elif qualify_total == total:
+                summary_key = "locked"
+            elif win_all and draw_some:
+                summary_key = "avoid_defeat"
+            elif win_all:
+                summary_key = "win_clinches"
+            elif win_some and not draw_some and not loss_some:
+                summary_key = "must_win_help"
+            elif draw_some:
+                summary_key = "draw_alive"
+            elif win_some:
+                summary_key = "needs_help"
+            else:
+                summary_key = "long_shot"
+
+            summaries.append({
+                "team": team,
+                "best_rank": best_rank,
+                "worst_rank": worst_rank,
+                "top2_paths": qualify_total,
+                "total_paths": total,
+                "summary_key": summary_key,
+                "by_result": buckets,
+            })
+
+        return summaries
+
     prediction_lookup = {
         (match["team_a"], match["team_b"], match["date"]): match
         for match in match_predictions
@@ -436,6 +520,7 @@ def build_group_scenarios(data: dict, match_predictions: list[dict], active_date
                 for match in active_matches
             ],
             "current_standings": recalculate_standings(group_data),
+            "team_paths": summarize_team_paths(group_data, scenarios),
             "default_scenario_id": default_id,
             "scenarios": scenarios,
         })
