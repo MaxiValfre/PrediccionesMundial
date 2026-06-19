@@ -331,9 +331,24 @@
             "date": "2026-06-19",
             "team_a": "Scotland",
             "team_b": "Morocco",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 1,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-19",
+              "group": "C",
+              "team_a": "Scotland",
+              "team_b": "Morocco",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.1976,
+              "prob_draw": 0.3192,
+              "prob_win_b": 0.4832,
+              "xg_a": 1.09,
+              "xg_b": 1.8,
+              "captured_at": "2026-06-19T22:31:04"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-19",
@@ -365,26 +380,26 @@
       },
       "standings": [
         {
-          "team": "Scotland",
-          "played": 1,
-          "won": 1,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 1,
-          "ga": 0,
-          "gd": 1,
-          "points": 3
-        },
-        {
           "team": "Morocco",
-          "played": 1,
-          "won": 0,
+          "played": 2,
+          "won": 1,
           "drawn": 1,
           "lost": 0,
+          "gf": 2,
+          "ga": 1,
+          "gd": 1,
+          "points": 4
+        },
+        {
+          "team": "Scotland",
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
           "gf": 1,
           "ga": 1,
           "gd": 0,
-          "points": 1
+          "points": 3
         },
         {
           "team": "Brazil",
@@ -458,7 +473,13 @@
               "xg_b": 1.2,
               "captured_at": "2026-06-19T19:31:01"
             },
-            "minute": 68
+            "minute": 68,
+            "pending_final_confirmation": {
+              "date": "2026-06-19",
+              "score_a": 2,
+              "score_b": 0,
+              "source": "thesportsdb"
+            }
           },
           {
             "date": "2026-06-19",
