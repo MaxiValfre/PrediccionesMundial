@@ -229,24 +229,9 @@
             "date": "2026-06-18",
             "team_a": "Canada",
             "team_b": "Qatar",
-            "score_a": 3,
+            "score_a": 6,
             "score_b": 0,
-            "status": "in_progress",
-            "pre_match_prediction": {
-              "date": "2026-06-18",
-              "group": "B",
-              "team_a": "Canada",
-              "team_b": "Qatar",
-              "predicted_score_a": 1,
-              "predicted_score_b": 1,
-              "prob_win_a": 0.5392,
-              "prob_draw": 0.3024,
-              "prob_win_b": 0.1584,
-              "xg_a": 1.96,
-              "xg_b": 0.99,
-              "captured_at": "2026-06-18T22:31:01"
-            },
-            "minute": 68
+            "status": "played"
           }
         ],
         "matchday3": [
@@ -270,6 +255,17 @@
       },
       "standings": [
         {
+          "team": "Canada",
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 7,
+          "ga": 1,
+          "gd": 6,
+          "points": 4
+        },
+        {
           "team": "Switzerland",
           "played": 2,
           "won": 1,
@@ -277,17 +273,6 @@
           "lost": 0,
           "gf": 5,
           "ga": 2,
-          "gd": 3,
-          "points": 4
-        },
-        {
-          "team": "Canada",
-          "played": 2,
-          "won": 1,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 4,
-          "ga": 1,
           "gd": 3,
           "points": 4
         },
@@ -309,8 +294,8 @@
           "drawn": 1,
           "lost": 1,
           "gf": 1,
-          "ga": 4,
-          "gd": -3,
+          "ga": 7,
+          "gd": -6,
           "points": 1
         }
       ]

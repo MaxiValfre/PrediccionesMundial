@@ -168,5 +168,22 @@
     "actual_score_b": 1,
     "result_category": "correct_direction",
     "brier_score": 0.0329
+  },
+  {
+    "date": "2026-06-18",
+    "group": "B",
+    "team_a": "Canada",
+    "team_b": "Qatar",
+    "predicted_score_a": 1,
+    "predicted_score_b": 1,
+    "prob_win_a": 0.5392,
+    "prob_draw": 0.3024,
+    "prob_win_b": 0.1584,
+    "xg_a": 1.96,
+    "xg_b": 0.99,
+    "actual_score_a": 6,
+    "actual_score_b": 0,
+    "result_category": "wrong",
+    "brier_score": 0.1096
   }
 ]
