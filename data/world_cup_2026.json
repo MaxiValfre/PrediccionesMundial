@@ -441,9 +441,24 @@
             "date": "2026-06-19",
             "team_a": "USA",
             "team_b": "Australia",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-19",
+              "group": "D",
+              "team_a": "USA",
+              "team_b": "Australia",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.4633,
+              "prob_draw": 0.3171,
+              "prob_win_b": 0.2196,
+              "xg_a": 1.82,
+              "xg_b": 1.2,
+              "captured_at": "2026-06-19T19:31:01"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-19",
@@ -476,24 +491,24 @@
       "standings": [
         {
           "team": "USA",
-          "played": 1,
-          "won": 1,
+          "played": 2,
+          "won": 2,
           "drawn": 0,
           "lost": 0,
-          "gf": 4,
+          "gf": 5,
           "ga": 1,
-          "gd": 3,
-          "points": 3
+          "gd": 4,
+          "points": 6
         },
         {
           "team": "Australia",
-          "played": 1,
+          "played": 2,
           "won": 1,
           "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "gf": 2,
-          "ga": 0,
-          "gd": 2,
+          "ga": 1,
+          "gd": 1,
           "points": 3
         },
         {
