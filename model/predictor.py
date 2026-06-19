@@ -291,6 +291,158 @@ def current_matchday_date(data: dict) -> str:
     return today_iso
 
 
+def scenario_choices_for_match(match: dict) -> list[dict]:
+    """Return compact scenario branches for one active match."""
+    team_a = match["team_a"]
+    team_b = match["team_b"]
+    status = match.get("status", "scheduled")
+    score_a = int(match.get("score_a") or 0)
+    score_b = int(match.get("score_b") or 0)
+
+    if status == "in_progress":
+        if score_a > score_b:
+            return [
+                {"result": "team_a", "label_kind": "hold", "score_a": score_a, "score_b": score_b},
+                {"result": "draw", "label_kind": "draw", "score_a": score_a, "score_b": score_a},
+                {"result": "team_b", "label_kind": "comeback", "score_a": score_a, "score_b": score_a + 1},
+            ]
+        if score_b > score_a:
+            return [
+                {"result": "team_b", "label_kind": "hold", "score_a": score_a, "score_b": score_b},
+                {"result": "draw", "label_kind": "draw", "score_a": score_b, "score_b": score_b},
+                {"result": "team_a", "label_kind": "comeback", "score_a": score_b + 1, "score_b": score_b},
+            ]
+        return [
+            {"result": "team_a", "label_kind": "win", "score_a": score_a + 1, "score_b": score_b},
+            {"result": "draw", "label_kind": "draw", "score_a": score_a, "score_b": score_b},
+            {"result": "team_b", "label_kind": "win", "score_a": score_a, "score_b": score_b + 1},
+        ]
+
+    return [
+        {"result": "team_a", "label_kind": "win", "score_a": 1, "score_b": 0},
+        {"result": "draw", "label_kind": "draw", "score_a": 1, "score_b": 1},
+        {"result": "team_b", "label_kind": "win", "score_a": 0, "score_b": 1},
+    ]
+
+
+def build_group_scenarios(data: dict, match_predictions: list[dict], active_date: str) -> list[dict]:
+    """Build simple what-if group scenarios for the active matchday."""
+    from itertools import product
+    from model.updater import recalculate_standings
+
+    prediction_lookup = {
+        (match["team_a"], match["team_b"], match["date"]): match
+        for match in match_predictions
+    }
+    groups = []
+
+    for group_name, group_data in sorted(data.get("groups", {}).items()):
+        active_matches = []
+        for matchday_key in ("matchday1", "matchday2", "matchday3"):
+            for match in group_data.get("matches", {}).get(matchday_key, []):
+                if match.get("date") != active_date or match.get("status") == "played":
+                    continue
+                prediction = prediction_lookup.get((match["team_a"], match["team_b"], match["date"]), {})
+                active_matches.append({
+                    "team_a": match["team_a"],
+                    "team_b": match["team_b"],
+                    "status": match.get("status", "scheduled"),
+                    "score_a": match.get("score_a"),
+                    "score_b": match.get("score_b"),
+                    "prob_win_a": prediction.get("prob_win_a"),
+                    "prob_draw": prediction.get("prob_draw"),
+                    "prob_win_b": prediction.get("prob_win_b"),
+                    "choices": scenario_choices_for_match(match),
+                })
+
+        if not active_matches:
+            continue
+
+        scenario_sets = [match["choices"] for match in active_matches]
+        scenarios = []
+        default_id = None
+
+        for combo in product(*scenario_sets):
+            group_copy = copy.deepcopy(group_data)
+            choice_payload = []
+
+            for match_idx, choice in enumerate(combo):
+                source_match = active_matches[match_idx]
+                for matchday_key in ("matchday1", "matchday2", "matchday3"):
+                    for match in group_copy.get("matches", {}).get(matchday_key, []):
+                        if (
+                            match["team_a"] == source_match["team_a"]
+                            and match["team_b"] == source_match["team_b"]
+                            and match.get("date") == active_date
+                        ):
+                            match["score_a"] = choice["score_a"]
+                            match["score_b"] = choice["score_b"]
+                            match["status"] = "played"
+                            match.pop("minute", None)
+                choice_payload.append({
+                    "team_a": source_match["team_a"],
+                    "team_b": source_match["team_b"],
+                    "result": choice["result"],
+                    "label_kind": choice["label_kind"],
+                    "score_a": choice["score_a"],
+                    "score_b": choice["score_b"],
+                })
+
+            scenario_id = "__".join(
+                f"{c['team_a']}_{c['team_b']}_{c['result']}_{c['score_a']}_{c['score_b']}"
+                for c in choice_payload
+            )
+            if default_id is None:
+                default_id = scenario_id
+
+            standings = recalculate_standings(group_copy)
+            scenarios.append({
+                "id": scenario_id,
+                "choices": choice_payload,
+                "standings": standings,
+            })
+
+        # Choose the default branch from the model's top outcome per active match.
+        default_parts = []
+        for match in active_matches:
+            probs = {
+                "team_a": match.get("prob_win_a") or 0,
+                "draw": match.get("prob_draw") or 0,
+                "team_b": match.get("prob_win_b") or 0,
+            }
+            top_result = max(probs, key=probs.get)
+            best_choice = next(
+                (choice for choice in match["choices"] if choice["result"] == top_result),
+                match["choices"][0],
+            )
+            default_parts.append(
+                f"{match['team_a']}_{match['team_b']}_{best_choice['result']}_{best_choice['score_a']}_{best_choice['score_b']}"
+            )
+        if default_parts:
+            default_id = "__".join(default_parts)
+
+        groups.append({
+            "group": group_name,
+            "date": active_date,
+            "matches": [
+                {
+                    "team_a": match["team_a"],
+                    "team_b": match["team_b"],
+                    "status": match["status"],
+                    "score_a": match["score_a"],
+                    "score_b": match["score_b"],
+                    "choices": match["choices"],
+                }
+                for match in active_matches
+            ],
+            "current_standings": recalculate_standings(group_data),
+            "default_scenario_id": default_id,
+            "scenarios": scenarios,
+        })
+
+    return groups
+
+
 # ---------------------------------------------------------------------------
 # Form adjustments from matchday results (momentum-based)
 # ---------------------------------------------------------------------------
@@ -2142,11 +2294,13 @@ def generate_predictions() -> dict:
     # Today's matches
     today = current_matchday_date(data)
     todays_matches = [m for m in match_predictions if m["date"] == today]
+    group_scenarios = build_group_scenarios(data, match_predictions, today)
 
     output = {
         "generated_date": date.today().isoformat(),
         "today": today,
         "todays_matches": todays_matches,
+        "group_scenarios": group_scenarios,
         "match_predictions": match_predictions,
         "tournament_probabilities": tournament_probs,
         "power_rankings": power_rankings,
