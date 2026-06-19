@@ -119,9 +119,24 @@
             "date": "2026-06-18",
             "team_a": "Mexico",
             "team_b": "South Korea",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-18",
+              "group": "A",
+              "team_a": "Mexico",
+              "team_b": "South Korea",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.4209,
+              "prob_draw": 0.3266,
+              "prob_win_b": 0.2525,
+              "xg_a": 1.69,
+              "xg_b": 1.27,
+              "captured_at": "2026-06-19T01:31:02"
+            },
+            "minute": 23
           }
         ],
         "matchday3": [
@@ -146,25 +161,25 @@
       "standings": [
         {
           "team": "Mexico",
-          "played": 1,
+          "played": 2,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
           "gf": 2,
           "ga": 0,
           "gd": 2,
-          "points": 3
+          "points": 4
         },
         {
           "team": "South Korea",
-          "played": 1,
+          "played": 2,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
           "gf": 2,
           "ga": 1,
           "gd": 1,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Czech Republic",
