@@ -551,24 +551,9 @@
             "date": "2026-06-20",
             "team_a": "Germany",
             "team_b": "Ivory Coast",
-            "score_a": 1,
+            "score_a": 2,
             "score_b": 1,
-            "status": "in_progress",
-            "pre_match_prediction": {
-              "date": "2026-06-20",
-              "group": "E",
-              "team_a": "Germany",
-              "team_b": "Ivory Coast",
-              "predicted_score_a": 2,
-              "predicted_score_b": 0,
-              "prob_win_a": 0.7444,
-              "prob_draw": 0.2045,
-              "prob_win_b": 0.0511,
-              "xg_a": 2.86,
-              "xg_b": 0.69,
-              "captured_at": "2026-06-20T20:35:36"
-            },
-            "minute": 68
+            "status": "played"
           },
           {
             "date": "2026-06-20",
@@ -602,24 +587,24 @@
         {
           "team": "Germany",
           "played": 2,
-          "won": 1,
-          "drawn": 1,
+          "won": 2,
+          "drawn": 0,
           "lost": 0,
-          "gf": 8,
+          "gf": 9,
           "ga": 2,
-          "gd": 6,
-          "points": 4
+          "gd": 7,
+          "points": 6
         },
         {
           "team": "Ivory Coast",
           "played": 2,
           "won": 1,
-          "drawn": 1,
-          "lost": 0,
+          "drawn": 0,
+          "lost": 1,
           "gf": 2,
-          "ga": 1,
-          "gd": 1,
-          "points": 4
+          "ga": 2,
+          "gd": 0,
+          "points": 3
         },
         {
           "team": "Ecuador",
