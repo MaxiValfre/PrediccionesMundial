@@ -339,7 +339,7 @@
             "date": "2026-06-19",
             "team_a": "Brazil",
             "team_b": "Haiti",
-            "score_a": 0,
+            "score_a": 3,
             "score_b": 0,
             "status": "in_progress",
             "pre_match_prediction": {
@@ -356,7 +356,7 @@
               "xg_b": 0.31,
               "captured_at": "2026-06-20T00:35:40"
             },
-            "minute": 23
+            "minute": 45
           }
         ],
         "matchday3": [
@@ -380,6 +380,17 @@
       },
       "standings": [
         {
+          "team": "Brazil",
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 4,
+          "ga": 1,
+          "gd": 3,
+          "points": 4
+        },
+        {
           "team": "Morocco",
           "played": 2,
           "won": 1,
@@ -402,26 +413,15 @@
           "points": 3
         },
         {
-          "team": "Brazil",
-          "played": 2,
-          "won": 0,
-          "drawn": 2,
-          "lost": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "points": 2
-        },
-        {
           "team": "Haiti",
           "played": 2,
           "won": 0,
-          "drawn": 1,
-          "lost": 1,
+          "drawn": 0,
+          "lost": 2,
           "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "points": 1
+          "ga": 4,
+          "gd": -4,
+          "points": 0
         }
       ]
     },
