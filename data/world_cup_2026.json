@@ -339,9 +339,24 @@
             "date": "2026-06-19",
             "team_a": "Brazil",
             "team_b": "Haiti",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-19",
+              "group": "C",
+              "team_a": "Brazil",
+              "team_b": "Haiti",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8771,
+              "prob_draw": 0.1171,
+              "prob_win_b": 0.0057,
+              "xg_a": 4.0,
+              "xg_b": 0.31,
+              "captured_at": "2026-06-20T00:35:40"
+            },
+            "minute": 23
           }
         ],
         "matchday3": [
@@ -388,25 +403,25 @@
         },
         {
           "team": "Brazil",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
           "gf": 1,
           "ga": 1,
           "gd": 0,
-          "points": 1
+          "points": 2
         },
         {
           "team": "Haiti",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 0,
           "ga": 1,
           "gd": -1,
-          "points": 0
+          "points": 1
         }
       ]
     },
