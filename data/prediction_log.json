@@ -236,5 +236,22 @@
     "actual_score_b": 1,
     "result_category": "wrong",
     "brier_score": 0.136
+  },
+  {
+    "date": "2026-06-19",
+    "group": "C",
+    "team_a": "Brazil",
+    "team_b": "Haiti",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8771,
+    "prob_draw": 0.1171,
+    "prob_win_b": 0.0057,
+    "xg_a": 4.0,
+    "xg_b": 0.31,
+    "actual_score_a": 3,
+    "actual_score_b": 0,
+    "result_category": "exact",
+    "brier_score": 0.0096
   }
 ]
