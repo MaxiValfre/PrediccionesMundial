@@ -253,5 +253,22 @@
     "actual_score_b": 0,
     "result_category": "exact",
     "brier_score": 0.0096
+  },
+  {
+    "date": "2026-06-19",
+    "group": "D",
+    "team_a": "Turkey",
+    "team_b": "Paraguay",
+    "predicted_score_a": 1,
+    "predicted_score_b": 1,
+    "prob_win_a": 0.5246,
+    "prob_draw": 0.3149,
+    "prob_win_b": 0.1606,
+    "xg_a": 1.82,
+    "xg_b": 0.93,
+    "actual_score_a": 0,
+    "actual_score_b": 1,
+    "result_category": "wrong",
+    "brier_score": 0.3597
   }
 ]
