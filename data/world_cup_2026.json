@@ -449,9 +449,24 @@
             "date": "2026-06-19",
             "team_a": "Turkey",
             "team_b": "Paraguay",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 1,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-19",
+              "group": "D",
+              "team_a": "Turkey",
+              "team_b": "Paraguay",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.5246,
+              "prob_draw": 0.3149,
+              "prob_win_b": 0.1606,
+              "xg_a": 1.82,
+              "xg_b": 0.93,
+              "captured_at": "2026-06-20T03:35:43"
+            },
+            "minute": 23
           }
         ],
         "matchday3": [
@@ -497,24 +512,24 @@
           "points": 3
         },
         {
-          "team": "Turkey",
-          "played": 1,
-          "won": 0,
+          "team": "Paraguay",
+          "played": 2,
+          "won": 1,
           "drawn": 0,
           "lost": 1,
-          "gf": 0,
-          "ga": 2,
+          "gf": 2,
+          "ga": 4,
           "gd": -2,
-          "points": 0
+          "points": 3
         },
         {
-          "team": "Paraguay",
-          "played": 1,
+          "team": "Turkey",
+          "played": 2,
           "won": 0,
           "drawn": 0,
-          "lost": 1,
-          "gf": 1,
-          "ga": 4,
+          "lost": 2,
+          "gf": 0,
+          "ga": 3,
           "gd": -3,
           "points": 0
         }
