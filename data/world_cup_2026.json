@@ -669,9 +669,24 @@
             "date": "2026-06-20",
             "team_a": "Tunisia",
             "team_b": "Japan",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 2,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-20",
+              "group": "F",
+              "team_a": "Tunisia",
+              "team_b": "Japan",
+              "predicted_score_a": 0,
+              "predicted_score_b": 2,
+              "prob_win_a": 0.0997,
+              "prob_draw": 0.2751,
+              "prob_win_b": 0.6252,
+              "xg_a": 0.76,
+              "xg_b": 2.13,
+              "captured_at": "2026-06-21T04:50:50"
+            },
+            "minute": 23
           }
         ],
         "matchday3": [
@@ -706,6 +721,17 @@
           "points": 4
         },
         {
+          "team": "Japan",
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 4,
+          "ga": 2,
+          "gd": 2,
+          "points": 4
+        },
+        {
           "team": "Sweden",
           "played": 2,
           "won": 1,
@@ -717,25 +743,14 @@
           "points": 3
         },
         {
-          "team": "Japan",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 1
-        },
-        {
           "team": "Tunisia",
-          "played": 1,
+          "played": 2,
           "won": 0,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "gf": 1,
-          "ga": 5,
-          "gd": -4,
+          "ga": 7,
+          "gd": -6,
           "points": 0
         }
       ]
