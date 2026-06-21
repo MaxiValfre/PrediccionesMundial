@@ -881,9 +881,9 @@
             "date": "2026-06-21",
             "team_a": "Spain",
             "team_b": "Saudi Arabia",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 4,
+            "score_b": 0,
+            "status": "played"
           },
           {
             "date": "2026-06-21",
@@ -915,6 +915,17 @@
       },
       "standings": [
         {
+          "team": "Spain",
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 4,
+          "ga": 0,
+          "gd": 4,
+          "points": 4
+        },
+        {
           "team": "Uruguay",
           "played": 1,
           "won": 0,
@@ -927,24 +938,13 @@
         },
         {
           "team": "Saudi Arabia",
-          "played": 1,
+          "played": 2,
           "won": 0,
           "drawn": 1,
-          "lost": 0,
+          "lost": 1,
           "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "points": 1
-        },
-        {
-          "team": "Spain",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "ga": 5,
+          "gd": -4,
           "points": 1
         },
         {
