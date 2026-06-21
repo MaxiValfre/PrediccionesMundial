@@ -771,9 +771,24 @@
             "date": "2026-06-21",
             "team_a": "Belgium",
             "team_b": "Iran",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-21",
+              "group": "G",
+              "team_a": "Belgium",
+              "team_b": "Iran",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.5478,
+              "prob_draw": 0.3025,
+              "prob_win_b": 0.1497,
+              "xg_a": 1.94,
+              "xg_b": 0.94,
+              "captured_at": "2026-06-21T19:50:53"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-21",
@@ -805,6 +820,28 @@
       },
       "standings": [
         {
+          "team": "Iran",
+          "played": 2,
+          "won": 0,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 2
+        },
+        {
+          "team": "Belgium",
+          "played": 2,
+          "won": 0,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 2
+        },
+        {
           "team": "New Zealand",
           "played": 1,
           "won": 0,
@@ -816,29 +853,7 @@
           "points": 1
         },
         {
-          "team": "Iran",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 1
-        },
-        {
           "team": "Egypt",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "points": 1
-        },
-        {
-          "team": "Belgium",
           "played": 1,
           "won": 0,
           "drawn": 1,
