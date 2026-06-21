@@ -559,9 +559,24 @@
             "date": "2026-06-20",
             "team_a": "Ecuador",
             "team_b": "Curaçao",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-20",
+              "group": "E",
+              "team_a": "Ecuador",
+              "team_b": "Curaçao",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8611,
+              "prob_draw": 0.1289,
+              "prob_win_b": 0.01,
+              "xg_a": 3.81,
+              "xg_b": 0.4,
+              "captured_at": "2026-06-21T00:50:50"
+            },
+            "minute": 23
           }
         ],
         "matchday3": [
@@ -608,25 +623,25 @@
         },
         {
           "team": "Ecuador",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 0,
           "ga": 1,
           "gd": -1,
-          "points": 0
+          "points": 1
         },
         {
           "team": "Curaçao",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 1,
           "ga": 7,
           "gd": -6,
-          "points": 0
+          "points": 1
         }
       ]
     },
