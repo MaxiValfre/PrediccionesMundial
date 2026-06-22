@@ -889,9 +889,9 @@
             "date": "2026-06-21",
             "team_a": "Uruguay",
             "team_b": "Cape Verde",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 2,
+            "score_b": 2,
+            "status": "played"
           }
         ],
         "matchday3": [
@@ -927,14 +927,25 @@
         },
         {
           "team": "Uruguay",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 3,
+          "ga": 3,
           "gd": 0,
-          "points": 1
+          "points": 2
+        },
+        {
+          "team": "Cape Verde",
+          "played": 2,
+          "won": 0,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 2
         },
         {
           "team": "Saudi Arabia",
@@ -945,17 +956,6 @@
           "gf": 1,
           "ga": 5,
           "gd": -4,
-          "points": 1
-        },
-        {
-          "team": "Cape Verde",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
           "points": 1
         }
       ]
