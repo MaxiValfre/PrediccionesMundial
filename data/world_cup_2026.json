@@ -779,7 +779,7 @@
             "date": "2026-06-21",
             "team_a": "New Zealand",
             "team_b": "Egypt",
-            "score_a": 0,
+            "score_a": 1,
             "score_b": 0,
             "status": "in_progress",
             "pre_match_prediction": {
@@ -796,7 +796,7 @@
               "xg_b": 1.85,
               "captured_at": "2026-06-22T01:05:43"
             },
-            "minute": 23
+            "minute": 45
           }
         ],
         "matchday3": [
@@ -822,13 +822,13 @@
         {
           "team": "New Zealand",
           "played": 2,
-          "won": 0,
-          "drawn": 2,
+          "won": 1,
+          "drawn": 1,
           "lost": 0,
-          "gf": 2,
+          "gf": 3,
           "ga": 2,
-          "gd": 0,
-          "points": 2
+          "gd": 1,
+          "points": 4
         },
         {
           "team": "Iran",
@@ -842,7 +842,7 @@
           "points": 2
         },
         {
-          "team": "Egypt",
+          "team": "Belgium",
           "played": 2,
           "won": 0,
           "drawn": 2,
@@ -853,15 +853,15 @@
           "points": 2
         },
         {
-          "team": "Belgium",
+          "team": "Egypt",
           "played": 2,
           "won": 0,
-          "drawn": 2,
-          "lost": 0,
+          "drawn": 1,
+          "lost": 1,
           "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "points": 2
+          "ga": 2,
+          "gd": -1,
+          "points": 1
         }
       ]
     },
