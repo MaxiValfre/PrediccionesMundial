@@ -779,9 +779,24 @@
             "date": "2026-06-21",
             "team_a": "New Zealand",
             "team_b": "Egypt",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-21",
+              "group": "G",
+              "team_a": "New Zealand",
+              "team_b": "Egypt",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.1669,
+              "prob_draw": 0.3134,
+              "prob_win_b": 0.5197,
+              "xg_a": 0.97,
+              "xg_b": 1.85,
+              "captured_at": "2026-06-22T01:05:43"
+            },
+            "minute": 23
           }
         ],
         "matchday3": [
@@ -805,6 +820,17 @@
       },
       "standings": [
         {
+          "team": "New Zealand",
+          "played": 2,
+          "won": 0,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 2
+        },
+        {
           "team": "Iran",
           "played": 2,
           "won": 0,
@@ -812,6 +838,17 @@
           "lost": 0,
           "gf": 2,
           "ga": 2,
+          "gd": 0,
+          "points": 2
+        },
+        {
+          "team": "Egypt",
+          "played": 2,
+          "won": 0,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
           "points": 2
         },
@@ -825,28 +862,6 @@
           "ga": 1,
           "gd": 0,
           "points": 2
-        },
-        {
-          "team": "New Zealand",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 1
-        },
-        {
-          "team": "Egypt",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "points": 1
         }
       ]
     },
