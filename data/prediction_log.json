@@ -406,5 +406,22 @@
     "actual_score_b": 3,
     "result_category": "wrong",
     "brier_score": 0.1189
+  },
+  {
+    "date": "2026-06-22",
+    "group": "J",
+    "team_a": "Argentina",
+    "team_b": "Austria",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8577,
+    "prob_draw": 0.1295,
+    "prob_win_b": 0.0128,
+    "xg_a": 4.0,
+    "xg_b": 0.51,
+    "actual_score_a": 2,
+    "actual_score_b": 0,
+    "result_category": "close",
+    "brier_score": 0.0124
   }
 ]
