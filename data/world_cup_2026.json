@@ -991,9 +991,24 @@
             "date": "2026-06-22",
             "team_a": "France",
             "team_b": "Iraq",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-22",
+              "group": "I",
+              "team_a": "France",
+              "team_b": "Iraq",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8811,
+              "prob_draw": 0.1144,
+              "prob_win_b": 0.0045,
+              "xg_a": 4.0,
+              "xg_b": 0.27,
+              "captured_at": "2026-06-22T21:05:50"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-22",
@@ -1025,6 +1040,17 @@
       },
       "standings": [
         {
+          "team": "France",
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 3,
+          "ga": 1,
+          "gd": 2,
+          "points": 4
+        },
+        {
           "team": "Norway",
           "played": 1,
           "won": 1,
@@ -1036,15 +1062,15 @@
           "points": 3
         },
         {
-          "team": "France",
-          "played": 1,
-          "won": 1,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 3,
-          "ga": 1,
-          "gd": 2,
-          "points": 3
+          "team": "Iraq",
+          "played": 2,
+          "won": 0,
+          "drawn": 1,
+          "lost": 1,
+          "gf": 1,
+          "ga": 4,
+          "gd": -3,
+          "points": 1
         },
         {
           "team": "Senegal",
@@ -1055,17 +1081,6 @@
           "gf": 1,
           "ga": 3,
           "gd": -2,
-          "points": 0
-        },
-        {
-          "team": "Iraq",
-          "played": 1,
-          "won": 0,
-          "drawn": 0,
-          "lost": 1,
-          "gf": 1,
-          "ga": 4,
-          "gd": -3,
           "points": 0
         }
       ]
