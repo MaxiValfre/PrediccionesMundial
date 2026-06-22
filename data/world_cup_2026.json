@@ -1101,9 +1101,24 @@
             "date": "2026-06-22",
             "team_a": "Argentina",
             "team_b": "Austria",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-22",
+              "group": "J",
+              "team_a": "Argentina",
+              "team_b": "Austria",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8577,
+              "prob_draw": 0.1295,
+              "prob_win_b": 0.0128,
+              "xg_a": 4.0,
+              "xg_b": 0.51,
+              "captured_at": "2026-06-22T17:05:48"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-22",
@@ -1136,25 +1151,25 @@
       "standings": [
         {
           "team": "Argentina",
-          "played": 1,
+          "played": 2,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
           "gf": 3,
           "ga": 0,
           "gd": 3,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Austria",
-          "played": 1,
+          "played": 2,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
           "gf": 3,
           "ga": 1,
           "gd": 2,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Jordan",
