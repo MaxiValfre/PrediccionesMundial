@@ -999,7 +999,7 @@
             "date": "2026-06-22",
             "team_a": "Norway",
             "team_b": "Senegal",
-            "score_a": 0,
+            "score_a": 2,
             "score_b": 0,
             "status": "in_progress",
             "pre_match_prediction": {
@@ -1016,7 +1016,7 @@
               "xg_b": 1.41,
               "captured_at": "2026-06-23T00:10:50"
             },
-            "minute": 23
+            "minute": 68
           }
         ],
         "matchday3": [
@@ -1040,6 +1040,17 @@
       },
       "standings": [
         {
+          "team": "Norway",
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 6,
+          "ga": 1,
+          "gd": 5,
+          "points": 6
+        },
+        {
           "team": "France",
           "played": 2,
           "won": 2,
@@ -1051,26 +1062,15 @@
           "points": 6
         },
         {
-          "team": "Norway",
-          "played": 2,
-          "won": 1,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 4,
-          "ga": 1,
-          "gd": 3,
-          "points": 4
-        },
-        {
           "team": "Senegal",
           "played": 2,
           "won": 0,
-          "drawn": 1,
-          "lost": 1,
+          "drawn": 0,
+          "lost": 2,
           "gf": 1,
-          "ga": 3,
-          "gd": -2,
-          "points": 1
+          "ga": 5,
+          "gd": -4,
+          "points": 0
         },
         {
           "team": "Iraq",
