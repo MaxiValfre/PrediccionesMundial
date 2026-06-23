@@ -1110,23 +1110,8 @@
             "team_a": "Jordan",
             "team_b": "Algeria",
             "score_a": 1,
-            "score_b": 0,
-            "status": "in_progress",
-            "pre_match_prediction": {
-              "date": "2026-06-22",
-              "group": "J",
-              "team_a": "Jordan",
-              "team_b": "Algeria",
-              "predicted_score_a": 0,
-              "predicted_score_b": 2,
-              "prob_win_a": 0.0966,
-              "prob_draw": 0.2757,
-              "prob_win_b": 0.6277,
-              "xg_a": 0.73,
-              "xg_b": 2.11,
-              "captured_at": "2026-06-23T03:10:51"
-            },
-            "minute": 68
+            "score_b": 2,
+            "status": "played"
           }
         ],
         "matchday3": [
@@ -1172,25 +1157,25 @@
           "points": 3
         },
         {
-          "team": "Jordan",
+          "team": "Algeria",
           "played": 2,
           "won": 1,
           "drawn": 0,
           "lost": 1,
           "gf": 2,
-          "ga": 3,
-          "gd": -1,
+          "ga": 4,
+          "gd": -2,
           "points": 3
         },
         {
-          "team": "Algeria",
+          "team": "Jordan",
           "played": 2,
           "won": 0,
           "drawn": 0,
           "lost": 2,
-          "gf": 0,
-          "ga": 4,
-          "gd": -4,
+          "gf": 2,
+          "ga": 5,
+          "gd": -3,
           "points": 0
         }
       ]
