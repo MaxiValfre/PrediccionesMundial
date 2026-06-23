@@ -1211,9 +1211,9 @@
             "date": "2026-06-23",
             "team_a": "Portugal",
             "team_b": "Uzbekistan",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 5,
+            "score_b": 0,
+            "status": "played"
           },
           {
             "date": "2026-06-23",
@@ -1245,6 +1245,17 @@
       },
       "standings": [
         {
+          "team": "Portugal",
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 6,
+          "ga": 1,
+          "gd": 5,
+          "points": 4
+        },
+        {
           "team": "Colombia",
           "played": 1,
           "won": 1,
@@ -1254,17 +1265,6 @@
           "ga": 1,
           "gd": 2,
           "points": 3
-        },
-        {
-          "team": "Portugal",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "points": 1
         },
         {
           "team": "DR Congo",
@@ -1279,13 +1279,13 @@
         },
         {
           "team": "Uzbekistan",
-          "played": 1,
+          "played": 2,
           "won": 0,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "gf": 1,
-          "ga": 3,
-          "gd": -2,
+          "ga": 8,
+          "gd": -7,
           "points": 0
         }
       ]

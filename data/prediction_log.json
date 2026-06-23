@@ -474,5 +474,22 @@
     "actual_score_b": 2,
     "result_category": "close",
     "brier_score": 0.0746
+  },
+  {
+    "date": "2026-06-23",
+    "group": "K",
+    "team_a": "Portugal",
+    "team_b": "Uzbekistan",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8819,
+    "prob_draw": 0.1138,
+    "prob_win_b": 0.0043,
+    "xg_a": 4.0,
+    "xg_b": 0.26,
+    "actual_score_a": 5,
+    "actual_score_b": 0,
+    "result_category": "correct_direction",
+    "brier_score": 0.009
   }
 ]
