@@ -1321,9 +1321,24 @@
             "date": "2026-06-23",
             "team_a": "England",
             "team_b": "Ghana",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-23",
+              "group": "L",
+              "team_a": "England",
+              "team_b": "Ghana",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8678,
+              "prob_draw": 0.1233,
+              "prob_win_b": 0.0089,
+              "xg_a": 4.0,
+              "xg_b": 0.41,
+              "captured_at": "2026-06-23T20:10:56"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-23",
@@ -1356,25 +1371,25 @@
       "standings": [
         {
           "team": "England",
-          "played": 1,
+          "played": 2,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
           "gf": 4,
           "ga": 2,
           "gd": 2,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Ghana",
-          "played": 1,
+          "played": 2,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
           "gf": 1,
           "ga": 0,
           "gd": 1,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Panama",
