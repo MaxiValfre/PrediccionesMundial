@@ -241,30 +241,15 @@
             "team_b": "Switzerland",
             "score_a": 1,
             "score_b": 2,
-            "status": "in_progress",
-            "pre_match_prediction": {
-              "date": "2026-06-24",
-              "group": "B",
-              "team_a": "Canada",
-              "team_b": "Switzerland",
-              "predicted_score_a": 1,
-              "predicted_score_b": 1,
-              "prob_win_a": 0.2074,
-              "prob_draw": 0.3061,
-              "prob_win_b": 0.4864,
-              "xg_a": 1.23,
-              "xg_b": 1.95,
-              "captured_at": "2026-06-24T19:55:42"
-            },
-            "minute": 68
+            "status": "played"
           },
           {
             "date": "2026-06-24",
             "team_a": "Qatar",
             "team_b": "Bosnia",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 3,
+            "status": "played"
           }
         ]
       },
@@ -293,24 +278,24 @@
         },
         {
           "team": "Bosnia",
-          "played": 2,
-          "won": 0,
+          "played": 3,
+          "won": 1,
           "drawn": 1,
           "lost": 1,
-          "gf": 2,
-          "ga": 5,
-          "gd": -3,
-          "points": 1
+          "gf": 5,
+          "ga": 6,
+          "gd": -1,
+          "points": 4
         },
         {
           "team": "Qatar",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 1,
-          "lost": 1,
-          "gf": 1,
-          "ga": 7,
-          "gd": -6,
+          "lost": 2,
+          "gf": 2,
+          "ga": 10,
+          "gd": -8,
           "points": 1
         }
       ]

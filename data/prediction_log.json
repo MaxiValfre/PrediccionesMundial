@@ -542,5 +542,39 @@
     "actual_score_b": 0,
     "result_category": "correct_direction",
     "brier_score": 0.0226
+  },
+  {
+    "date": "2026-06-24",
+    "group": "B",
+    "team_a": "Canada",
+    "team_b": "Switzerland",
+    "predicted_score_a": 1,
+    "predicted_score_b": 1,
+    "prob_win_a": 0.2074,
+    "prob_draw": 0.3061,
+    "prob_win_b": 0.4864,
+    "xg_a": 1.23,
+    "xg_b": 1.95,
+    "actual_score_a": 1,
+    "actual_score_b": 2,
+    "result_category": "wrong",
+    "brier_score": 0.1335
+  },
+  {
+    "date": "2026-06-24",
+    "group": "B",
+    "team_a": "Qatar",
+    "team_b": "Bosnia",
+    "predicted_score_a": 1,
+    "predicted_score_b": 1,
+    "prob_win_a": 0.3891,
+    "prob_draw": 0.3501,
+    "prob_win_b": 0.2608,
+    "xg_a": 1.44,
+    "xg_b": 1.14,
+    "actual_score_a": 1,
+    "actual_score_b": 3,
+    "result_category": "wrong",
+    "brier_score": 0.2735
   }
 ]
