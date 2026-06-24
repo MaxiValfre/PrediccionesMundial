@@ -1219,9 +1219,9 @@
             "date": "2026-06-23",
             "team_a": "Colombia",
             "team_b": "DR Congo",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 0,
+            "status": "played"
           }
         ],
         "matchday3": [
@@ -1245,6 +1245,17 @@
       },
       "standings": [
         {
+          "team": "Colombia",
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 4,
+          "ga": 1,
+          "gd": 3,
+          "points": 6
+        },
+        {
           "team": "Portugal",
           "played": 2,
           "won": 1,
@@ -1256,25 +1267,14 @@
           "points": 4
         },
         {
-          "team": "Colombia",
-          "played": 1,
-          "won": 1,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 3,
-          "ga": 1,
-          "gd": 2,
-          "points": 3
-        },
-        {
           "team": "DR Congo",
-          "played": 1,
+          "played": 2,
           "won": 0,
           "drawn": 1,
-          "lost": 0,
+          "lost": 1,
           "gf": 1,
-          "ga": 1,
-          "gd": 0,
+          "ga": 2,
+          "gd": -1,
           "points": 1
         },
         {

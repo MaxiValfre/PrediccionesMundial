@@ -525,5 +525,22 @@
     "actual_score_b": 1,
     "result_category": "close",
     "brier_score": 0.0311
+  },
+  {
+    "date": "2026-06-23",
+    "group": "K",
+    "team_a": "Colombia",
+    "team_b": "DR Congo",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8036,
+    "prob_draw": 0.1684,
+    "prob_win_b": 0.028,
+    "xg_a": 3.25,
+    "xg_b": 0.57,
+    "actual_score_a": 1,
+    "actual_score_b": 0,
+    "result_category": "correct_direction",
+    "brier_score": 0.0226
   }
 ]
