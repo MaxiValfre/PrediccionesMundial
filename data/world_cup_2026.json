@@ -239,9 +239,24 @@
             "date": "2026-06-24",
             "team_a": "Canada",
             "team_b": "Switzerland",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-24",
+              "group": "B",
+              "team_a": "Canada",
+              "team_b": "Switzerland",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.2074,
+              "prob_draw": 0.3061,
+              "prob_win_b": 0.4864,
+              "xg_a": 1.23,
+              "xg_b": 1.95,
+              "captured_at": "2026-06-24T19:55:42"
+            },
+            "minute": 45
           },
           {
             "date": "2026-06-24",
@@ -256,25 +271,25 @@
       "standings": [
         {
           "team": "Canada",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
           "gf": 7,
           "ga": 1,
           "gd": 6,
-          "points": 4
+          "points": 5
         },
         {
           "team": "Switzerland",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
           "gf": 5,
           "ga": 2,
           "gd": 3,
-          "points": 4
+          "points": 5
         },
         {
           "team": "Bosnia",
