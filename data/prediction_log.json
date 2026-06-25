@@ -610,5 +610,39 @@
     "actual_score_b": 0,
     "result_category": "exact",
     "brier_score": 0.0225
+  },
+  {
+    "date": "2026-06-24",
+    "group": "A",
+    "team_a": "South Korea",
+    "team_b": "South Africa",
+    "predicted_score_a": 2,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.7349,
+    "prob_draw": 0.2156,
+    "prob_win_b": 0.0495,
+    "xg_a": 2.63,
+    "xg_b": 0.6,
+    "actual_score_a": 0,
+    "actual_score_b": 1,
+    "result_category": "wrong",
+    "brier_score": 0.4967
+  },
+  {
+    "date": "2026-06-24",
+    "group": "A",
+    "team_a": "Mexico",
+    "team_b": "Czech Republic",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.7878,
+    "prob_draw": 0.1776,
+    "prob_win_b": 0.0346,
+    "xg_a": 3.17,
+    "xg_b": 0.63,
+    "actual_score_a": 3,
+    "actual_score_b": 0,
+    "result_category": "exact",
+    "brier_score": 0.0259
   }
 ]
