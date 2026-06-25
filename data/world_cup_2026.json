@@ -137,9 +137,24 @@
             "date": "2026-06-24",
             "team_a": "South Korea",
             "team_b": "South Africa",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-24",
+              "group": "A",
+              "team_a": "South Korea",
+              "team_b": "South Africa",
+              "predicted_score_a": 2,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.7349,
+              "prob_draw": 0.2156,
+              "prob_win_b": 0.0495,
+              "xg_a": 2.63,
+              "xg_b": 0.6,
+              "captured_at": "2026-06-25T01:31:01"
+            },
+            "minute": 23
           }
         ]
       },
@@ -157,14 +172,25 @@
         },
         {
           "team": "South Korea",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 2,
           "ga": 2,
           "gd": 0,
-          "points": 3
+          "points": 4
+        },
+        {
+          "team": "South Africa",
+          "played": 3,
+          "won": 0,
+          "drawn": 2,
+          "lost": 1,
+          "gf": 1,
+          "ga": 3,
+          "gd": -2,
+          "points": 2
         },
         {
           "team": "Czech Republic",
@@ -175,17 +201,6 @@
           "gf": 2,
           "ga": 3,
           "gd": -1,
-          "points": 1
-        },
-        {
-          "team": "South Africa",
-          "played": 2,
-          "won": 0,
-          "drawn": 1,
-          "lost": 1,
-          "gf": 1,
-          "ga": 3,
-          "gd": -2,
           "points": 1
         }
       ]
