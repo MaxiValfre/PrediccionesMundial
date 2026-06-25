@@ -570,23 +570,8 @@
             "team_a": "Germany",
             "team_b": "Ecuador",
             "score_a": 1,
-            "score_b": 1,
-            "status": "in_progress",
-            "pre_match_prediction": {
-              "date": "2026-06-25",
-              "group": "E",
-              "team_a": "Germany",
-              "team_b": "Ecuador",
-              "predicted_score_a": 2,
-              "predicted_score_b": 0,
-              "prob_win_a": 0.7667,
-              "prob_draw": 0.1914,
-              "prob_win_b": 0.042,
-              "xg_a": 3.0,
-              "xg_b": 0.65,
-              "captured_at": "2026-06-25T20:35:40"
-            },
-            "minute": 68
+            "score_b": 2,
+            "status": "played"
           },
           {
             "date": "2026-06-25",
@@ -594,22 +579,7 @@
             "team_b": "Curaçao",
             "score_a": 2,
             "score_b": 0,
-            "status": "in_progress",
-            "pre_match_prediction": {
-              "date": "2026-06-25",
-              "group": "E",
-              "team_a": "Ivory Coast",
-              "team_b": "Curaçao",
-              "predicted_score_a": 3,
-              "predicted_score_b": 0,
-              "prob_win_a": 0.8285,
-              "prob_draw": 0.1532,
-              "prob_win_b": 0.0183,
-              "xg_a": 3.37,
-              "xg_b": 0.46,
-              "captured_at": "2026-06-25T20:35:40"
-            },
-            "minute": 68
+            "status": "played"
           }
         ]
       },
@@ -618,12 +588,12 @@
           "team": "Germany",
           "played": 3,
           "won": 2,
-          "drawn": 1,
-          "lost": 0,
+          "drawn": 0,
+          "lost": 1,
           "gf": 10,
-          "ga": 3,
-          "gd": 7,
-          "points": 7
+          "ga": 4,
+          "gd": 6,
+          "points": 6
         },
         {
           "team": "Ivory Coast",
@@ -639,13 +609,13 @@
         {
           "team": "Ecuador",
           "played": 3,
-          "won": 0,
-          "drawn": 2,
+          "won": 1,
+          "drawn": 1,
           "lost": 1,
-          "gf": 1,
+          "gf": 2,
           "ga": 2,
-          "gd": -1,
-          "points": 2
+          "gd": 0,
+          "points": 4
         },
         {
           "team": "Curaçao",

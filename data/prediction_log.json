@@ -644,5 +644,39 @@
     "actual_score_b": 0,
     "result_category": "exact",
     "brier_score": 0.0259
+  },
+  {
+    "date": "2026-06-25",
+    "group": "E",
+    "team_a": "Ivory Coast",
+    "team_b": "Curaçao",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8285,
+    "prob_draw": 0.1532,
+    "prob_win_b": 0.0183,
+    "xg_a": 3.37,
+    "xg_b": 0.46,
+    "actual_score_a": 2,
+    "actual_score_b": 0,
+    "result_category": "close",
+    "brier_score": 0.0177
+  },
+  {
+    "date": "2026-06-25",
+    "group": "E",
+    "team_a": "Germany",
+    "team_b": "Ecuador",
+    "predicted_score_a": 2,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.7667,
+    "prob_draw": 0.1914,
+    "prob_win_b": 0.042,
+    "xg_a": 3.0,
+    "xg_b": 0.65,
+    "actual_score_a": 1,
+    "actual_score_b": 2,
+    "result_category": "wrong",
+    "brier_score": 0.5141
   }
 ]
