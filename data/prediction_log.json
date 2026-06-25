@@ -576,5 +576,39 @@
     "actual_score_b": 3,
     "result_category": "wrong",
     "brier_score": 0.2735
+  },
+  {
+    "date": "2026-06-24",
+    "group": "C",
+    "team_a": "Morocco",
+    "team_b": "Haiti",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8542,
+    "prob_draw": 0.1348,
+    "prob_win_b": 0.011,
+    "xg_a": 3.64,
+    "xg_b": 0.38,
+    "actual_score_a": 4,
+    "actual_score_b": 2,
+    "result_category": "correct_direction",
+    "brier_score": 0.0132
+  },
+  {
+    "date": "2026-06-24",
+    "group": "C",
+    "team_a": "Brazil",
+    "team_b": "Scotland",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8035,
+    "prob_draw": 0.1678,
+    "prob_win_b": 0.0286,
+    "xg_a": 3.29,
+    "xg_b": 0.59,
+    "actual_score_a": 3,
+    "actual_score_b": 0,
+    "result_category": "exact",
+    "brier_score": 0.0225
   }
 ]
