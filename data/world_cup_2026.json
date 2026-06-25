@@ -569,63 +569,93 @@
             "date": "2026-06-25",
             "team_a": "Germany",
             "team_b": "Ecuador",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 1,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-25",
+              "group": "E",
+              "team_a": "Germany",
+              "team_b": "Ecuador",
+              "predicted_score_a": 2,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.7667,
+              "prob_draw": 0.1914,
+              "prob_win_b": 0.042,
+              "xg_a": 3.0,
+              "xg_b": 0.65,
+              "captured_at": "2026-06-25T20:35:40"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-25",
             "team_a": "Ivory Coast",
             "team_b": "Curaçao",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-25",
+              "group": "E",
+              "team_a": "Ivory Coast",
+              "team_b": "Curaçao",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8285,
+              "prob_draw": 0.1532,
+              "prob_win_b": 0.0183,
+              "xg_a": 3.37,
+              "xg_b": 0.46,
+              "captured_at": "2026-06-25T20:35:40"
+            },
+            "minute": 23
           }
         ]
       },
       "standings": [
         {
           "team": "Germany",
-          "played": 2,
+          "played": 3,
           "won": 2,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
-          "gf": 9,
-          "ga": 2,
+          "gf": 10,
+          "ga": 3,
           "gd": 7,
-          "points": 6
+          "points": 7
         },
         {
           "team": "Ivory Coast",
-          "played": 2,
-          "won": 1,
+          "played": 3,
+          "won": 2,
           "drawn": 0,
           "lost": 1,
-          "gf": 2,
+          "gf": 3,
           "ga": 2,
-          "gd": 0,
-          "points": 3
+          "gd": 1,
+          "points": 6
         },
         {
           "team": "Ecuador",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 1,
-          "gf": 0,
-          "ga": 1,
+          "gf": 1,
+          "ga": 2,
           "gd": -1,
-          "points": 1
+          "points": 2
         },
         {
           "team": "Curaçao",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 1,
-          "lost": 1,
+          "lost": 2,
           "gf": 1,
-          "ga": 7,
-          "gd": -6,
+          "ga": 8,
+          "gd": -7,
           "points": 1
         }
       ]
