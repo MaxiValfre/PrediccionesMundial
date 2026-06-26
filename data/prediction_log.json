@@ -695,5 +695,39 @@
     "actual_score_b": 1,
     "result_category": "close",
     "brier_score": 0.0279
+  },
+  {
+    "date": "2026-06-25",
+    "group": "D",
+    "team_a": "Australia",
+    "team_b": "Paraguay",
+    "predicted_score_a": 1,
+    "predicted_score_b": 1,
+    "prob_win_a": 0.563,
+    "prob_draw": 0.2978,
+    "prob_win_b": 0.1392,
+    "xg_a": 1.98,
+    "xg_b": 0.9,
+    "actual_score_a": 0,
+    "actual_score_b": 0,
+    "result_category": "close",
+    "brier_score": 0.2765
+  },
+  {
+    "date": "2026-06-25",
+    "group": "D",
+    "team_a": "USA",
+    "team_b": "Turkey",
+    "predicted_score_a": 2,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.705,
+    "prob_draw": 0.2287,
+    "prob_win_b": 0.0663,
+    "xg_a": 2.59,
+    "xg_b": 0.72,
+    "actual_score_a": 2,
+    "actual_score_b": 3,
+    "result_category": "wrong",
+    "brier_score": 0.4737
   }
 ]
