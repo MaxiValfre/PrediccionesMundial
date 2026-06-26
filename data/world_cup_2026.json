@@ -679,9 +679,9 @@
             "date": "2026-06-25",
             "team_a": "Netherlands",
             "team_b": "Tunisia",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 3,
+            "score_b": 1,
+            "status": "played"
           },
           {
             "date": "2026-06-25",
@@ -696,14 +696,14 @@
       "standings": [
         {
           "team": "Netherlands",
-          "played": 2,
-          "won": 1,
+          "played": 3,
+          "won": 2,
           "drawn": 1,
           "lost": 0,
-          "gf": 7,
-          "ga": 3,
-          "gd": 4,
-          "points": 4
+          "gf": 10,
+          "ga": 4,
+          "gd": 6,
+          "points": 7
         },
         {
           "team": "Japan",
@@ -729,13 +729,13 @@
         },
         {
           "team": "Tunisia",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 0,
-          "lost": 2,
-          "gf": 1,
-          "ga": 9,
-          "gd": -8,
+          "lost": 3,
+          "gf": 2,
+          "ga": 12,
+          "gd": -10,
           "points": 0
         }
       ]
