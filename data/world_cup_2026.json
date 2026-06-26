@@ -459,64 +459,94 @@
             "date": "2026-06-25",
             "team_a": "USA",
             "team_b": "Turkey",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 2,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-25",
+              "group": "D",
+              "team_a": "USA",
+              "team_b": "Turkey",
+              "predicted_score_a": 2,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.705,
+              "prob_draw": 0.2287,
+              "prob_win_b": 0.0663,
+              "xg_a": 2.59,
+              "xg_b": 0.72,
+              "captured_at": "2026-06-26T02:45:50"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-25",
             "team_a": "Australia",
             "team_b": "Paraguay",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-25",
+              "group": "D",
+              "team_a": "Australia",
+              "team_b": "Paraguay",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.563,
+              "prob_draw": 0.2978,
+              "prob_win_b": 0.1392,
+              "xg_a": 1.98,
+              "xg_b": 0.9,
+              "captured_at": "2026-06-26T02:45:50"
+            },
+            "minute": 23
           }
         ]
       },
       "standings": [
         {
           "team": "USA",
-          "played": 2,
+          "played": 3,
           "won": 2,
           "drawn": 0,
-          "lost": 0,
-          "gf": 6,
-          "ga": 1,
-          "gd": 5,
+          "lost": 1,
+          "gf": 7,
+          "ga": 3,
+          "gd": 4,
           "points": 6
         },
         {
           "team": "Australia",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 2,
           "ga": 2,
           "gd": 0,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Paraguay",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 2,
           "ga": 4,
           "gd": -2,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Turkey",
-          "played": 2,
-          "won": 0,
+          "played": 3,
+          "won": 1,
           "drawn": 0,
           "lost": 2,
-          "gf": 0,
-          "ga": 3,
-          "gd": -3,
-          "points": 0
+          "gf": 2,
+          "ga": 4,
+          "gd": -2,
+          "points": 3
         }
       ]
     },
