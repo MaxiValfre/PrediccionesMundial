@@ -459,7 +459,7 @@
             "date": "2026-06-25",
             "team_a": "USA",
             "team_b": "Turkey",
-            "score_a": 1,
+            "score_a": 2,
             "score_b": 2,
             "status": "in_progress",
             "pre_match_prediction": {
@@ -476,7 +476,7 @@
               "xg_b": 0.72,
               "captured_at": "2026-06-26T02:45:50"
             },
-            "minute": 23
+            "minute": 68
           },
           {
             "date": "2026-06-25",
@@ -499,7 +499,7 @@
               "xg_b": 0.9,
               "captured_at": "2026-06-26T02:45:50"
             },
-            "minute": 23
+            "minute": 68
           }
         ]
       },
@@ -508,12 +508,12 @@
           "team": "USA",
           "played": 3,
           "won": 2,
-          "drawn": 0,
-          "lost": 1,
-          "gf": 7,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 8,
           "ga": 3,
-          "gd": 4,
-          "points": 6
+          "gd": 5,
+          "points": 7
         },
         {
           "team": "Australia",
@@ -540,13 +540,13 @@
         {
           "team": "Turkey",
           "played": 3,
-          "won": 1,
-          "drawn": 0,
+          "won": 0,
+          "drawn": 1,
           "lost": 2,
           "gf": 2,
-          "ga": 4,
-          "gd": -2,
-          "points": 3
+          "ga": 5,
+          "gd": -3,
+          "points": 1
         }
       ]
     },
