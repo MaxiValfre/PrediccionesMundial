@@ -476,7 +476,13 @@
               "xg_b": 0.72,
               "captured_at": "2026-06-26T02:45:50"
             },
-            "minute": 68
+            "minute": 68,
+            "pending_final_confirmation": {
+              "date": "2026-06-25",
+              "score_a": 2,
+              "score_b": 3,
+              "source": "thesportsdb"
+            }
           },
           {
             "date": "2026-06-25",
@@ -499,7 +505,13 @@
               "xg_b": 0.9,
               "captured_at": "2026-06-26T02:45:50"
             },
-            "minute": 68
+            "minute": 68,
+            "pending_final_confirmation": {
+              "date": "2026-06-25",
+              "score_a": 0,
+              "score_b": 0,
+              "source": "thesportsdb"
+            }
           }
         ]
       },
@@ -1039,9 +1051,24 @@
             "date": "2026-06-26",
             "team_a": "France",
             "team_b": "Norway",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 3,
+            "score_b": 1,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-26",
+              "group": "I",
+              "team_a": "France",
+              "team_b": "Norway",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8268,
+              "prob_draw": 0.1486,
+              "prob_win_b": 0.0245,
+              "xg_a": 3.78,
+              "xg_b": 0.68,
+              "captured_at": "2026-06-26T19:45:43"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-26",
@@ -1056,24 +1083,24 @@
       "standings": [
         {
           "team": "France",
-          "played": 2,
-          "won": 2,
+          "played": 3,
+          "won": 3,
           "drawn": 0,
           "lost": 0,
-          "gf": 6,
-          "ga": 1,
-          "gd": 5,
-          "points": 6
+          "gf": 9,
+          "ga": 2,
+          "gd": 7,
+          "points": 9
         },
         {
           "team": "Norway",
-          "played": 2,
+          "played": 3,
           "won": 2,
           "drawn": 0,
-          "lost": 0,
-          "gf": 7,
-          "ga": 3,
-          "gd": 4,
+          "lost": 1,
+          "gf": 8,
+          "ga": 6,
+          "gd": 2,
           "points": 6
         },
         {
