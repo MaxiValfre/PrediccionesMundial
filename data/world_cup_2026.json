@@ -460,29 +460,8 @@
             "team_a": "USA",
             "team_b": "Turkey",
             "score_a": 2,
-            "score_b": 2,
-            "status": "in_progress",
-            "pre_match_prediction": {
-              "date": "2026-06-25",
-              "group": "D",
-              "team_a": "USA",
-              "team_b": "Turkey",
-              "predicted_score_a": 2,
-              "predicted_score_b": 0,
-              "prob_win_a": 0.705,
-              "prob_draw": 0.2287,
-              "prob_win_b": 0.0663,
-              "xg_a": 2.59,
-              "xg_b": 0.72,
-              "captured_at": "2026-06-26T02:45:50"
-            },
-            "minute": 68,
-            "pending_final_confirmation": {
-              "date": "2026-06-25",
-              "score_a": 2,
-              "score_b": 3,
-              "source": "thesportsdb"
-            }
+            "score_b": 3,
+            "status": "played"
           },
           {
             "date": "2026-06-25",
@@ -490,28 +469,7 @@
             "team_b": "Paraguay",
             "score_a": 0,
             "score_b": 0,
-            "status": "in_progress",
-            "pre_match_prediction": {
-              "date": "2026-06-25",
-              "group": "D",
-              "team_a": "Australia",
-              "team_b": "Paraguay",
-              "predicted_score_a": 1,
-              "predicted_score_b": 1,
-              "prob_win_a": 0.563,
-              "prob_draw": 0.2978,
-              "prob_win_b": 0.1392,
-              "xg_a": 1.98,
-              "xg_b": 0.9,
-              "captured_at": "2026-06-26T02:45:50"
-            },
-            "minute": 68,
-            "pending_final_confirmation": {
-              "date": "2026-06-25",
-              "score_a": 0,
-              "score_b": 0,
-              "source": "thesportsdb"
-            }
+            "status": "played"
           }
         ]
       },
@@ -520,12 +478,12 @@
           "team": "USA",
           "played": 3,
           "won": 2,
-          "drawn": 1,
-          "lost": 0,
+          "drawn": 0,
+          "lost": 1,
           "gf": 8,
-          "ga": 3,
-          "gd": 5,
-          "points": 7
+          "ga": 4,
+          "gd": 4,
+          "points": 6
         },
         {
           "team": "Australia",
@@ -552,13 +510,13 @@
         {
           "team": "Turkey",
           "played": 3,
-          "won": 0,
-          "drawn": 1,
+          "won": 1,
+          "drawn": 0,
           "lost": 2,
-          "gf": 2,
+          "gf": 3,
           "ga": 5,
-          "gd": -3,
-          "points": 1
+          "gd": -2,
+          "points": 3
         }
       ]
     },
