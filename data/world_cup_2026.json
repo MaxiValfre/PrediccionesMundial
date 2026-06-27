@@ -789,7 +789,7 @@
             "date": "2026-06-26",
             "team_a": "Belgium",
             "team_b": "New Zealand",
-            "score_a": 0,
+            "score_a": 1,
             "score_b": 0,
             "status": "in_progress",
             "pre_match_prediction": {
@@ -806,14 +806,14 @@
               "xg_b": 0.48,
               "captured_at": "2026-06-27T03:05:37"
             },
-            "minute": 23
+            "minute": 45
           },
           {
             "date": "2026-06-26",
             "team_a": "Iran",
             "team_b": "Egypt",
-            "score_a": 0,
-            "score_b": 0,
+            "score_a": 1,
+            "score_b": 1,
             "status": "in_progress",
             "pre_match_prediction": {
               "date": "2026-06-26",
@@ -829,7 +829,7 @@
               "xg_b": 1.28,
               "captured_at": "2026-06-27T03:05:37"
             },
-            "minute": 23
+            "minute": 45
           }
         ]
       },
@@ -840,9 +840,20 @@
           "won": 1,
           "drawn": 2,
           "lost": 0,
-          "gf": 4,
-          "ga": 2,
+          "gf": 5,
+          "ga": 3,
           "gd": 2,
+          "points": 5
+        },
+        {
+          "team": "Belgium",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 2,
+          "ga": 1,
+          "gd": 1,
           "points": 5
         },
         {
@@ -851,19 +862,8 @@
           "won": 0,
           "drawn": 3,
           "lost": 0,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 3
-        },
-        {
-          "team": "Belgium",
-          "played": 3,
-          "won": 0,
-          "drawn": 3,
-          "lost": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 3,
+          "ga": 3,
           "gd": 0,
           "points": 3
         },
@@ -871,12 +871,12 @@
           "team": "New Zealand",
           "played": 3,
           "won": 0,
-          "drawn": 2,
-          "lost": 1,
+          "drawn": 1,
+          "lost": 2,
           "gf": 3,
-          "ga": 5,
-          "gd": -2,
-          "points": 2
+          "ga": 6,
+          "gd": -3,
+          "points": 1
         }
       ]
     },
