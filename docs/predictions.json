@@ -1,679 +1,611 @@
 {
-  "generated_date": "2026-06-26",
-  "today": "2026-06-25",
+  "generated_date": "2026-06-27",
+  "today": "2026-06-26",
   "todays_matches": [
     {
-      "date": "2026-06-25",
-      "group": "D",
-      "team_a": "USA",
-      "team_b": "Turkey",
-      "status": "played",
-      "actual_score_a": 2,
-      "actual_score_b": 3,
-      "xg_a": 2.59,
-      "xg_b": 0.72,
-      "predicted_score_a": 2,
-      "predicted_score_b": 0,
-      "prob_win_a": 0.705,
-      "prob_draw": 0.2287,
-      "prob_win_b": 0.0663,
-      "confidence": 0.705,
-      "score_matrix": [
-        [
-          0.04768,
-          0.01833,
-          0.00995,
-          0.00239,
-          0.00043,
-          6e-05
-        ],
-        [
-          0.09009,
-          0.08086,
-          0.02576,
-          0.00618,
-          0.00111,
-          0.00016
-        ],
-        [
-          0.12871,
-          0.09267,
-          0.03336,
-          0.00801,
-          0.00144,
-          0.00021
-        ],
-        [
-          0.11112,
-          0.08,
-          0.0288,
-          0.00691,
-          0.00124,
-          0.00018
-        ],
-        [
-          0.07195,
-          0.0518,
-          0.01865,
-          0.00448,
-          0.00081,
-          0.00012
-        ],
-        [
-          0.03727,
-          0.02683,
-          0.00966,
-          0.00232,
-          0.00042,
-          6e-05
-        ]
-      ],
-      "odds_a": 1.42,
-      "odds_draw": 4.37,
-      "odds_b": 15.08,
-      "prediction_source": "archived",
-      "explanation": {
-        "favorite_side": "team_a",
-        "favorite_team": "USA",
-        "confidence_band": "strong",
-        "summary": "USA are clear favorites.",
-        "signals": [
-          "Elo edge: USA 115",
-          "xG edge: USA +1.87",
-          "Form edge: USA +0.20",
-          "Market edge: +18.0 pts vs books"
-        ],
-        "risk": "Draw risk is still 22.9%.",
-        "rating_edge": 115.0,
-        "form_edge": 0.2,
-        "xg_edge": 1.87,
-        "market_edge": 18.0
-      },
-      "market_prob_a": 0.5246,
-      "market_prob_draw": 0.2288,
-      "market_prob_b": 0.2466,
-      "market_odds_a": 1.82,
-      "market_odds_draw": 4.17,
-      "market_odds_b": 3.87,
-      "bookmaker_count": 48
-    },
-    {
-      "date": "2026-06-25",
-      "group": "D",
-      "team_a": "Australia",
-      "team_b": "Paraguay",
-      "status": "played",
-      "actual_score_a": 0,
-      "actual_score_b": 0,
-      "xg_a": 1.98,
-      "xg_b": 0.9,
-      "predicted_score_a": 1,
-      "predicted_score_b": 1,
-      "prob_win_a": 0.563,
-      "prob_draw": 0.2978,
-      "prob_win_b": 0.1392,
-      "confidence": 0.563,
-      "score_matrix": [
-        [
-          0.07028,
-          0.03813,
-          0.02311,
-          0.00693,
-          0.00156,
-          0.00028
-        ],
-        [
-          0.09976,
-          0.1149,
-          0.04576,
-          0.01373,
-          0.00309,
-          0.00056
-        ],
-        [
-          0.11185,
-          0.10066,
-          0.0453,
-          0.01359,
-          0.00306,
-          0.00055
-        ],
-        [
-          0.07382,
-          0.06644,
-          0.0299,
-          0.00897,
-          0.00202,
-          0.00036
-        ],
-        [
-          0.03654,
-          0.03289,
-          0.0148,
-          0.00444,
-          0.001,
-          0.00018
-        ],
-        [
-          0.01447,
-          0.01302,
-          0.00586,
-          0.00176,
-          0.0004,
-          7e-05
-        ]
-      ],
-      "odds_a": 1.78,
-      "odds_draw": 3.36,
-      "odds_b": 7.18,
-      "prediction_source": "archived",
-      "explanation": {
-        "favorite_side": "team_a",
-        "favorite_team": "Australia",
-        "confidence_band": "lean",
-        "summary": "Australia hold the edge.",
-        "signals": [
-          "Elo edge: Australia 123",
-          "xG edge: Australia +1.08",
-          "Form edge: Australia +0.04",
-          "Market edge: +34.6 pts vs books"
-        ],
-        "risk": "Draw risk is still 29.8%.",
-        "rating_edge": 123.4,
-        "form_edge": 0.04,
-        "xg_edge": 1.08,
-        "market_edge": 34.6
-      },
-      "market_prob_a": 0.2173,
-      "market_prob_draw": 0.4215,
-      "market_prob_b": 0.3613,
-      "market_odds_a": 4.39,
-      "market_odds_draw": 2.26,
-      "market_odds_b": 2.64,
-      "bookmaker_count": 48
-    },
-    {
-      "date": "2026-06-25",
-      "group": "E",
-      "team_a": "Germany",
-      "team_b": "Ecuador",
-      "status": "played",
-      "actual_score_a": 1,
-      "actual_score_b": 2,
-      "xg_a": 3.0,
-      "xg_b": 0.65,
-      "predicted_score_a": 2,
-      "predicted_score_b": 0,
-      "prob_win_a": 0.7667,
-      "prob_draw": 0.1914,
-      "prob_win_b": 0.042,
-      "confidence": 0.7667,
-      "score_matrix": [
-        [
-          0.03557,
-          0.01125,
-          0.00599,
-          0.0013,
-          0.00021,
-          3e-05
-        ],
-        [
-          0.07793,
-          0.06252,
-          0.01798,
-          0.0039,
-          0.00063,
-          8e-05
-        ],
-        [
-          0.12768,
-          0.08299,
-          0.02697,
-          0.00584,
-          0.00095,
-          0.00012
-        ],
-        [
-          0.12768,
-          0.08299,
-          0.02697,
-          0.00584,
-          0.00095,
-          0.00012
-        ],
-        [
-          0.09576,
-          0.06224,
-          0.02023,
-          0.00438,
-          0.00071,
-          9e-05
-        ],
-        [
-          0.05746,
-          0.03735,
-          0.01214,
-          0.00263,
-          0.00043,
-          6e-05
-        ]
-      ],
-      "odds_a": 1.3,
-      "odds_draw": 5.22,
-      "odds_b": 23.81,
-      "prediction_source": "archived",
-      "explanation": {
-        "favorite_side": "team_a",
-        "favorite_team": "Germany",
-        "confidence_band": "strong",
-        "summary": "Germany are clear favorites.",
-        "signals": [
-          "Elo edge: Germany 176",
-          "xG edge: Germany +2.35",
-          "Form edge: Germany +0.08",
-          "Market edge: +15.7 pts vs books"
-        ],
-        "risk": "Most volatility sits in finishing variance.",
-        "rating_edge": 175.8,
-        "form_edge": 0.08,
-        "xg_edge": 2.35,
-        "market_edge": 15.7
-      },
-      "market_prob_a": 0.6101,
-      "market_prob_draw": 0.2001,
-      "market_prob_b": 0.1898,
-      "market_odds_a": 1.56,
-      "market_odds_draw": 4.77,
-      "market_odds_b": 5.03,
-      "bookmaker_count": 48
-    },
-    {
-      "date": "2026-06-25",
-      "group": "E",
-      "team_a": "Ivory Coast",
-      "team_b": "Curaçao",
-      "status": "played",
-      "actual_score_a": 2,
-      "actual_score_b": 0,
-      "xg_a": 3.37,
-      "xg_b": 0.46,
+      "date": "2026-06-26",
+      "group": "G",
+      "team_a": "Belgium",
+      "team_b": "New Zealand",
+      "status": "scheduled",
+      "actual_score_a": null,
+      "actual_score_b": null,
+      "xg_a": 3.21,
+      "xg_b": 0.48,
       "predicted_score_a": 3,
       "predicted_score_b": 0,
-      "prob_win_a": 0.8285,
-      "prob_draw": 0.1532,
-      "prob_win_b": 0.0183,
-      "confidence": 0.8285,
+      "prob_win_a": 0.8138,
+      "prob_draw": 0.1637,
+      "prob_win_b": 0.0225,
+      "confidence": 0.8138,
       "score_matrix": [
         [
-          0.02983,
-          0.00642,
-          0.00263,
-          0.0004,
-          5e-05,
-          0.0
-        ],
-        [
-          0.07868,
-          0.0435,
-          0.00885,
-          0.00136,
-          0.00016,
+          0.03337,
+          0.0078,
+          0.00323,
+          0.00052,
+          6e-05,
           1e-05
         ],
         [
-          0.141,
-          0.06486,
-          0.01492,
-          0.00229,
-          0.00026,
+          0.08367,
+          0.04866,
+          0.01039,
+          0.00167,
+          0.0002,
           2e-05
         ],
         [
-          0.15839,
-          0.07286,
-          0.01676,
-          0.00257,
-          0.0003,
+          0.14349,
+          0.06922,
+          0.0167,
+          0.00268,
+          0.00032,
           3e-05
         ],
         [
-          0.13344,
-          0.06138,
-          0.01412,
-          0.00216,
-          0.00025,
-          2e-05
-        ],
-        [
-          0.08994,
-          0.04137,
-          0.00952,
-          0.00146,
-          0.00017,
-          2e-05
-        ]
-      ],
-      "odds_a": 1.21,
-      "odds_draw": 6.53,
-      "odds_b": 54.64,
-      "prediction_source": "archived",
-      "explanation": {
-        "favorite_side": "team_a",
-        "favorite_team": "Ivory Coast",
-        "confidence_band": "strong",
-        "summary": "Ivory Coast are clear favorites.",
-        "signals": [
-          "Elo edge: Ivory Coast 342",
-          "xG edge: Ivory Coast +2.91",
-          "Form edge: Ivory Coast +0.24"
-        ],
-        "risk": "Most volatility sits in finishing variance.",
-        "rating_edge": 341.6,
-        "form_edge": 0.24,
-        "xg_edge": 2.91,
-        "market_edge": 0.9
-      },
-      "market_prob_a": 0.8191,
-      "market_prob_draw": 0.1208,
-      "market_prob_b": 0.0601,
-      "market_odds_a": 1.17,
-      "market_odds_draw": 7.92,
-      "market_odds_b": 15.93,
-      "bookmaker_count": 48
-    },
-    {
-      "date": "2026-06-25",
-      "group": "F",
-      "team_a": "Tunisia",
-      "team_b": "Japan",
-      "status": "played",
-      "actual_score_a": 1,
-      "actual_score_b": 1,
-      "xg_a": 0.76,
-      "xg_b": 2.13,
-      "predicted_score_a": 0,
-      "predicted_score_b": 2,
-      "prob_win_a": 0.0997,
-      "prob_draw": 0.2751,
-      "prob_win_b": 0.6252,
-      "confidence": 0.6252,
-      "score_matrix": [
-        [
-          0.06878,
-          0.10907,
-          0.12889,
-          0.09151,
-          0.04873,
-          0.02076
-        ],
-        [
-          0.03122,
-          0.10393,
-          0.09796,
-          0.06955,
-          0.03703,
-          0.01578
-        ],
-        [
-          0.01641,
-          0.03495,
-          0.03722,
-          0.02643,
-          0.01407,
-          0.006
-        ],
-        [
-          0.00416,
-          0.00885,
-          0.00943,
-          0.0067,
-          0.00357,
-          0.00152
-        ],
-        [
-          0.00079,
-          0.00168,
-          0.00179,
-          0.00127,
-          0.00068,
-          0.00029
-        ],
-        [
-          0.00012,
-          0.00026,
-          0.00027,
-          0.00019,
-          0.0001,
-          4e-05
-        ]
-      ],
-      "odds_a": 10.03,
-      "odds_draw": 3.64,
-      "odds_b": 1.6,
-      "prediction_source": "archived",
-      "explanation": {
-        "favorite_side": "team_b",
-        "favorite_team": "Japan",
-        "confidence_band": "lean",
-        "summary": "Japan hold the edge.",
-        "signals": [
-          "Elo edge: Japan 162",
-          "xG edge: Japan +1.37",
-          "Form edge: Japan +0.16",
-          "Market edge: -14.6 pts vs books"
-        ],
-        "risk": "Draw risk is still 27.5%.",
-        "rating_edge": -161.8,
-        "form_edge": -0.16,
-        "xg_edge": -1.37,
-        "market_edge": -14.6
-      },
-      "market_prob_a": 0.0684,
-      "market_prob_draw": 0.1602,
-      "market_prob_b": 0.7714,
-      "market_odds_a": 14.12,
-      "market_odds_draw": 6.03,
-      "market_odds_b": 1.25,
-      "bookmaker_count": 48
-    },
-    {
-      "date": "2026-06-25",
-      "group": "F",
-      "team_a": "Netherlands",
-      "team_b": "Tunisia",
-      "status": "played",
-      "actual_score_a": 3,
-      "actual_score_b": 1,
-      "xg_a": 2.87,
-      "xg_b": 0.49,
-      "predicted_score_a": 2,
-      "predicted_score_b": 0,
-      "prob_win_a": 0.7816,
-      "prob_draw": 0.1874,
-      "prob_win_b": 0.031,
-      "confidence": 0.7816,
-      "score_matrix": [
-        [
-          0.04424,
-          0.01149,
-          0.00449,
-          0.00073,
-          9e-05,
-          1e-05
-        ],
-        [
-          0.10052,
-          0.05944,
-          0.01289,
-          0.00211,
-          0.00026,
-          3e-05
-        ],
-        [
-          0.15405,
-          0.07549,
-          0.01849,
-          0.00302,
-          0.00037,
-          4e-05
-        ],
-        [
-          0.14738,
-          0.07222,
-          0.01769,
-          0.00289,
+          0.15376,
+          0.07417,
+          0.01789,
+          0.00288,
           0.00035,
           3e-05
         ],
         [
-          0.10574,
-          0.05181,
-          0.01269,
-          0.00207,
-          0.00025,
+          0.12357,
+          0.05961,
+          0.01438,
+          0.00231,
+          0.00028,
+          3e-05
+        ],
+        [
+          0.07945,
+          0.03833,
+          0.00924,
+          0.00149,
+          0.00018,
           2e-05
-        ],
-        [
-          0.0607,
-          0.02974,
-          0.00729,
-          0.00119,
-          0.00015,
-          1e-05
         ]
       ],
-      "odds_a": 1.28,
-      "odds_draw": 5.34,
-      "odds_b": 32.26,
-      "prediction_source": "archived",
-      "explanation": {
-        "favorite_side": "team_a",
-        "favorite_team": "Netherlands",
-        "confidence_band": "strong",
-        "summary": "Netherlands are clear favorites.",
-        "signals": [
-          "Elo edge: Netherlands 252",
-          "xG edge: Netherlands +2.38",
-          "Form edge: Netherlands +0.32",
-          "Market edge: -6.7 pts vs books"
-        ],
-        "risk": "Most volatility sits in finishing variance.",
-        "rating_edge": 252.0,
-        "form_edge": 0.32,
-        "xg_edge": 2.38,
-        "market_edge": -6.7
-      },
-      "market_prob_a": 0.8484,
-      "market_prob_draw": 0.1033,
-      "market_prob_b": 0.0483,
-      "market_odds_a": 1.13,
-      "market_odds_draw": 9.27,
-      "market_odds_b": 19.83,
-      "bookmaker_count": 47
-    },
-    {
-      "date": "2026-06-25",
-      "group": "F",
-      "team_a": "Japan",
-      "team_b": "Sweden",
-      "status": "scheduled",
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "xg_a": 1.42,
-      "xg_b": 1.3,
-      "predicted_score_a": 1,
-      "predicted_score_b": 1,
-      "prob_win_a": 0.3527,
-      "prob_draw": 0.3447,
-      "prob_win_b": 0.3026,
-      "confidence": 0.3527,
-      "score_matrix": [
-        [
-          0.08163,
-          0.06991,
-          0.05595,
-          0.02433,
-          0.00793,
-          0.00207
-        ],
-        [
-          0.07771,
-          0.13794,
-          0.07962,
-          0.03462,
-          0.01129,
-          0.00295
-        ],
-        [
-          0.06658,
-          0.08685,
-          0.05665,
-          0.02463,
-          0.00803,
-          0.0021
-        ],
-        [
-          0.03158,
-          0.0412,
-          0.02687,
-          0.01168,
-          0.00381,
-          0.00099
-        ],
-        [
-          0.01124,
-          0.01466,
-          0.00956,
-          0.00416,
-          0.00136,
-          0.00035
-        ],
-        [
-          0.0032,
-          0.00417,
-          0.00272,
-          0.00118,
-          0.00039,
-          0.0001
-        ]
-      ],
-      "odds_a": 2.84,
-      "odds_draw": 2.9,
-      "odds_b": 3.3,
+      "odds_a": 1.23,
+      "odds_draw": 6.11,
+      "odds_b": 44.51,
       "prediction_source": "scheduled",
       "explanation": {
         "favorite_side": "team_a",
-        "favorite_team": "Japan",
-        "confidence_band": "fragile",
-        "summary": "Japan lead a volatile matchup.",
+        "favorite_team": "Belgium",
+        "confidence_band": "strong",
+        "summary": "Belgium are clear favorites.",
         "signals": [
-          "Elo edge: Japan 23",
-          "Top outcome: Japan 35.3%",
-          "Market edge: -6.9 pts vs books"
+          "Elo edge: Belgium 297",
+          "xG edge: Belgium +2.73",
+          "Form edge: Belgium +0.08"
         ],
-        "risk": "Draw risk is still 34.5%.",
-        "rating_edge": 22.8,
-        "form_edge": 0.0,
-        "xg_edge": 0.12,
-        "market_edge": -6.9
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 297.1,
+        "form_edge": 0.08,
+        "xg_edge": 2.73,
+        "market_edge": 0.6
       },
-      "market_prob_a": 0.4221,
-      "market_prob_draw": 0.2825,
-      "market_prob_b": 0.2955,
-      "market_odds_a": 2.26,
-      "market_odds_draw": 3.38,
-      "market_odds_b": 3.23,
+      "market_prob_a": 0.8082,
+      "market_prob_draw": 0.1213,
+      "market_prob_b": 0.0706,
+      "market_odds_a": 1.18,
+      "market_odds_draw": 7.88,
+      "market_odds_b": 13.54,
+      "bookmaker_count": 48
+    },
+    {
+      "date": "2026-06-26",
+      "group": "G",
+      "team_a": "Iran",
+      "team_b": "Egypt",
+      "status": "scheduled",
+      "actual_score_a": null,
+      "actual_score_b": null,
+      "xg_a": 1.49,
+      "xg_b": 1.28,
+      "predicted_score_a": 1,
+      "predicted_score_b": 1,
+      "prob_win_a": 0.3742,
+      "prob_draw": 0.3412,
+      "prob_win_b": 0.2846,
+      "confidence": 0.3742,
+      "score_matrix": [
+        [
+          0.07879,
+          0.06503,
+          0.05152,
+          0.02193,
+          0.007,
+          0.00179
+        ],
+        [
+          0.07854,
+          0.13594,
+          0.07683,
+          0.03271,
+          0.01044,
+          0.00267
+        ],
+        [
+          0.07022,
+          0.0897,
+          0.05728,
+          0.02439,
+          0.00779,
+          0.00199
+        ],
+        [
+          0.03491,
+          0.04459,
+          0.02847,
+          0.01212,
+          0.00387,
+          0.00099
+        ],
+        [
+          0.01301,
+          0.01662,
+          0.01062,
+          0.00452,
+          0.00144,
+          0.00037
+        ],
+        [
+          0.00388,
+          0.00496,
+          0.00317,
+          0.00135,
+          0.00043,
+          0.00011
+        ]
+      ],
+      "odds_a": 2.67,
+      "odds_draw": 2.93,
+      "odds_b": 3.51,
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Iran",
+        "confidence_band": "fragile",
+        "summary": "Iran lead a volatile matchup.",
+        "signals": [
+          "Elo edge: Iran 39",
+          "xG edge: Iran +0.21",
+          "Form edge: Egypt +0.08",
+          "Market edge: +10.8 pts vs books"
+        ],
+        "risk": "Draw risk is still 34.1%.",
+        "rating_edge": 38.8,
+        "form_edge": -0.08,
+        "xg_edge": 0.21,
+        "market_edge": 10.8
+      },
+      "market_prob_a": 0.2666,
+      "market_prob_draw": 0.3622,
+      "market_prob_b": 0.3712,
+      "market_odds_a": 3.58,
+      "market_odds_draw": 2.63,
+      "market_odds_b": 2.57,
+      "bookmaker_count": 48
+    },
+    {
+      "date": "2026-06-26",
+      "group": "H",
+      "team_a": "Spain",
+      "team_b": "Uruguay",
+      "status": "scheduled",
+      "actual_score_a": null,
+      "actual_score_b": null,
+      "xg_a": 2.1,
+      "xg_b": 0.99,
+      "predicted_score_a": 1,
+      "predicted_score_b": 1,
+      "prob_win_a": 0.5674,
+      "prob_draw": 0.2886,
+      "prob_win_b": 0.144,
+      "confidence": 0.5674,
+      "score_matrix": [
+        [
+          0.05907,
+          0.03345,
+          0.02275,
+          0.0075,
+          0.00186,
+          0.00037
+        ],
+        [
+          0.08512,
+          0.10918,
+          0.04779,
+          0.01576,
+          0.0039,
+          0.00077
+        ],
+        [
+          0.10257,
+          0.10146,
+          0.05018,
+          0.01654,
+          0.00409,
+          0.00081
+        ],
+        [
+          0.0718,
+          0.07103,
+          0.03513,
+          0.01158,
+          0.00286,
+          0.00057
+        ],
+        [
+          0.0377,
+          0.03729,
+          0.01844,
+          0.00608,
+          0.0015,
+          0.0003
+        ],
+        [
+          0.01583,
+          0.01566,
+          0.00775,
+          0.00255,
+          0.00063,
+          0.00012
+        ]
+      ],
+      "odds_a": 1.76,
+      "odds_draw": 3.46,
+      "odds_b": 6.94,
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Spain",
+        "confidence_band": "lean",
+        "summary": "Spain hold the edge.",
+        "signals": [
+          "Elo edge: Spain 119",
+          "xG edge: Spain +1.11",
+          "Form edge: Spain +0.08"
+        ],
+        "risk": "Draw risk is still 28.9%.",
+        "rating_edge": 118.8,
+        "form_edge": 0.08,
+        "xg_edge": 1.11,
+        "market_edge": -2.5
+      },
+      "market_prob_a": 0.5922,
+      "market_prob_draw": 0.2556,
+      "market_prob_b": 0.1522,
+      "market_odds_a": 1.61,
+      "market_odds_draw": 3.73,
+      "market_odds_b": 6.26,
+      "bookmaker_count": 48
+    },
+    {
+      "date": "2026-06-26",
+      "group": "H",
+      "team_a": "Saudi Arabia",
+      "team_b": "Cape Verde",
+      "status": "scheduled",
+      "actual_score_a": null,
+      "actual_score_b": null,
+      "xg_a": 2.05,
+      "xg_b": 0.84,
+      "predicted_score_a": 2,
+      "predicted_score_b": 0,
+      "prob_win_a": 0.5922,
+      "prob_draw": 0.2876,
+      "prob_win_b": 0.1202,
+      "confidence": 0.5922,
+      "score_matrix": [
+        [
+          0.06927,
+          0.03475,
+          0.01984,
+          0.00553,
+          0.00116,
+          0.00019
+        ],
+        [
+          0.10361,
+          0.10997,
+          0.04073,
+          0.01136,
+          0.00238,
+          0.0004
+        ],
+        [
+          0.11936,
+          0.09991,
+          0.04181,
+          0.01167,
+          0.00244,
+          0.00041
+        ],
+        [
+          0.08169,
+          0.06838,
+          0.02862,
+          0.00799,
+          0.00167,
+          0.00028
+        ],
+        [
+          0.04193,
+          0.0351,
+          0.01469,
+          0.0041,
+          0.00086,
+          0.00014
+        ],
+        [
+          0.01722,
+          0.01441,
+          0.00603,
+          0.00168,
+          0.00035,
+          6e-05
+        ]
+      ],
+      "odds_a": 1.69,
+      "odds_draw": 3.48,
+      "odds_b": 8.32,
+      "prediction_source": "scheduled",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Saudi Arabia",
+        "confidence_band": "lean",
+        "summary": "Saudi Arabia hold the edge.",
+        "signals": [
+          "Elo edge: Saudi Arabia 162",
+          "xG edge: Saudi Arabia +1.22",
+          "Form edge: Cape Verde +0.08",
+          "Market edge: +20.9 pts vs books"
+        ],
+        "risk": "Draw risk is still 28.8%.",
+        "rating_edge": 161.9,
+        "form_edge": -0.08,
+        "xg_edge": 1.22,
+        "market_edge": 20.9
+      },
+      "market_prob_a": 0.3836,
+      "market_prob_draw": 0.2888,
+      "market_prob_b": 0.3276,
+      "market_odds_a": 2.48,
+      "market_odds_draw": 3.3,
+      "market_odds_b": 2.91,
+      "bookmaker_count": 48
+    },
+    {
+      "date": "2026-06-26",
+      "group": "I",
+      "team_a": "France",
+      "team_b": "Norway",
+      "status": "played",
+      "actual_score_a": 4,
+      "actual_score_b": 1,
+      "xg_a": 3.78,
+      "xg_b": 0.68,
+      "predicted_score_a": 3,
+      "predicted_score_b": 0,
+      "prob_win_a": 0.8268,
+      "prob_draw": 0.1486,
+      "prob_win_b": 0.0245,
+      "confidence": 0.8268,
+      "score_matrix": [
+        [
+          0.01885,
+          0.00489,
+          0.00327,
+          0.00074,
+          0.00013,
+          2e-05
+        ],
+        [
+          0.04868,
+          0.04103,
+          0.01235,
+          0.0028,
+          0.00048,
+          6e-05
+        ],
+        [
+          0.10093,
+          0.06863,
+          0.02333,
+          0.00529,
+          0.0009,
+          0.00012
+        ],
+        [
+          0.12717,
+          0.08648,
+          0.0294,
+          0.00666,
+          0.00113,
+          0.00015
+        ],
+        [
+          0.12018,
+          0.08172,
+          0.02778,
+          0.0063,
+          0.00107,
+          0.00015
+        ],
+        [
+          0.09085,
+          0.06178,
+          0.02101,
+          0.00476,
+          0.00081,
+          0.00011
+        ]
+      ],
+      "odds_a": 1.21,
+      "odds_draw": 6.73,
+      "odds_b": 40.82,
+      "prediction_source": "archived",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "France",
+        "confidence_band": "strong",
+        "summary": "France are clear favorites.",
+        "signals": [
+          "Elo edge: France 353",
+          "xG edge: France +3.10",
+          "Form edge: France +0.20",
+          "Market edge: +16.4 pts vs books"
+        ],
+        "risk": "Most volatility sits in finishing variance.",
+        "rating_edge": 352.9,
+        "form_edge": 0.2,
+        "xg_edge": 3.1,
+        "market_edge": 16.4
+      },
+      "market_prob_a": 0.6632,
+      "market_prob_draw": 0.1854,
+      "market_prob_b": 0.1513,
+      "market_odds_a": 1.44,
+      "market_odds_draw": 5.14,
+      "market_odds_b": 6.3,
+      "bookmaker_count": 48
+    },
+    {
+      "date": "2026-06-26",
+      "group": "I",
+      "team_a": "Senegal",
+      "team_b": "Iraq",
+      "status": "played",
+      "actual_score_a": 5,
+      "actual_score_b": 0,
+      "xg_a": 1.78,
+      "xg_b": 0.78,
+      "predicted_score_a": 1,
+      "predicted_score_b": 0,
+      "prob_win_a": 0.551,
+      "prob_draw": 0.3155,
+      "prob_win_b": 0.1335,
+      "confidence": 0.551,
+      "score_matrix": [
+        [
+          0.09218,
+          0.04681,
+          0.02375,
+          0.00618,
+          0.0012,
+          0.00019
+        ],
+        [
+          0.1249,
+          0.12251,
+          0.04228,
+          0.01099,
+          0.00214,
+          0.00033
+        ],
+        [
+          0.12371,
+          0.09649,
+          0.03763,
+          0.00978,
+          0.00191,
+          0.0003
+        ],
+        [
+          0.0734,
+          0.05725,
+          0.02233,
+          0.00581,
+          0.00113,
+          0.00018
+        ],
+        [
+          0.03266,
+          0.02548,
+          0.00994,
+          0.00258,
+          0.0005,
+          8e-05
+        ],
+        [
+          0.01163,
+          0.00907,
+          0.00354,
+          0.00092,
+          0.00018,
+          3e-05
+        ]
+      ],
+      "odds_a": 1.81,
+      "odds_draw": 3.17,
+      "odds_b": 7.49,
+      "prediction_source": "archived",
+      "explanation": {
+        "favorite_side": "team_a",
+        "favorite_team": "Senegal",
+        "confidence_band": "lean",
+        "summary": "Senegal hold the edge.",
+        "signals": [
+          "Elo edge: Senegal 159",
+          "xG edge: Senegal +1.00",
+          "Form edge: Senegal +0.20",
+          "Market edge: -23.3 pts vs books"
+        ],
+        "risk": "Draw risk is still 31.6%.",
+        "rating_edge": 159.1,
+        "form_edge": 0.2,
+        "xg_edge": 1.0,
+        "market_edge": -23.3
+      },
+      "market_prob_a": 0.784,
+      "market_prob_draw": 0.1398,
+      "market_prob_b": 0.0761,
+      "market_odds_a": 1.22,
+      "market_odds_draw": 6.84,
+      "market_odds_b": 12.56,
       "bookmaker_count": 48
     }
   ],
   "group_scenarios": [
     {
-      "group": "F",
-      "date": "2026-06-25",
+      "group": "G",
+      "date": "2026-06-26",
       "matches": [
         {
-          "team_a": "Japan",
-          "team_b": "Sweden",
+          "team_a": "Belgium",
+          "team_b": "New Zealand",
+          "status": "scheduled",
+          "score_a": null,
+          "score_b": null,
+          "choices": [
+            {
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ]
+        },
+        {
+          "team_a": "Iran",
+          "team_b": "Egypt",
           "status": "scheduled",
           "score_a": null,
           "score_b": null,
@@ -701,29 +633,820 @@
       ],
       "current_standings": [
         {
-          "team": "Netherlands",
-          "played": 3,
-          "won": 2,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 10,
-          "ga": 4,
-          "gd": 6,
-          "points": 7
-        },
-        {
-          "team": "Sweden",
+          "team": "Egypt",
           "played": 2,
           "won": 1,
-          "drawn": 0,
-          "lost": 1,
-          "gf": 6,
-          "ga": 6,
-          "gd": 0,
-          "points": 3
+          "drawn": 1,
+          "lost": 0,
+          "gf": 4,
+          "ga": 2,
+          "gd": 2,
+          "points": 4
         },
         {
-          "team": "Japan",
+          "team": "Iran",
+          "played": 2,
+          "won": 0,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 2
+        },
+        {
+          "team": "Belgium",
+          "played": 2,
+          "won": 0,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 2
+        },
+        {
+          "team": "New Zealand",
+          "played": 2,
+          "won": 0,
+          "drawn": 1,
+          "lost": 1,
+          "gf": 3,
+          "ga": 5,
+          "gd": -2,
+          "points": 1
+        }
+      ],
+      "team_paths": [
+        {
+          "team": "Belgium",
+          "best_rank": 2,
+          "worst_rank": 4,
+          "top2_paths": 4,
+          "total_paths": 9,
+          "summary_key": "avoid_defeat",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 1,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Egypt",
+          "best_rank": 1,
+          "worst_rank": 3,
+          "top2_paths": 8,
+          "total_paths": 9,
+          "summary_key": "avoid_defeat",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 3,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 2,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Iran",
+          "best_rank": 1,
+          "worst_rank": 3,
+          "top2_paths": 4,
+          "total_paths": 9,
+          "summary_key": "avoid_defeat",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 1,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "New Zealand",
+          "best_rank": 2,
+          "worst_rank": 4,
+          "top2_paths": 2,
+          "total_paths": 9,
+          "summary_key": "must_win_help",
+          "by_result": {
+            "win": {
+              "qualify": 2,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 0,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        }
+      ],
+      "default_scenario_id": "Belgium_New Zealand_team_a_1_0__Iran_Egypt_team_a_1_0",
+      "scenarios": [
+        {
+          "id": "Belgium_New Zealand_team_a_1_0__Iran_Egypt_team_a_1_0",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            }
+          ],
+          "standings": [
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 3,
+              "ga": 2,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 2,
+              "ga": 1,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 3,
+              "gd": 1,
+              "points": 4
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 0,
+              "drawn": 1,
+              "lost": 2,
+              "gf": 3,
+              "ga": 6,
+              "gd": -3,
+              "points": 1
+            }
+          ]
+        },
+        {
+          "id": "Belgium_New Zealand_team_a_1_0__Iran_Egypt_draw_1_1",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 5,
+              "ga": 3,
+              "gd": 2,
+              "points": 5
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 2,
+              "ga": 1,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 3,
+              "ga": 3,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 0,
+              "drawn": 1,
+              "lost": 2,
+              "gf": 3,
+              "ga": 6,
+              "gd": -3,
+              "points": 1
+            }
+          ]
+        },
+        {
+          "id": "Belgium_New Zealand_team_a_1_0__Iran_Egypt_team_b_0_1",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 2,
+              "drawn": 1,
+              "lost": 0,
+              "gf": 5,
+              "ga": 2,
+              "gd": 3,
+              "points": 7
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 2,
+              "ga": 1,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 3,
+              "gd": -1,
+              "points": 2
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 0,
+              "drawn": 1,
+              "lost": 2,
+              "gf": 3,
+              "ga": 6,
+              "gd": -3,
+              "points": 1
+            }
+          ]
+        },
+        {
+          "id": "Belgium_New Zealand_draw_1_1__Iran_Egypt_team_a_1_0",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            }
+          ],
+          "standings": [
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 3,
+              "ga": 2,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 3,
+              "gd": 1,
+              "points": 4
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 2,
+              "ga": 2,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 4,
+              "ga": 6,
+              "gd": -2,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Belgium_New Zealand_draw_1_1__Iran_Egypt_draw_1_1",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 5,
+              "ga": 3,
+              "gd": 2,
+              "points": 5
+            },
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 3,
+              "ga": 3,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 2,
+              "ga": 2,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 4,
+              "ga": 6,
+              "gd": -2,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Belgium_New Zealand_draw_1_1__Iran_Egypt_team_b_0_1",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 2,
+              "drawn": 1,
+              "lost": 0,
+              "gf": 5,
+              "ga": 2,
+              "gd": 3,
+              "points": 7
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 2,
+              "ga": 2,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 3,
+              "gd": -1,
+              "points": 2
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 4,
+              "ga": 6,
+              "gd": -2,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Belgium_New Zealand_team_b_0_1__Iran_Egypt_team_a_1_0",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            }
+          ],
+          "standings": [
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 3,
+              "ga": 2,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 3,
+              "gd": 1,
+              "points": 4
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 5,
+              "gd": -1,
+              "points": 4
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 1,
+              "ga": 2,
+              "gd": -1,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Belgium_New Zealand_team_b_0_1__Iran_Egypt_draw_1_1",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 5,
+              "ga": 3,
+              "gd": 2,
+              "points": 5
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 5,
+              "gd": -1,
+              "points": 4
+            },
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 3,
+              "ga": 3,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 1,
+              "ga": 2,
+              "gd": -1,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Belgium_New Zealand_team_b_0_1__Iran_Egypt_team_b_0_1",
+          "choices": [
+            {
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            },
+            {
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Egypt",
+              "played": 3,
+              "won": 2,
+              "drawn": 1,
+              "lost": 0,
+              "gf": 5,
+              "ga": 2,
+              "gd": 3,
+              "points": 7
+            },
+            {
+              "team": "New Zealand",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 5,
+              "gd": -1,
+              "points": 4
+            },
+            {
+              "team": "Iran",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 3,
+              "gd": -1,
+              "points": 2
+            },
+            {
+              "team": "Belgium",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 1,
+              "ga": 2,
+              "gd": -1,
+              "points": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "date": "2026-06-26",
+      "matches": [
+        {
+          "team_a": "Spain",
+          "team_b": "Uruguay",
+          "status": "scheduled",
+          "score_a": null,
+          "score_b": null,
+          "choices": [
+            {
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ]
+        },
+        {
+          "team_a": "Saudi Arabia",
+          "team_b": "Cape Verde",
+          "status": "scheduled",
+          "score_a": null,
+          "score_b": null,
+          "choices": [
+            {
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ]
+        }
+      ],
+      "current_standings": [
+        {
+          "team": "Spain",
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 4,
+          "ga": 0,
+          "gd": 4,
+          "points": 4
+        },
+        {
+          "team": "Uruguay",
           "played": 2,
           "won": 0,
           "drawn": 2,
@@ -734,115 +1457,134 @@
           "points": 2
         },
         {
-          "team": "Tunisia",
-          "played": 3,
+          "team": "Cape Verde",
+          "played": 2,
+          "won": 0,
+          "drawn": 2,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 2
+        },
+        {
+          "team": "Saudi Arabia",
+          "played": 2,
           "won": 0,
           "drawn": 1,
-          "lost": 2,
-          "gf": 3,
-          "ga": 9,
-          "gd": -6,
+          "lost": 1,
+          "gf": 1,
+          "ga": 5,
+          "gd": -4,
           "points": 1
         }
       ],
       "team_paths": [
         {
-          "team": "Netherlands",
+          "team": "Spain",
           "best_rank": 1,
-          "worst_rank": 1,
-          "top2_paths": 3,
-          "total_paths": 3,
-          "summary_key": "locked",
-          "by_result": {
-            "win": {
-              "qualify": 0,
-              "total": 0
-            },
-            "draw": {
-              "qualify": 0,
-              "total": 0
-            },
-            "loss": {
-              "qualify": 0,
-              "total": 0
-            }
-          }
-        },
-        {
-          "team": "Japan",
-          "best_rank": 2,
           "worst_rank": 3,
-          "top2_paths": 1,
-          "total_paths": 3,
-          "summary_key": "win_clinches",
-          "by_result": {
-            "win": {
-              "qualify": 1,
-              "total": 1
-            },
-            "draw": {
-              "qualify": 0,
-              "total": 1
-            },
-            "loss": {
-              "qualify": 0,
-              "total": 1
-            }
-          }
-        },
-        {
-          "team": "Sweden",
-          "best_rank": 2,
-          "worst_rank": 3,
-          "top2_paths": 2,
-          "total_paths": 3,
+          "top2_paths": 8,
+          "total_paths": 9,
           "summary_key": "avoid_defeat",
           "by_result": {
             "win": {
-              "qualify": 1,
-              "total": 1
+              "qualify": 3,
+              "total": 3
             },
             "draw": {
-              "qualify": 1,
-              "total": 1
+              "qualify": 3,
+              "total": 3
             },
             "loss": {
-              "qualify": 0,
-              "total": 1
+              "qualify": 2,
+              "total": 3
             }
           }
         },
         {
-          "team": "Tunisia",
-          "best_rank": 4,
+          "team": "Cape Verde",
+          "best_rank": 2,
           "worst_rank": 4,
-          "top2_paths": 0,
-          "total_paths": 3,
-          "summary_key": "eliminated",
+          "top2_paths": 4,
+          "total_paths": 9,
+          "summary_key": "avoid_defeat",
           "by_result": {
             "win": {
-              "qualify": 0,
-              "total": 0
+              "qualify": 3,
+              "total": 3
             },
             "draw": {
-              "qualify": 0,
-              "total": 0
+              "qualify": 1,
+              "total": 3
             },
             "loss": {
               "qualify": 0,
-              "total": 0
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Saudi Arabia",
+          "best_rank": 2,
+          "worst_rank": 4,
+          "top2_paths": 2,
+          "total_paths": 9,
+          "summary_key": "must_win_help",
+          "by_result": {
+            "win": {
+              "qualify": 2,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 0,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
+            }
+          }
+        },
+        {
+          "team": "Uruguay",
+          "best_rank": 1,
+          "worst_rank": 3,
+          "top2_paths": 4,
+          "total_paths": 9,
+          "summary_key": "avoid_defeat",
+          "by_result": {
+            "win": {
+              "qualify": 3,
+              "total": 3
+            },
+            "draw": {
+              "qualify": 1,
+              "total": 3
+            },
+            "loss": {
+              "qualify": 0,
+              "total": 3
             }
           }
         }
       ],
-      "default_scenario_id": "Japan_Sweden_team_a_1_0",
+      "default_scenario_id": "Spain_Uruguay_team_a_1_0__Saudi Arabia_Cape Verde_team_a_1_0",
       "scenarios": [
         {
-          "id": "Japan_Sweden_team_a_1_0",
+          "id": "Spain_Uruguay_team_a_1_0__Saudi Arabia_Cape Verde_team_a_1_0",
           "choices": [
             {
-              "team_a": "Japan",
-              "team_b": "Sweden",
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
               "result": "team_a",
               "label_kind": "win",
               "score_a": 1,
@@ -851,147 +1593,29 @@
           ],
           "standings": [
             {
-              "team": "Netherlands",
+              "team": "Spain",
               "played": 3,
               "won": 2,
               "drawn": 1,
               "lost": 0,
-              "gf": 10,
-              "ga": 4,
-              "gd": 6,
+              "gf": 5,
+              "ga": 0,
+              "gd": 5,
               "points": 7
             },
             {
-              "team": "Japan",
-              "played": 3,
-              "won": 1,
-              "drawn": 2,
-              "lost": 0,
-              "gf": 4,
-              "ga": 3,
-              "gd": 1,
-              "points": 5
-            },
-            {
-              "team": "Sweden",
-              "played": 3,
-              "won": 1,
-              "drawn": 0,
-              "lost": 2,
-              "gf": 6,
-              "ga": 7,
-              "gd": -1,
-              "points": 3
-            },
-            {
-              "team": "Tunisia",
-              "played": 3,
-              "won": 0,
-              "drawn": 1,
-              "lost": 2,
-              "gf": 3,
-              "ga": 9,
-              "gd": -6,
-              "points": 1
-            }
-          ]
-        },
-        {
-          "id": "Japan_Sweden_draw_1_1",
-          "choices": [
-            {
-              "team_a": "Japan",
-              "team_b": "Sweden",
-              "result": "draw",
-              "label_kind": "draw",
-              "score_a": 1,
-              "score_b": 1
-            }
-          ],
-          "standings": [
-            {
-              "team": "Netherlands",
-              "played": 3,
-              "won": 2,
-              "drawn": 1,
-              "lost": 0,
-              "gf": 10,
-              "ga": 4,
-              "gd": 6,
-              "points": 7
-            },
-            {
-              "team": "Sweden",
+              "team": "Saudi Arabia",
               "played": 3,
               "won": 1,
               "drawn": 1,
               "lost": 1,
-              "gf": 7,
-              "ga": 7,
-              "gd": 0,
+              "gf": 2,
+              "ga": 5,
+              "gd": -3,
               "points": 4
             },
             {
-              "team": "Japan",
-              "played": 3,
-              "won": 0,
-              "drawn": 3,
-              "lost": 0,
-              "gf": 4,
-              "ga": 4,
-              "gd": 0,
-              "points": 3
-            },
-            {
-              "team": "Tunisia",
-              "played": 3,
-              "won": 0,
-              "drawn": 1,
-              "lost": 2,
-              "gf": 3,
-              "ga": 9,
-              "gd": -6,
-              "points": 1
-            }
-          ]
-        },
-        {
-          "id": "Japan_Sweden_team_b_0_1",
-          "choices": [
-            {
-              "team_a": "Japan",
-              "team_b": "Sweden",
-              "result": "team_b",
-              "label_kind": "win",
-              "score_a": 0,
-              "score_b": 1
-            }
-          ],
-          "standings": [
-            {
-              "team": "Netherlands",
-              "played": 3,
-              "won": 2,
-              "drawn": 1,
-              "lost": 0,
-              "gf": 10,
-              "ga": 4,
-              "gd": 6,
-              "points": 7
-            },
-            {
-              "team": "Sweden",
-              "played": 3,
-              "won": 2,
-              "drawn": 0,
-              "lost": 1,
-              "gf": 7,
-              "ga": 6,
-              "gd": 1,
-              "points": 6
-            },
-            {
-              "team": "Japan",
+              "team": "Uruguay",
               "played": 3,
               "won": 0,
               "drawn": 2,
@@ -1002,14 +1626,550 @@
               "points": 2
             },
             {
-              "team": "Tunisia",
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 3,
+              "gd": -1,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Spain_Uruguay_team_a_1_0__Saudi Arabia_Cape Verde_draw_1_1",
+          "choices": [
+            {
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Spain",
+              "played": 3,
+              "won": 2,
+              "drawn": 1,
+              "lost": 0,
+              "gf": 5,
+              "ga": 0,
+              "gd": 5,
+              "points": 7
+            },
+            {
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 3,
+              "ga": 3,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Uruguay",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 3,
+              "ga": 4,
+              "gd": -1,
+              "points": 2
+            },
+            {
+              "team": "Saudi Arabia",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 6,
+              "gd": -4,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Spain_Uruguay_team_a_1_0__Saudi Arabia_Cape Verde_team_b_0_1",
+          "choices": [
+            {
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Spain",
+              "played": 3,
+              "won": 2,
+              "drawn": 1,
+              "lost": 0,
+              "gf": 5,
+              "ga": 0,
+              "gd": 5,
+              "points": 7
+            },
+            {
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 3,
+              "ga": 2,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Uruguay",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 3,
+              "ga": 4,
+              "gd": -1,
+              "points": 2
+            },
+            {
+              "team": "Saudi Arabia",
               "played": 3,
               "won": 0,
               "drawn": 1,
               "lost": 2,
+              "gf": 1,
+              "ga": 6,
+              "gd": -5,
+              "points": 1
+            }
+          ]
+        },
+        {
+          "id": "Spain_Uruguay_draw_1_1__Saudi Arabia_Cape Verde_team_a_1_0",
+          "choices": [
+            {
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            }
+          ],
+          "standings": [
+            {
+              "team": "Spain",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 5,
+              "ga": 1,
+              "gd": 4,
+              "points": 5
+            },
+            {
+              "team": "Saudi Arabia",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 2,
+              "ga": 5,
+              "gd": -3,
+              "points": 4
+            },
+            {
+              "team": "Uruguay",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 4,
+              "ga": 4,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 3,
+              "gd": -1,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Spain_Uruguay_draw_1_1__Saudi Arabia_Cape Verde_draw_1_1",
+          "choices": [
+            {
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Spain",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 5,
+              "ga": 1,
+              "gd": 4,
+              "points": 5
+            },
+            {
+              "team": "Uruguay",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 4,
+              "ga": 4,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
               "gf": 3,
-              "ga": 9,
-              "gd": -6,
+              "ga": 3,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Saudi Arabia",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 6,
+              "gd": -4,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Spain_Uruguay_draw_1_1__Saudi Arabia_Cape Verde_team_b_0_1",
+          "choices": [
+            {
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Spain",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 5,
+              "ga": 1,
+              "gd": 4,
+              "points": 5
+            },
+            {
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 3,
+              "ga": 2,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Uruguay",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 4,
+              "ga": 4,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Saudi Arabia",
+              "played": 3,
+              "won": 0,
+              "drawn": 1,
+              "lost": 2,
+              "gf": 1,
+              "ga": 6,
+              "gd": -5,
+              "points": 1
+            }
+          ]
+        },
+        {
+          "id": "Spain_Uruguay_team_b_0_1__Saudi Arabia_Cape Verde_team_a_1_0",
+          "choices": [
+            {
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "result": "team_a",
+              "label_kind": "win",
+              "score_a": 1,
+              "score_b": 0
+            }
+          ],
+          "standings": [
+            {
+              "team": "Uruguay",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 4,
+              "ga": 3,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Spain",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 1,
+              "gd": 3,
+              "points": 4
+            },
+            {
+              "team": "Saudi Arabia",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 2,
+              "ga": 5,
+              "gd": -3,
+              "points": 4
+            },
+            {
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 3,
+              "gd": -1,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Spain_Uruguay_team_b_0_1__Saudi Arabia_Cape Verde_draw_1_1",
+          "choices": [
+            {
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "result": "draw",
+              "label_kind": "draw",
+              "score_a": 1,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Uruguay",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 4,
+              "ga": 3,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Spain",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 1,
+              "gd": 3,
+              "points": 4
+            },
+            {
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 0,
+              "drawn": 3,
+              "lost": 0,
+              "gf": 3,
+              "ga": 3,
+              "gd": 0,
+              "points": 3
+            },
+            {
+              "team": "Saudi Arabia",
+              "played": 3,
+              "won": 0,
+              "drawn": 2,
+              "lost": 1,
+              "gf": 2,
+              "ga": 6,
+              "gd": -4,
+              "points": 2
+            }
+          ]
+        },
+        {
+          "id": "Spain_Uruguay_team_b_0_1__Saudi Arabia_Cape Verde_team_b_0_1",
+          "choices": [
+            {
+              "team_a": "Spain",
+              "team_b": "Uruguay",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            },
+            {
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "result": "team_b",
+              "label_kind": "win",
+              "score_a": 0,
+              "score_b": 1
+            }
+          ],
+          "standings": [
+            {
+              "team": "Uruguay",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 4,
+              "ga": 3,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Cape Verde",
+              "played": 3,
+              "won": 1,
+              "drawn": 2,
+              "lost": 0,
+              "gf": 3,
+              "ga": 2,
+              "gd": 1,
+              "points": 5
+            },
+            {
+              "team": "Spain",
+              "played": 3,
+              "won": 1,
+              "drawn": 1,
+              "lost": 1,
+              "gf": 4,
+              "ga": 1,
+              "gd": 3,
+              "points": 4
+            },
+            {
+              "team": "Saudi Arabia",
+              "played": 3,
+              "won": 0,
+              "drawn": 1,
+              "lost": 2,
+              "gf": 1,
+              "ga": 6,
+              "gd": -5,
               "points": 1
             }
           ]
@@ -10790,11 +11950,11 @@
     "South Africa": "🇿🇦"
   },
   "probability_timeline": {
-    "Tunisia": [
+    "Haiti": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.2236
+        "qualify_pct": 0.0672
       },
       {
         "matchday": "md1",
@@ -10802,28 +11962,52 @@
         "qualify_pct": 0.0
       }
     ],
-    "France": [
+    "Sweden": [
       {
         "matchday": "pre",
-        "win_pct": 0.234,
+        "win_pct": 0.0012,
+        "qualify_pct": 0.788
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0006,
+        "qualify_pct": 0.8061
+      }
+    ],
+    "Scotland": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6632
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0465
+      }
+    ],
+    "England": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0568,
         "qualify_pct": 0.9996
       },
       {
         "matchday": "md1",
-        "win_pct": 0.2301,
+        "win_pct": 0.0429,
         "qualify_pct": 1.0
       }
     ],
-    "Brazil": [
+    "Saudi Arabia": [
       {
         "matchday": "pre",
-        "win_pct": 0.096,
-        "qualify_pct": 0.9976
+        "win_pct": 0.0,
+        "qualify_pct": 0.6088
       },
       {
         "matchday": "md1",
-        "win_pct": 0.1012,
-        "qualify_pct": 1.0
+        "win_pct": 0.0,
+        "qualify_pct": 0.589
       }
     ],
     "South Africa": [
@@ -10835,6 +12019,30 @@
       {
         "matchday": "md1",
         "win_pct": 0.0,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Norway": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7152
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 1.0
+      }
+    ],
+    "France": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.234,
+        "qualify_pct": 0.9996
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.2301,
         "qualify_pct": 1.0
       }
     ],
@@ -10850,124 +12058,28 @@
         "qualify_pct": 1.0
       }
     ],
-    "Algeria": [
+    "Portugal": [
       {
         "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.7524
+        "win_pct": 0.0264,
+        "qualify_pct": 0.9932
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6981
-      }
-    ],
-    "Uzbekistan": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1012
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0003
-      }
-    ],
-    "Jordan": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1236
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0
-      }
-    ],
-    "Mexico": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0084,
-        "qualify_pct": 0.992
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0094,
+        "win_pct": 0.0213,
         "qualify_pct": 1.0
       }
     ],
-    "Czech Republic": [
+    "Bosnia": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.3756
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0
-      }
-    ],
-    "Australia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0004,
-        "qualify_pct": 0.7664
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0001,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Ivory Coast": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.8952
+        "qualify_pct": 0.4208
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
         "qualify_pct": 1.0
-      }
-    ],
-    "Uruguay": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0024,
-        "qualify_pct": 0.9592
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0006,
-        "qualify_pct": 0.4059
-      }
-    ],
-    "Iraq": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1968
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0
-      }
-    ],
-    "Qatar": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.3452
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0
       }
     ],
     "Netherlands": [
@@ -10982,23 +12094,131 @@
         "qualify_pct": 1.0
       }
     ],
-    "Iran": [
+    "Switzerland": [
       {
         "matchday": "pre",
-        "win_pct": 0.0004,
-        "qualify_pct": 0.8368
+        "win_pct": 0.0008,
+        "qualify_pct": 0.9896
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0011,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Mexico": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0084,
+        "qualify_pct": 0.992
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0094,
+        "qualify_pct": 1.0
+      }
+    ],
+    "South Korea": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.8888
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 0.6676
+        "qualify_pct": 0.4151
       }
     ],
-    "Egypt": [
+    "Cape Verde": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.7516
+        "qualify_pct": 0.09
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3845
+      }
+    ],
+    "Panama": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.1988
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0
+      }
+    ],
+    "Czech Republic": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3756
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0
+      }
+    ],
+    "Belgium": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0084,
+        "qualify_pct": 0.9708
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0033,
+        "qualify_pct": 0.9596
+      }
+    ],
+    "Tunisia": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.2236
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0
+      }
+    ],
+    "Jordan": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.1236
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0
+      }
+    ],
+    "Turkey": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6936
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0
+      }
+    ],
+    "Ivory Coast": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.8952
       },
       {
         "matchday": "md1",
@@ -11018,28 +12238,124 @@
         "qualify_pct": 1.0
       }
     ],
-    "Belgium": [
+    "Iran": [
       {
         "matchday": "pre",
-        "win_pct": 0.0084,
-        "qualify_pct": 0.9708
+        "win_pct": 0.0004,
+        "qualify_pct": 0.8368
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0033,
-        "qualify_pct": 0.9596
+        "win_pct": 0.0,
+        "qualify_pct": 0.6676
       }
     ],
-    "Spain": [
+    "Uruguay": [
       {
         "matchday": "pre",
-        "win_pct": 0.0524,
-        "qualify_pct": 0.9916
+        "win_pct": 0.0024,
+        "qualify_pct": 0.9592
       },
       {
         "matchday": "md1",
-        "win_pct": 0.049,
+        "win_pct": 0.0006,
+        "qualify_pct": 0.4059
+      }
+    ],
+    "Morocco": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0044,
+        "qualify_pct": 0.966
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0023,
         "qualify_pct": 1.0
+      }
+    ],
+    "Ecuador": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.9228
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0001,
+        "qualify_pct": 1.0
+      }
+    ],
+    "New Zealand": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.1928
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0225
+      }
+    ],
+    "DR Congo": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.4164
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.5847
+      }
+    ],
+    "Ghana": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.3844
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Germany": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0248,
+        "qualify_pct": 0.994
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0153,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Egypt": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7516
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 1.0
+      }
+    ],
+    "Uzbekistan": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.1012
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0003
       }
     ],
     "Senegal": [
@@ -11054,27 +12370,15 @@
         "qualify_pct": 0.994
       }
     ],
-    "Paraguay": [
+    "Australia": [
       {
         "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.3596
+        "win_pct": 0.0004,
+        "qualify_pct": 0.7664
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Argentina": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.4372,
-        "qualify_pct": 1.0
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.4733,
+        "win_pct": 0.0001,
         "qualify_pct": 1.0
       }
     ],
@@ -11090,23 +12394,11 @@
         "qualify_pct": 0.9618
       }
     ],
-    "Ghana": [
+    "Curaçao": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.3844
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Turkey": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6936
+        "qualify_pct": 0.0216
       },
       {
         "matchday": "md1",
@@ -11114,131 +12406,35 @@
         "qualify_pct": 0.0
       }
     ],
-    "England": [
+    "Paraguay": [
       {
         "matchday": "pre",
-        "win_pct": 0.0568,
-        "qualify_pct": 0.9996
+        "win_pct": 0.0,
+        "qualify_pct": 0.3596
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0429,
+        "win_pct": 0.0,
         "qualify_pct": 1.0
       }
     ],
-    "Scotland": [
+    "Spain": [
       {
         "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6632
+        "win_pct": 0.0524,
+        "qualify_pct": 0.9916
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0465
-      }
-    ],
-    "Switzerland": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0008,
-        "qualify_pct": 0.9896
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0011,
+        "win_pct": 0.049,
         "qualify_pct": 1.0
       }
     ],
-    "DR Congo": [
+    "Qatar": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.4164
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.5847
-      }
-    ],
-    "Austria": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.7384
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.8075
-      }
-    ],
-    "South Korea": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.8888
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.4151
-      }
-    ],
-    "Sweden": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0012,
-        "qualify_pct": 0.788
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0006,
-        "qualify_pct": 0.8061
-      }
-    ],
-    "Saudi Arabia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.6088
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.589
-      }
-    ],
-    "New Zealand": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1928
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0225
-      }
-    ],
-    "Germany": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0248,
-        "qualify_pct": 0.994
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0153,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Haiti": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0672
+        "qualify_pct": 0.3452
       },
       {
         "matchday": "md1",
@@ -11246,40 +12442,16 @@
         "qualify_pct": 0.0
       }
     ],
-    "Cape Verde": [
+    "Brazil": [
       {
         "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.09
+        "win_pct": 0.096,
+        "qualify_pct": 0.9976
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.3845
-      }
-    ],
-    "Bosnia": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.4208
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
+        "win_pct": 0.1012,
         "qualify_pct": 1.0
-      }
-    ],
-    "Panama": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.1988
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0
       }
     ],
     "Japan": [
@@ -11294,51 +12466,15 @@
         "qualify_pct": 0.6568
       }
     ],
-    "Portugal": [
+    "Argentina": [
       {
         "matchday": "pre",
-        "win_pct": 0.0264,
-        "qualify_pct": 0.9932
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0213,
+        "win_pct": 0.4372,
         "qualify_pct": 1.0
-      }
-    ],
-    "Morocco": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0044,
-        "qualify_pct": 0.966
       },
       {
         "matchday": "md1",
-        "win_pct": 0.0023,
-        "qualify_pct": 1.0
-      }
-    ],
-    "Curaçao": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0216
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0,
-        "qualify_pct": 0.0
-      }
-    ],
-    "Ecuador": [
-      {
-        "matchday": "pre",
-        "win_pct": 0.0,
-        "qualify_pct": 0.9228
-      },
-      {
-        "matchday": "md1",
-        "win_pct": 0.0001,
+        "win_pct": 0.4733,
         "qualify_pct": 1.0
       }
     ],
@@ -11354,16 +12490,40 @@
         "qualify_pct": 1.0
       }
     ],
-    "Norway": [
+    "Austria": [
       {
         "matchday": "pre",
         "win_pct": 0.0,
-        "qualify_pct": 0.7152
+        "qualify_pct": 0.7384
       },
       {
         "matchday": "md1",
         "win_pct": 0.0,
-        "qualify_pct": 1.0
+        "qualify_pct": 0.8075
+      }
+    ],
+    "Iraq": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.1968
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.0
+      }
+    ],
+    "Algeria": [
+      {
+        "matchday": "pre",
+        "win_pct": 0.0,
+        "qualify_pct": 0.7524
+      },
+      {
+        "matchday": "md1",
+        "win_pct": 0.0,
+        "qualify_pct": 0.6981
       }
     ]
   },
@@ -12205,17 +13365,17 @@
       "count": 15
     }
   ],
-  "generated_at": "2026-06-26T23:56:30Z",
+  "generated_at": "2026-06-27T00:02:05Z",
   "market_odds_status": {
     "last_fetch": "2026-06-26T22:59:26",
     "matches_with_odds": 51
   },
   "refresh_status": {
-    "generated_at": "2026-06-26T23:56:30Z",
+    "generated_at": "2026-06-27T00:02:05Z",
     "update_mode": "update",
     "sources": {
-      "thesportsdb": 6,
-      "wikipedia": 27,
+      "thesportsdb": 3,
+      "wikipedia": 26,
       "file": 0
     },
     "results_applied": 0,
