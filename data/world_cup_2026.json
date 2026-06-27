@@ -789,64 +789,94 @@
             "date": "2026-06-26",
             "team_a": "Belgium",
             "team_b": "New Zealand",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-26",
+              "group": "G",
+              "team_a": "Belgium",
+              "team_b": "New Zealand",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8138,
+              "prob_draw": 0.1637,
+              "prob_win_b": 0.0225,
+              "xg_a": 3.21,
+              "xg_b": 0.48,
+              "captured_at": "2026-06-27T03:05:37"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-26",
             "team_a": "Iran",
             "team_b": "Egypt",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-26",
+              "group": "G",
+              "team_a": "Iran",
+              "team_b": "Egypt",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.3742,
+              "prob_draw": 0.3412,
+              "prob_win_b": 0.2846,
+              "xg_a": 1.49,
+              "xg_b": 1.28,
+              "captured_at": "2026-06-27T03:05:37"
+            },
+            "minute": 23
           }
         ]
       },
       "standings": [
         {
           "team": "Egypt",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
           "gf": 4,
           "ga": 2,
           "gd": 2,
-          "points": 4
+          "points": 5
         },
         {
           "team": "Iran",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "drawn": 2,
+          "drawn": 3,
           "lost": 0,
           "gf": 2,
           "ga": 2,
           "gd": 0,
-          "points": 2
+          "points": 3
         },
         {
           "team": "Belgium",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "drawn": 2,
+          "drawn": 3,
           "lost": 0,
           "gf": 1,
           "ga": 1,
           "gd": 0,
-          "points": 2
+          "points": 3
         },
         {
           "team": "New Zealand",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 1,
           "gf": 3,
           "ga": 5,
           "gd": -2,
-          "points": 1
+          "points": 2
         }
       ]
     },
