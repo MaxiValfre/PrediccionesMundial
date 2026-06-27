@@ -797,5 +797,22 @@
     "actual_score_b": 0,
     "result_category": "wrong",
     "brier_score": 0.0971
+  },
+  {
+    "date": "2026-06-26",
+    "group": "G",
+    "team_a": "Belgium",
+    "team_b": "New Zealand",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8138,
+    "prob_draw": 0.1637,
+    "prob_win_b": 0.0225,
+    "xg_a": 3.21,
+    "xg_b": 0.48,
+    "actual_score_a": 5,
+    "actual_score_b": 1,
+    "result_category": "correct_direction",
+    "brier_score": 0.0207
   }
 ]
