@@ -907,9 +907,24 @@
             "date": "2026-06-26",
             "team_a": "Saudi Arabia",
             "team_b": "Cape Verde",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-26",
+              "group": "H",
+              "team_a": "Saudi Arabia",
+              "team_b": "Cape Verde",
+              "predicted_score_a": 2,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.5922,
+              "prob_draw": 0.2876,
+              "prob_win_b": 0.1202,
+              "xg_a": 2.05,
+              "xg_b": 0.84,
+              "captured_at": "2026-06-27T00:05:41"
+            },
+            "minute": 23
           }
         ]
       },
@@ -926,6 +941,17 @@
           "points": 4
         },
         {
+          "team": "Cape Verde",
+          "played": 3,
+          "won": 0,
+          "drawn": 3,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 3
+        },
+        {
           "team": "Uruguay",
           "played": 2,
           "won": 0,
@@ -937,26 +963,15 @@
           "points": 2
         },
         {
-          "team": "Cape Verde",
-          "played": 2,
+          "team": "Saudi Arabia",
+          "played": 3,
           "won": 0,
           "drawn": 2,
-          "lost": 0,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 2
-        },
-        {
-          "team": "Saudi Arabia",
-          "played": 2,
-          "won": 0,
-          "drawn": 1,
           "lost": 1,
           "gf": 1,
           "ga": 5,
           "gd": -4,
-          "points": 1
+          "points": 2
         }
       ]
     },
