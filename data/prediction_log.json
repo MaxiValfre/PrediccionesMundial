@@ -899,5 +899,39 @@
     "actual_score_b": 1,
     "result_category": "close",
     "brier_score": 0.0928
+  },
+  {
+    "date": "2026-06-27",
+    "group": "J",
+    "team_a": "Algeria",
+    "team_b": "Austria",
+    "predicted_score_a": 1,
+    "predicted_score_b": 1,
+    "prob_win_a": 0.3223,
+    "prob_draw": 0.3473,
+    "prob_win_b": 0.3304,
+    "xg_a": 1.34,
+    "xg_b": 1.36,
+    "actual_score_a": 3,
+    "actual_score_b": 3,
+    "result_category": "correct_direction",
+    "brier_score": 0.213
+  },
+  {
+    "date": "2026-06-27",
+    "group": "J",
+    "team_a": "Argentina",
+    "team_b": "Jordan",
+    "predicted_score_a": 3,
+    "predicted_score_b": 0,
+    "prob_win_a": 0.8825,
+    "prob_draw": 0.1133,
+    "prob_win_b": 0.0041,
+    "xg_a": 4.0,
+    "xg_b": 0.25,
+    "actual_score_a": 3,
+    "actual_score_b": 1,
+    "result_category": "close",
+    "brier_score": 0.0089
   }
 ]
