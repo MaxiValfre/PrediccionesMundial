@@ -1119,63 +1119,93 @@
             "date": "2026-06-27",
             "team_a": "Argentina",
             "team_b": "Jordan",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 1,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-27",
+              "group": "J",
+              "team_a": "Argentina",
+              "team_b": "Jordan",
+              "predicted_score_a": 3,
+              "predicted_score_b": 0,
+              "prob_win_a": 0.8825,
+              "prob_draw": 0.1133,
+              "prob_win_b": 0.0041,
+              "xg_a": 4.0,
+              "xg_b": 0.25,
+              "captured_at": "2026-06-28T02:20:47"
+            },
+            "minute": 23
           },
           {
             "date": "2026-06-27",
             "team_a": "Algeria",
             "team_b": "Austria",
-            "score_a": null,
-            "score_b": null,
-            "status": "scheduled"
+            "score_a": 0,
+            "score_b": 0,
+            "status": "in_progress",
+            "pre_match_prediction": {
+              "date": "2026-06-27",
+              "group": "J",
+              "team_a": "Algeria",
+              "team_b": "Austria",
+              "predicted_score_a": 1,
+              "predicted_score_b": 1,
+              "prob_win_a": 0.3223,
+              "prob_draw": 0.3473,
+              "prob_win_b": 0.3304,
+              "xg_a": 1.34,
+              "xg_b": 1.36,
+              "captured_at": "2026-06-28T02:20:47"
+            },
+            "minute": 23
           }
         ]
       },
       "standings": [
         {
           "team": "Argentina",
-          "played": 2,
-          "won": 2,
+          "played": 3,
+          "won": 3,
           "drawn": 0,
           "lost": 0,
-          "gf": 5,
+          "gf": 6,
           "ga": 0,
-          "gd": 5,
-          "points": 6
+          "gd": 6,
+          "points": 9
         },
         {
           "team": "Austria",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 3,
           "ga": 3,
           "gd": 0,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Algeria",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 2,
           "ga": 4,
           "gd": -2,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Jordan",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 0,
-          "lost": 2,
+          "lost": 3,
           "gf": 2,
-          "ga": 5,
-          "gd": -3,
+          "ga": 6,
+          "gd": -4,
           "points": 0
         }
       ]
