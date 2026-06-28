@@ -1119,8 +1119,8 @@
             "date": "2026-06-27",
             "team_a": "Argentina",
             "team_b": "Jordan",
-            "score_a": 1,
-            "score_b": 0,
+            "score_a": 2,
+            "score_b": 1,
             "status": "in_progress",
             "pre_match_prediction": {
               "date": "2026-06-27",
@@ -1136,14 +1136,14 @@
               "xg_b": 0.25,
               "captured_at": "2026-06-28T02:20:47"
             },
-            "minute": 23
+            "minute": 68
           },
           {
             "date": "2026-06-27",
             "team_a": "Algeria",
             "team_b": "Austria",
-            "score_a": 0,
-            "score_b": 0,
+            "score_a": 1,
+            "score_b": 2,
             "status": "in_progress",
             "pre_match_prediction": {
               "date": "2026-06-27",
@@ -1159,7 +1159,7 @@
               "xg_b": 1.36,
               "captured_at": "2026-06-28T02:20:47"
             },
-            "minute": 23
+            "minute": 68
           }
         ]
       },
@@ -1170,32 +1170,32 @@
           "won": 3,
           "drawn": 0,
           "lost": 0,
-          "gf": 6,
-          "ga": 0,
+          "gf": 7,
+          "ga": 1,
           "gd": 6,
           "points": 9
         },
         {
           "team": "Austria",
           "played": 3,
-          "won": 1,
-          "drawn": 1,
+          "won": 2,
+          "drawn": 0,
           "lost": 1,
-          "gf": 3,
-          "ga": 3,
-          "gd": 0,
-          "points": 4
+          "gf": 5,
+          "ga": 4,
+          "gd": 1,
+          "points": 6
         },
         {
           "team": "Algeria",
           "played": 3,
           "won": 1,
-          "drawn": 1,
-          "lost": 1,
-          "gf": 2,
-          "ga": 4,
-          "gd": -2,
-          "points": 4
+          "drawn": 0,
+          "lost": 2,
+          "gf": 3,
+          "ga": 6,
+          "gd": -3,
+          "points": 3
         },
         {
           "team": "Jordan",
@@ -1203,8 +1203,8 @@
           "won": 0,
           "drawn": 0,
           "lost": 3,
-          "gf": 2,
-          "ga": 6,
+          "gf": 3,
+          "ga": 7,
           "gd": -4,
           "points": 0
         }
